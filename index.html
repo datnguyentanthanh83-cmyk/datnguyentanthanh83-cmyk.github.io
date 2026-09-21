@@ -100,7 +100,7 @@ h1{font-size:1.48rem;letter-spacing:-.03em;color:#262626;font-weight:800}.brand 
 .live-head h2{font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;color:#1d4ed8;font-weight:800;margin:0}
 .live-status{font-size:.72rem;font-weight:700;color:#555}
 .live-status.ok{color:#087443}.live-status.bad{color:#a15c00}
-.live-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px}
+.live-grid{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:8px}
 .live-item{background:#f8fafc;border:1px solid #e6eaf0;border-radius:12px;padding:10px 10px 9px}
 .live-item .k{font-size:.65rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:#666;margin-bottom:4px}
 .live-item .live-value{font-size:1.05rem;font-weight:800;color:#262626;font-variant-numeric:tabular-nums;white-space:nowrap}
@@ -175,6 +175,7 @@ h1{font-size:1.48rem;letter-spacing:-.03em;color:#262626;font-weight:800}.brand 
     +'<div class="live-item" id="live-usdvnd"><div class="k">USD/VND</div><div class="live-value">—</div><div class="live-chg">FX mid</div></div>'
     +'<div class="live-item" id="live-eurusd"><div class="k">EUR/USD</div><div class="live-value">—</div><div class="live-chg">FX mid</div></div>'
     +'<div class="live-item" id="live-usdjpy"><div class="k">USD/JPY</div><div class="live-value">—</div><div class="live-chg">FX mid</div></div>'
+    +'<div class="live-item" id="live-btc"><div class="k">Bitcoin</div><div class="live-value">—</div><div class="live-chg"></div></div>'
     +'</div></section>';
   html += '<div class="section-label">Bảng chỉ số chi tiết</div>';
   html += '<section class="grid">'+(d.cards||[]).map(function(c){

@@ -26,6 +26,7 @@ PAIRS = {
     "audusd": 5,
     "eurusd": 1,
     "usdjpy": 3,
+    "btc": 1057391,
 }
 
 def get_json(url: str, timeout: float = 12.0):
