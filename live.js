@@ -43,7 +43,7 @@
     spx: { tz: 'America/New_York', days: [1,2,3,4,5], windows: [[9*60+30, 16*60]] },
     ndx: { tz: 'America/New_York', days: [1,2,3,4,5], windows: [[9*60+30, 16*60]] },
     dji: { tz: 'America/New_York', days: [1,2,3,4,5], windows: [[9*60+30, 16*60]] },
-    rut: { tz: 'America/New_York', days: [1,2,3,4,5], windows: [[9*60+30, 16*60]] }
+    rut: { tz: 'America/New_York', days: [1*60+30, 16*60]] }
   };
 
   function partsInTz(date, tz) {
@@ -136,6 +136,7 @@
     if (q.wti) { var w = pct(q.wti); setC('wti', '$' + fmtNum(q.wti.price, 2), w.t, w.c); }
     if (q.eurusd) { var e = pct(q.eurusd); setC('eurusd', fmtNum(q.eurusd.price, 4), e.t, e.c); }
     if (q.gold) { var g = pct(q.gold); setC('gold', '$' + fmtNum(q.gold.price, 0), g.t, g.c); }
+    if (q.btc) { var b = pct(q.btc); setC('btc', '$' + fmtNum(q.btc.price, 0), b.t, b.c); }
   }
 
   function applyQuotes(payload) {
@@ -212,6 +213,9 @@
     }
     var j = apply('usdjpy', function (p) { return fmtNum(p, 2); });
     if (j) setBoard('#live-usdjpy', j.priceText, chgHtml(j.dayText, j.dayCls, false), false);
+
+    var btc = apply('btc', function (p) { return '$' + fmtNum(p, 0); });
+    if (btc) setBoard('#live-btc', btc.priceText, chgHtml(btc.dayText, btc.dayCls, false), false);
 
     var v = apply('usdvnd', function (p) { return fmtNum(p, 0); });
     if (v) {
