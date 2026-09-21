@@ -78,7 +78,7 @@
       el.classList.remove('is-live');
     });
     var boardMap = {
-      dxy: '#live-dxy', ust10y: '#live-ust10y', ust2y: '#live-ust-2y', vnindex: '#live-vn',
+      dxy: '#live-dxy', ust10y: '#live-ust10y', ust2y: '#live-ust2y', vnindex: '#live-vn',
       eurusd: '#live-eurusd', usdjpy: '#live-usdjpy', usdvnd: '#live-usdvnd'
     };
     var id = boardMap[key];
