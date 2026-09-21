@@ -142,11 +142,11 @@ h1{font-size:1.48rem;letter-spacing:-.03em;color:#262626;font-weight:800}.brand 
         else if (/^10Y\s*UST|^UST\s*10Y/i.test(r.name)) nk='ust10y';
         else if (/^2s10s/i.test(r.name)) nk='ust2s10s';
         else if (/^VN-Index/i.test(r.name)) nk='vnindex';
-        else if (/EUR\/(?:USD)/i.test(r.name)) nk='eurusd';
-        else if (/GBP\/(?:USD)/i.test(r.name)) nk='gbpusd';
-        else if (/USD\/(?:JPY)/i.test(r.name)) nk='usdjpy';
-        else if (/AUD\/(?:USD)/i.test(r.name)) nk='audusd';
-        else if (/SBV\s*USD\/(?:VND)|USD\/(?:VND)/i.test(r.name)) nk='usdvnd';
+        else if (/EUR\/USD/i.test(r.name)) nk='eurusd';
+        else if (/GBP\/USD/i.test(r.name)) nk='gbpusd';
+        else if (/USD\/JPY/i.test(r.name)) nk='usdjpy';
+        else if (/AUD\/USD/i.test(r.name)) nk='audusd';
+        else if (/SBV\s*USD\/VND|USD\/VND/i.test(r.name)) nk='usdvnd';
         else if (/^WTI\b/i.test(r.name)) nk='wti';
         else if (/^Brent\b/i.test(r.name)) nk='brent';
         else if (/^Gold\b/i.test(r.name)) nk='gold';
