@@ -43,7 +43,7 @@
     spx: { tz: 'America/New_York', days: [1,2,3,4,5], windows: [[9*60+30, 16*60]] },
     ndx: { tz: 'America/New_York', days: [1,2,3,4,5], windows: [[9*60+30, 16*60]] },
     dji: { tz: 'America/New_York', days: [1,2,3,4,5], windows: [[9*60+30, 16*60]] },
-    rut: { tz: 'America/New_York', days: [1*60+30, 16*60]] }
+    rut: { tz: 'America/New_York', days: [1,2,3,4,5], windows: [[9*60+30, 16*60]] }
   };
 
   function partsInTz(date, tz) {
