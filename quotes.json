@@ -1,6 +1,6 @@
 {
-  "asOf": "2026-09-22 06:50:32 ICT",
-  "asOfUnix": 1790034632,
+  "asOf": "2026-09-22 07:14:12 ICT",
+  "asOfUnix": 1790036052,
   "provider": "Investing.com (vs prior close) + er-api FX",
   "quotes": {
     "dxy": {
@@ -58,11 +58,11 @@
       "pairId": 8833
     },
     "gold": {
-      "price": 4405.05,
+      "price": 4404.59,
       "prevClose": 4411.34,
-      "chgPct": -0.14258705971428098,
-      "chgAbs": -6.289999999999964,
-      "ts": 1790034300000,
+      "chgPct": -0.15301473021802897,
+      "chgAbs": -6.75,
+      "ts": 1790034600000,
       "source": "investing",
       "pairId": 8830
     },
