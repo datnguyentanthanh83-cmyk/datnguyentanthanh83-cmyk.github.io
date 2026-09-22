@@ -190,10 +190,8 @@
         if (k) k.textContent = vn.closed ? 'VN-Index · đóng cửa' : 'VN-Index';
       }
       setLevel('vnindex', vn.priceText);
-    } else {
-      // fallback rõ ràng nếu thiếu quotes
-      setBoard('#live-vn', '—', '<span style="color:#7a8699;font-weight:700">chưa có % đổi</span>', true);
     }
+    // Không blank VN nếu thiếu quotes — giữ giá đã paint / snapshot data.js
 
     [['wti', 2, '$'], ['brent', 2, '$'], ['gold', 0, '$']].forEach(function (x) {
       var r = apply(x[0], function (p) { return x[2] + fmtNum(p, x[1]); });
@@ -230,6 +228,24 @@
   }
 
   var refreshing = false;
+  var lastGood = null;
+
+  function mergeQuotes(incoming) {
+    var base = (lastGood && lastGood.quotes) ? Object.assign({}, lastGood.quotes) : {};
+    var q = (incoming && incoming.quotes) || {};
+    Object.keys(q).forEach(function (k) {
+      if (q[k] && q[k].price != null) base[k] = q[k];
+    });
+    return {
+      asOf: (incoming && incoming.asOf) || (lastGood && lastGood.asOf) || '',
+      asOfUnix: (incoming && incoming.asOfUnix) || (lastGood && lastGood.asOfUnix),
+      provider: (incoming && incoming.provider) || (lastGood && lastGood.provider),
+      quotes: base,
+      errors: (incoming && incoming.errors) || [],
+      retained: (incoming && incoming.retained) || []
+    };
+  }
+
   async function refresh() {
     if (refreshing) return;
     refreshing = true;
@@ -239,11 +255,24 @@
       var r = await fetch(QUOTES_URL + '?t=' + Date.now(), { cache: 'no-store' });
       if (!r.ok) throw new Error('HTTP ' + r.status);
       var payload = await r.json();
-      applyQuotes(payload);
+      var merged = mergeQuotes(payload);
+      var n = Object.keys(merged.quotes || {}).filter(function (k) {
+        return merged.quotes[k] && merged.quotes[k].price != null;
+      }).length;
+      if (n > 0) lastGood = merged;
+      applyQuotes(merged);
       var ms = Date.now() - t0;
-      setStatus('Investing · vs prior close · ' + (payload.asOf || '') + ' · ' + ms + 'ms', true);
+      var note = (payload.errors && payload.errors.length)
+        ? ' · giữ ' + ((payload.retained && payload.retained.length) || 0) + ' mã cũ'
+        : '';
+      setStatus('Investing · vs prior close · ' + (merged.asOf || '') + ' · ' + ms + 'ms' + note, true);
     } catch (e) {
-      setStatus('Chưa có quotes.json — giữ snapshot. (' + (e && e.message) + ')', false);
+      if (lastGood) {
+        applyQuotes(lastGood);
+        setStatus('Mạng lỗi — giữ snapshot cũ. (' + (e && e.message) + ')', false);
+      } else {
+        setStatus('Chưa có quotes.json — giữ snapshot. (' + (e && e.message) + ')', false);
+      }
       console.warn(e);
     } finally {
       refreshing = false;
