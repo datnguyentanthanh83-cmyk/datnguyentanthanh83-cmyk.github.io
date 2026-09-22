@@ -130,6 +130,16 @@ h1{font-size:1.48rem;letter-spacing:-.03em;color:#262626;font-weight:800}.brand 
 .analysis p{font-size:.88rem;color:#333;font-weight:600;line-height:1.68;margin-bottom:12px}
 .analysis p:last-child{margin-bottom:0}
 .analysis strong{color:#262626;font-weight:800}
+.trading{margin:0 0 18px;padding:22px 24px;background:linear-gradient(135deg,#fff,#fff8f0);border:1px solid #f0e0c8;border-radius:16px;box-shadow:0 10px 28px rgba(25,42,70,.07)}
+.trading .badge{display:inline-flex;align-items:center;gap:7px;padding:5px 11px;border-radius:999px;background:#fff1e0;color:#b45309;font-size:.7rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;margin-bottom:12px}
+.trading h2{font-size:1.05rem;font-weight:800;color:#262626;letter-spacing:-.02em;margin-bottom:10px}
+.trading p{font-size:.88rem;color:#333;font-weight:600;line-height:1.68;margin:0}
+.sources{margin:0 0 18px;padding:14px 20px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px}
+.sources p{font-size:.82rem;color:#475569;font-weight:500;line-height:1.6;margin:0;font-style:italic}
+.sources strong{font-style:normal;font-weight:800;color:#334155;margin-right:6px}
+.footer .source{font-style:italic}
+.geo-feed .source-note{font-style:italic;font-size:.78rem;color:#667085;margin:8px 0 0;font-weight:600}
+.card .note{font-style:italic}
 .tr.is-live .name{color:#0f172a}.tr.is-live .change.live-day{font-weight:800}.live-item.is-closed .live-chg,.tr.is-closed .name{color:#7a8699}.card .level.is-live{outline:1px solid rgba(8,116,67,.22);outline-offset:2px;border-radius:6px}
 .section-label{font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:#667085;font-weight:800;margin:4px 0 10px}
 
@@ -229,11 +239,20 @@ h1{font-size:1.48rem;letter-spacing:-.03em;color:#262626;font-weight:800}.brand 
     html += '</article>';
   });
   if (!(geo.items||[]).length) html += '<article class="geo-item"><p>Chưa có tin Geo Pulse trong cửa sổ 24h — sẽ cập nhật khi có brief.</p></article>';
+  if (geo.sourceNote) html += '<p class="source-note">'+esc(geo.sourceNote)+'</p>';
   html += '</section>';
 
   var cm = d.comment||{};
   html += '<div class="section-label">Nhận định · đánh giá · dự đoán</div>';
   html += '<section class="analysis"><div class="badge">'+esc(cm.badge||'Macro Eco · Bình luận')+'</div><h2>'+esc(cm.title||'Nhận định chung tình hình')+'</h2>'+(cm.paragraphs||[]).map(function(p){return '<p>'+p+'</p>';}).join('')+'</section>';
+
+  var tr = d.trading||{};
+  if (tr.title || tr.body) {
+    html += '<section class="trading"><div class="badge">'+esc(tr.badge||'Macro Eco · Trading')+'</div><h2>'+esc(tr.title||'Chiến lược Trading')+'</h2><p>'+(tr.body||'')+'</p></section>';
+  }
+  if (d.sources) {
+    html += '<section class="sources"><p><strong>Sources:</strong> '+esc(d.sources)+'</p></section>';
+  }
 
   html += '<section class="spotlight"><div class="panel"><h2>Bottom line hôm nay</h2><ul>'+(d.bottomLine||[]).map(function(x){return '<li>'+esc(x)+'</li>';}).join('')+'</ul></div><div class="side"><h2>Lịch catalyst</h2><div class="cal">'+(d.catalysts||[]).map(function(x){return '<div class="cal-item"><span class="when">'+esc(x.when)+'</span><span class="what">'+esc(x.what)+'</span></div>';}).join('')+'</div></div></section>';
   html += '<div class="legend"><b>Quy ước:</b><span><i style="background:#087443"></i> tăng</span><span><i style="background:#c73545"></i> giảm</span><span><i style="background:#a7b0bd"></i> chưa có dữ liệu = —</span><span>Fed: vs kỳ gần nhất · Inflation: MoM/YoY · còn lại: % ngày/% tuần</span></div>';
