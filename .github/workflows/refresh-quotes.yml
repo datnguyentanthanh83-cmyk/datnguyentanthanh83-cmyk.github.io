@@ -16,6 +16,19 @@ jobs:
           python-version: '3.12'
       - name: Fetch quotes from Investing.com
         run: python3 scripts/fetch_quotes.py
+      - name: Guard against empty overwrite
+        run: |
+          python3 - <<'PY'
+          import json, sys
+          from pathlib import Path
+          p = Path('quotes.json')
+          q = json.loads(p.read_text())
+          n = sum(1 for v in (q.get('quotes') or {}).values() if isinstance(v, dict) and v.get('price') is not None)
+          print(f'quote_keys_with_price={n} errors={len(q.get("errors") or [])} retained={len(q.get("retained") or [])} investingOk={q.get("investingOk")}')
+          if n < 8:
+              print('Refusing to commit near-empty quotes.json', file=sys.stderr)
+              sys.exit(2)
+          PY
       - name: Commit quotes.json
         run: |
           git config user.name "Macro Eco bot"
