@@ -1,1 +1,169 @@
-PLACEHOLDER
+{
+  "asOf": "2026-09-22 08:16:46 ICT",
+  "asOfUnix": 1790039806,
+  "provider": "Investing.com (vs prior close) + er-api FX",
+  "quotes": {
+    "dxy": {
+      "price": 100.148,
+      "prevClose": 100.156,
+      "chgPct": -0.00798753943848574,
+      "chgAbs": -0.008000000000009777,
+      "ts": 1790039700000,
+      "source": "investing",
+      "pairId": 8827
+    },
+    "ust10y": {
+      "price": 4.751,
+      "prevClose": 4.756,
+      "chgPct": -0.10513036164844182,
+      "chgAbs": -0.004999999999999893,
+      "ts": 1790033400000,
+      "source": "investing",
+      "pairId": 23701
+    },
+    "ust2y": {
+      "price": 4.927,
+      "prevClose": 4.948,
+      "chgPct": -0.42441390460793843,
+      "chgAbs": -0.021000000000000796,
+      "ts": 1790037000000,
+      "source": "investing",
+      "pairId": 23705
+    },
+    "vnindex": {
+      "price": 1799.67,
+      "prevClose": 1815.66,
+      "chgPct": -0.8806714913585147,
+      "chgAbs": -15.990000000000009,
+      "ts": 1789976700000,
+      "source": "investing",
+      "pairId": 41063
+    },
+    "wti": {
+      "price": 92.78,
+      "prevClose": 92.28,
+      "chgPct": 0.541829215431296,
+      "chgAbs": 0.5,
+      "ts": 1790039700000,
+      "source": "investing",
+      "pairId": 8849
+    },
+    "brent": {
+      "price": 100.85,
+      "prevClose": 100.34,
+      "chgPct": 0.5082718756228731,
+      "chgAbs": 0.5099999999999909,
+      "ts": 1790039700000,
+      "source": "investing",
+      "pairId": 8833
+    },
+    "gold": {
+      "price": 4389.59,
+      "prevClose": 4406.95,
+      "chgPct": -0.39392323489033626,
+      "chgAbs": -17.359999999999673,
+      "ts": 1790039700000,
+      "source": "investing",
+      "pairId": 8830
+    },
+    "spx": {
+      "price": 7764.8,
+      "prevClose": 7650.5,
+      "chgPct": 1.4940199986928981,
+      "chgAbs": 114.30000000000018,
+      "ts": 1790020500000,
+      "source": "investing",
+      "pairId": 166
+    },
+    "ndx": {
+      "price": 27122.09,
+      "prevClose": 26522.54,
+      "chgPct": 2.260530100058287,
+      "chgAbs": 599.5499999999993,
+      "ts": 1790020500000,
+      "source": "investing",
+      "pairId": 14958
+    },
+    "dji": {
+      "price": 52050.26,
+      "prevClose": 51682.64,
+      "chgPct": 0.7113026733928504,
+      "chgAbs": 367.6200000000026,
+      "ts": 1790022000000,
+      "source": "investing",
+      "pairId": 169
+    },
+    "rut": {
+      "price": 2874.54,
+      "prevClose": 2860.4,
+      "chgPct": 0.4943364564396543,
+      "chgAbs": 14.139999999999873,
+      "ts": 1790020500000,
+      "source": "investing",
+      "pairId": 170
+    },
+    "gbpusd": {
+      "price": 1.337,
+      "prevClose": 1.3367,
+      "chgPct": 0.022443330590257122,
+      "chgAbs": 0.00029999999999996696,
+      "ts": 1790039700000,
+      "source": "investing",
+      "pairId": 2
+    },
+    "audusd": {
+      "price": 0.7113,
+      "prevClose": 0.7119,
+      "chgPct": -0.08428150021069447,
+      "chgAbs": -0.0005999999999999339,
+      "ts": 1790039700000,
+      "source": "investing",
+      "pairId": 5
+    },
+    "eurusd": {
+      "price": 1.1467,
+      "prevClose": 1.1464,
+      "chgPct": 0.026168876482900116,
+      "chgAbs": 0.00029999999999996696,
+      "ts": 1790039700000,
+      "source": "investing",
+      "pairId": 1
+    },
+    "usdjpy": {
+      "price": 157.42,
+      "prevClose": 157.37,
+      "chgPct": 0.031772256465643356,
+      "chgAbs": 0.04999999999998295,
+      "ts": 1790039700000,
+      "source": "investing",
+      "pairId": 3
+    },
+    "btc": {
+      "price": 85808.1,
+      "prevClose": 86620.4,
+      "chgPct": -0.9377698555998222,
+      "chgAbs": -812.2999999999884,
+      "ts": 1790039700000,
+      "source": "investing",
+      "pairId": 1057391
+    },
+    "usdvnd": {
+      "price": 25969.65414,
+      "prevClose": 25969.65414,
+      "chgPct": 0.0,
+      "chgAbs": 0.0,
+      "source": "er-api"
+    },
+    "ust2s10s": {
+      "price": -0.17599999999999927,
+      "chgPct": null,
+      "chgAbs": null,
+      "source": "derived"
+    }
+  },
+  "errors": [],
+  "retained": [
+    "ust2s10s"
+  ],
+  "investingOk": 16
+}
