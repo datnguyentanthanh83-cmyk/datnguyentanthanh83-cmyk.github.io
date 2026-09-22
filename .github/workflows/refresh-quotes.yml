@@ -1,7 +1,6 @@
 name: Refresh Investing quotes
 on:
   schedule:
-    # Every 5 minutes — GitHub may delay; still far better than browser CORS
     - cron: '*/5 * * * *'
   workflow_dispatch:
 jobs:
@@ -16,18 +15,46 @@ jobs:
           python-version: '3.12'
       - name: Fetch quotes from Investing.com
         run: python3 scripts/fetch_quotes.py
-      - name: Guard against empty overwrite
+      - name: Retain last-good prices on partial/403 failure
         run: |
           python3 - <<'PY'
-          import json, sys
+          import json, subprocess
           from pathlib import Path
           p = Path('quotes.json')
-          q = json.loads(p.read_text())
-          n = sum(1 for v in (q.get('quotes') or {}).values() if isinstance(v, dict) and v.get('price') is not None)
-          print(f'quote_keys_with_price={n} errors={len(q.get("errors") or [])} retained={len(q.get("retained") or [])} investingOk={q.get("investingOk")}')
+          fresh = json.loads(p.read_text())
+          try:
+              prev_raw = subprocess.check_output(
+                  ['git', 'show', 'HEAD:quotes.json'], text=True
+              )
+              previous = (json.loads(prev_raw).get('quotes') or {})
+          except Exception:
+              previous = {}
+          quotes = dict(fresh.get('quotes') or {})
+          retained = list(fresh.get('retained') or [])
+          errors = list(fresh.get('errors') or [])
+          for k, v in previous.items():
+              if not isinstance(v, dict) or v.get('price') is None:
+                  continue
+              cur = quotes.get(k)
+              if not cur or cur.get('price') is None:
+                  kept = dict(v)
+                  kept['retained'] = True
+                  quotes[k] = kept
+                  if k not in retained:
+                      retained.append(k)
+          n = sum(1 for v in quotes.values() if isinstance(v, dict) and v.get('price') is not None)
+          investing_ok = sum(
+              1 for k, v in quotes.items()
+              if isinstance(v, dict) and not v.get('retained') and v.get('source') == 'investing'
+          )
+          fresh['quotes'] = quotes
+          fresh['retained'] = retained
+          fresh['errors'] = errors
+          fresh['investingOk'] = investing_ok
+          p.write_text(json.dumps(fresh, ensure_ascii=False, indent=2) + '\n')
+          print(f'merged keys_with_price={n} investingOk={investing_ok} retained={len(retained)}')
           if n < 8:
-              print('Refusing to commit near-empty quotes.json', file=sys.stderr)
-              sys.exit(2)
+              raise SystemExit(f'Refusing near-empty quotes.json (n={n})')
           PY
       - name: Commit quotes.json
         run: |
