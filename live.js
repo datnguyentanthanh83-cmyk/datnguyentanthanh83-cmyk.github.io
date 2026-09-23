@@ -158,7 +158,44 @@
         if (ch) { ch.style.color = '#94a3b8'; ch.style.fontSize = '.78rem'; }
       }
     }
-    if (q.gold) { var g = pct(q.gold); setC('gold', '$' + fmtNum(q.gold.price, 0), g.t, g.c); }
+    if (q.goldsjc && q.goldsjc.price != null) {
+      var gs = q.goldsjc;
+      function trieu(n) {
+        if (n == null || isNaN(n)) return '—';
+        return (Number(n) / 1e6).toFixed(1) + 'tr';
+      }
+      var chgGs = '';
+      if (gs.buy != null && gs.sell != null) {
+        chgGs = 'Mua ' + (Number(gs.buy) / 1e6).toFixed(1) + ' · Bán ' + trieu(gs.sell);
+      } else {
+        var pg = pct(gs);
+        chgGs = pg.t;
+      }
+      var clsGs = 'flat';
+      if (gs.chgAbs != null) clsGs = gs.chgAbs > 0 ? 'up' : (gs.chgAbs < 0 ? 'down' : 'flat');
+      else if (gs.chgPct != null) clsGs = clsPct(gs.chgPct);
+      setC('goldsjc', trieu(gs.price), chgGs, clsGs);
+      var worldEl = document.getElementById('c-gold-world');
+      if (worldEl) {
+        var wp = gs.worldPrice != null ? gs.worldPrice : (q.gold && q.gold.price);
+        var wch = gs.worldChgPct != null ? gs.worldChgPct : (q.gold && q.gold.chgPct);
+        if (wp != null) {
+          var wtxt = 'TG $' + fmtNum(wp, 0) + '/oz';
+          if (wch != null && !isNaN(wch)) {
+            var sign = wch > 0 ? '+' : '';
+            wtxt += ' (' + sign + Number(wch).toFixed(2) + '%)';
+          }
+          worldEl.textContent = wtxt;
+        } else {
+          worldEl.textContent = 'TG $—/oz';
+        }
+      }
+      var gcard = document.querySelector('.c-card[data-c="goldsjc"]');
+      if (gcard) {
+        var gch = gcard.querySelector('.c-chg');
+        if (gch) { gch.style.color = '#94a3b8'; gch.style.fontSize = '.78rem'; }
+      }
+    }
     if (q.btc) { var b = pct(q.btc); setC('btc', '$' + fmtNum(q.btc.price, 0), b.t, b.c); }
   }
 
