@@ -4,7 +4,7 @@
 Never wipe last-good prices: on Investing 403/empty, keep prior quotes.json values.
 """
 from __future__ import annotations
-import json, time, urllib.error, urllib.request
+import json, re, time, urllib.error, urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -93,22 +93,97 @@ def investing_quote(pair_id: int):
     }
 
 
+def _parse_num(s):
+    if s is None:
+        return None
+    t = str(s).replace(",", "").replace(" ", "").strip()
+    if not t or t == "-":
+        return None
+    return float(t)
+
+
+def fetch_vcb_usd():
+    """VCB listed USD/VND trading rates (cash / transfer buy / sell)."""
+    day = datetime.now(ZoneInfo("Asia/Ho_Chi_Minh")).strftime("%Y-%m-%d")
+    data = get_json(f"https://www.vietcombank.com.vn/api/exchangerates?date={day}")
+    rows = data.get("Data") or []
+    usd = next((r for r in rows if str(r.get("currencyCode", "")).upper() == "USD"), None)
+    if not usd:
+        raise ValueError("VCB USD row missing")
+    cash = _parse_num(usd.get("cash"))
+    transfer = _parse_num(usd.get("transfer"))
+    sell = _parse_num(usd.get("sell"))
+    if transfer is None or sell is None:
+        raise ValueError("VCB USD incomplete")
+    mid = round((transfer + sell) / 2.0)
+    return {
+        "cash": cash,
+        "transfer": transfer,
+        "sell": sell,
+        "mid": mid,
+        "updated": data.get("UpdatedDate") or data.get("Date"),
+    }
+
+
+def fetch_sbv_center():
+    """SBV central USD/VND rate from sbv.gov.vn tỷ giá page."""
+    url = "https://www.sbv.gov.vn/webcenter/portal/m/menu/trangchu/tg"
+    req = urllib.request.Request(
+        url, headers={"User-Agent": UA["User-Agent"], "Accept": "text/html"}
+    )
+    with urllib.request.urlopen(req, timeout=25) as r:
+        html = r.read().decode("utf-8", "replace")
+    # Headline near chart: "25,635.00 VND" + day change
+    m = re.search(
+        r"([0-9]{2},[0-9]{3}(?:\.[0-9]+)?)\s*VND\s*<span[^>]*>\s*([+\-]?[0-9,.]+)\s*\(",
+        html,
+    )
+    if m:
+        return {"price": _parse_num(m.group(1)), "chgAbs": _parse_num(m.group(2))}
+    m2 = re.search(r"([0-9]{2},[0-9]{3}(?:\.[0-9]+)?)\s*VND", html)
+    if m2:
+        return {"price": _parse_num(m2.group(1)), "chgAbs": None}
+    m3 = re.search(
+        r"\[([0-9,\s]+)\]\s*;\s*const ctx = document\.getElementById\('TyGiaChart'\)",
+        html,
+    )
+    if m3:
+        rates = [int(x) for x in re.findall(r"\d+", m3.group(1))]
+        if rates:
+            return {"price": float(rates[-1]), "chgAbs": None}
+    raise ValueError("SBV central rate not found")
+
+
 def fx_with_state(state: dict):
-    data = get_json("https://open.er-api.com/v6/latest/USD")
-    rates = data.get("rates") or {}
+    """USD/VND: VCB trading mid as price + SBV central as sbvCenter."""
     out = {}
-    vnd = float(rates["VND"]) if "VND" in rates else None
-    if vnd is not None:
-        prev = state.get("usdvnd")
-        chg = ((vnd - prev) / prev * 100.0) if prev else None
-        out["usdvnd"] = {
-            "price": vnd,
-            "prevClose": prev,
-            "chgPct": chg,
-            "chgAbs": (vnd - prev) if prev is not None else None,
-            "source": "er-api",
-        }
-        state["usdvnd"] = vnd
+    vcb = fetch_vcb_usd()
+    sbv = None
+    try:
+        sbv = fetch_sbv_center()
+    except Exception:
+        sbv = None
+    mid = vcb["mid"]
+    prev = state.get("usdvnd")
+    chg = ((mid - prev) / prev * 100.0) if prev else None
+    item = {
+        "price": mid,
+        "buy": vcb["transfer"],
+        "sell": vcb["sell"],
+        "cash": vcb["cash"],
+        "transfer": vcb["transfer"],
+        "prevClose": prev,
+        "chgPct": chg,
+        "chgAbs": (mid - prev) if prev is not None else None,
+        "source": "vcb",
+        "vcbUpdated": vcb.get("updated"),
+    }
+    if sbv and sbv.get("price") is not None:
+        item["sbvCenter"] = sbv["price"]
+        item["sbvChgAbs"] = sbv.get("chgAbs")
+        item["source"] = "vcb+sbv"
+    out["usdvnd"] = item
+    state["usdvnd"] = mid
     return out
 
 
@@ -194,7 +269,7 @@ def main():
     payload = {
         "asOf": ict.strftime("%Y-%m-%d %H:%M:%S ICT"),
         "asOfUnix": int(time.time()),
-        "provider": "Investing.com (vs prior close) + er-api FX",
+        "provider": "Investing.com (vs prior close) + VCB/SBV USDVND",
         "quotes": fresh,
         "errors": errors,
         "retained": retained,
