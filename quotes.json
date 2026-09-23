@@ -1,1 +1,176 @@
-PLACEHOLDER
+{
+  "asOf": "2026-09-23 09:22:16 ICT",
+  "asOfUnix": 1790130136,
+  "provider": "Investing.com (vs prior close) + VCB/SBV USDVND",
+  "quotes": {
+    "dxy": {
+      "price": 100.388,
+      "prevClose": 100.319,
+      "chgPct": 0.06878058991816367,
+      "chgAbs": 0.06900000000000261,
+      "ts": 1790130000000,
+      "source": "investing",
+      "pairId": 8827
+    },
+    "ust10y": {
+      "price": 4.747,
+      "prevClose": 4.753,
+      "chgPct": -0.126236061434888,
+      "chgAbs": -0.006000000000000227,
+      "ts": 1790111100000,
+      "source": "investing",
+      "pairId": 23701
+    },
+    "ust2y": {
+      "price": 4.955,
+      "prevClose": 4.963,
+      "chgPct": -0.16119282691920223,
+      "chgAbs": -0.008000000000000007,
+      "ts": 1790119800000,
+      "source": "investing",
+      "pairId": 23705
+    },
+    "vnindex": {
+      "price": 1818.88,
+      "prevClose": 1816.93,
+      "chgPct": 0.10732389249998875,
+      "chgAbs": 1.9500000000000455,
+      "ts": 1790130000000,
+      "source": "investing",
+      "pairId": 41063
+    },
+    "wti": {
+      "price": 89.95,
+      "prevClose": 89.57,
+      "chgPct": 0.424249190577213,
+      "chgAbs": 0.38000000000000966,
+      "ts": 1790129700000,
+      "source": "investing",
+      "pairId": 8849
+    },
+    "brent": {
+      "price": 98.82,
+      "prevClose": 99.25,
+      "chgPct": -0.433249370277085,
+      "chgAbs": -0.4300000000000068,
+      "ts": 1790130000000,
+      "source": "investing",
+      "pairId": 8833
+    },
+    "gold": {
+      "price": 4373.05,
+      "prevClose": 4401.59,
+      "chgPct": -0.6484020547120464,
+      "chgAbs": -28.539999999999964,
+      "ts": 1790130000000,
+      "source": "investing",
+      "pairId": 8830
+    },
+    "spx": {
+      "price": 7764.64,
+      "prevClose": 7764.7,
+      "chgPct": -0.0007727278581206059,
+      "chgAbs": -0.05999999999949068,
+      "ts": 1790106900000,
+      "source": "investing",
+      "pairId": 166
+    },
+    "ndx": {
+      "price": 27244.28,
+      "prevClose": 27122.09,
+      "chgPct": 0.4505183781928262,
+      "chgAbs": 122.18999999999869,
+      "ts": 1790106900000,
+      "source": "investing",
+      "pairId": 14958
+    },
+    "dji": {
+      "price": 51863.69,
+      "prevClose": 52048.83,
+      "chgPct": -0.3557044413870579,
+      "chgAbs": -185.13999999999942,
+      "ts": 1790108400000,
+      "source": "investing",
+      "pairId": 169
+    },
+    "rut": {
+      "price": 2889.92,
+      "prevClose": 2875.36,
+      "chgPct": 0.5063713761059465,
+      "chgAbs": 14.559999999999945,
+      "ts": 1790106900000,
+      "source": "investing",
+      "pairId": 170
+    },
+    "gbpusd": {
+      "price": 1.3325,
+      "prevClose": 1.3344,
+      "chgPct": -0.14238609112709927,
+      "chgAbs": -0.0019000000000000128,
+      "ts": 1790130000000,
+      "source": "investing",
+      "pairId": 2
+    },
+    "audusd": {
+      "price": 0.7104,
+      "prevClose": 0.7112,
+      "chgPct": -0.11248593925759602,
+      "chgAbs": -0.0008000000000000229,
+      "ts": 1790130000000,
+      "source": "investing",
+      "pairId": 5
+    },
+    "eurusd": {
+      "price": 1.1434,
+      "prevClose": 1.1448,
+      "chgPct": -0.12229210342418481,
+      "chgAbs": -0.0014000000000000679,
+      "ts": 1790130000000,
+      "source": "investing",
+      "pairId": 1
+    },
+    "usdjpy": {
+      "price": 157.63,
+      "prevClose": 157.46,
+      "chgPct": 0.10796392734661976,
+      "chgAbs": 0.1699999999999875,
+      "ts": 1790130000000,
+      "source": "investing",
+      "pairId": 3
+    },
+    "btc": {
+      "price": 86594.0,
+      "prevClose": 86204.6,
+      "chgPct": 0.4517160337151314,
+      "chgAbs": 389.3999999999942,
+      "ts": 1790130000000,
+      "source": "investing",
+      "pairId": 1057391
+    },
+    "usdvnd": {
+      "price": 26020,
+      "buy": 25830.0,
+      "sell": 26210.0,
+      "cash": 25800.0,
+      "transfer": 25830.0,
+      "prevClose": 25971.628089,
+      "chgPct": 0.18624905159675284,
+      "chgAbs": 48.37191099999836,
+      "source": "vcb+sbv",
+      "vcbUpdated": "2026-09-23T08:00:11+07:00",
+      "sbvCenter": 25635.0,
+      "sbvChgAbs": -5.0
+    },
+    "ust2s10s": {
+      "price": -0.20800000000000018,
+      "chgPct": null,
+      "chgAbs": null,
+      "source": "derived"
+    }
+  },
+  "errors": [],
+  "retained": [
+    "ust2s10s"
+  ],
+  "investingOk": 16
+}
