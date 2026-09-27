@@ -32,6 +32,17 @@
     }
     return { pct: pct, abs: abs };
   }
+  // Futures (WTI/Brent/Gold): a contract roll can make "price vs prior close" compare two
+  // different contracts. If the server flagged a roll, or the day move is implausibly large,
+  // hide the % instead of showing a bogus change.
+  var ROLL_LIMIT = { wti: 7, brent: 7, gold: 5 };
+  function rollSuspect(key, item, pct) {
+    if (!item || !ROLL_LIMIT[key]) return false;
+    if (item.rollSuspect) return true;
+    return pct != null && !isNaN(pct) && Math.abs(pct) > ROLL_LIMIT[key];
+  }
+  var ROLL_NOTE = '<span style="color:#7a8699;font-weight:700">Chuyển hợp đồng kỳ hạn</span>';
+
   function chgHtml(text, cls, closed) {
     var label = '<b class="' + (cls || 'flat') + '">' + text + '</b>';
     if (closed) label += ' <span style="color:#7a8699;font-weight:700">· đóng cửa</span>';
@@ -138,7 +149,11 @@
     if (q.dxy) { var p = pct(q.dxy); setC('dxy', fmtNum(q.dxy.price, 2), p.t, p.c); }
     if (q.ust10y) { var u = deriveChg(q.ust10y); setC('ust10y', fmtNum(q.ust10y.price, 3) + '%', fmtBp(u.abs), clsPct(u.abs)); }
     if (q.vnindex) { var v = pct(q.vnindex); setC('vnindex', fmtNum(q.vnindex.price, 2), v.t, v.c); }
-    if (q.wti) { var w = pct(q.wti); setC('wti', '$' + fmtNum(q.wti.price, 2), w.t, w.c); }
+    if (q.wti) {
+      var w = pct(q.wti);
+      if (rollSuspect('wti', q.wti, deriveChg(q.wti).pct)) { w = { t: 'Chuyển hợp đồng kỳ hạn', c: 'flat' }; }
+      setC('wti', '$' + fmtNum(q.wti.price, 2), w.t, w.c);
+    }
     if (q.usdvnd && q.usdvnd.price != null) {
       var uv = q.usdvnd;
       var buy = uv.buy != null ? uv.buy : uv.transfer;
@@ -215,6 +230,10 @@
       var closed = SESSIONS[key] ? !isSessionOpen(key, now) : false;
       var priceText = fmtPrice(item.price);
       var d = deriveChg(item);
+      if (rollSuspect(key, item, d.pct)) {
+        setRow(key, priceText, '—', 'flat', closed);
+        return { priceText: priceText, dayText: '—', dayCls: 'flat', closed: closed, item: item, chgPct: null, roll: true };
+      }
       // mutate so dayFmt (bp) can use refreshed abs
       if (item.chgPct == null && d.pct != null) item.chgPct = d.pct;
       if (item.chgAbs == null && d.abs != null) item.chgAbs = d.abs;
@@ -261,21 +280,27 @@
     [['wti', 2, '$'], ['brent', 2, '$'], ['gold', 0, '$']].forEach(function (x) {
       var r = apply(x[0], function (p) { return x[2] + fmtNum(p, x[1]); });
       if (r && x[0] === 'wti') setLevel('wti', r.priceText, 'WTI');
+      if (r && x[0] === 'brent') {
+        setBoard('#live-brent', r.priceText, r.roll ? ROLL_NOTE : chgHtml(r.dayText, r.dayCls, false), false);
+      }
     });
-    [['spx', 0], ['ndx', 0], ['dji', 0], ['rut', 0]].forEach(function (x) {
+    [['spx', 0], ['ndx', 0], ['rut', 0]].forEach(function (x) {
       var r = apply(x[0], function (p) { return fmtNum(p, x[1]); });
       if (r && x[0] === 'spx') setLevel('spx', r.priceText, 'S&P 500');
     });
+    var dj = apply('dji', function (p) { return fmtNum(p, 2); });
+    if (dj) {
+      setBoard('#live-dji', dj.priceText, chgHtml(dj.dayText, dj.dayCls, dj.closed), dj.closed);
+      var djk = document.querySelector('#live-dji .k');
+      if (djk) djk.textContent = dj.closed ? 'Dow Jones · đóng cửa' : 'Dow Jones';
+    }
     apply('gbpusd', function (p) { return fmtNum(p, 4); });
     apply('audusd', function (p) { return fmtNum(p, 4); });
 
+    // EUR/USD, USD/JPY: detail-card rows + FX level only (no live-board tile)
     var e = apply('eurusd', function (p) { return fmtNum(p, 4); });
-    if (e) {
-      setBoard('#live-eurusd', e.priceText, chgHtml(e.dayText, e.dayCls, false), false);
-      setLevel('eurusd', e.priceText, 'EUR/USD');
-    }
-    var j = apply('usdjpy', function (p) { return fmtNum(p, 2); });
-    if (j) setBoard('#live-usdjpy', j.priceText, chgHtml(j.dayText, j.dayCls, false), false);
+    if (e) setLevel('eurusd', e.priceText, 'EUR/USD');
+    apply('usdjpy', function (p) { return fmtNum(p, 2); });
 
     var btc = apply('btc', function (p) { return '$' + fmtNum(p, 0); });
     if (btc) setBoard('#live-btc', btc.priceText, chgHtml(btc.dayText, btc.dayCls, false), false);
