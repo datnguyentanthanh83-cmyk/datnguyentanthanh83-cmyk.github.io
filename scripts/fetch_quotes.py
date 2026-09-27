@@ -82,6 +82,14 @@ def investing_quote(pair_id: int):
 
     chg_abs = (price - prev) if prev is not None else None
     chg_pct = ((price - prev) / prev * 100.0) if prev else None
+    # Close of the daily bar for the same calendar day as the last intraday bar
+    # (used to detect a futures contract roll: intraday and daily series disagree).
+    same_day_close = None
+    if drows:
+        d_last = datetime.fromtimestamp(int(drows[-1][0]) // 1000, timezone.utc).date()
+        d_intra = datetime.fromtimestamp(ts // 1000, timezone.utc).date()
+        if d_last == d_intra:
+            same_day_close = float(drows[-1][4])
     return {
         "price": price,
         "prevClose": prev,
@@ -90,7 +98,42 @@ def investing_quote(pair_id: int):
         "ts": ts,
         "source": "investing",
         "pairId": pair_id,
+        "_sameDayClose": same_day_close,
     }
+
+
+# Futures series on Investing roll to the next contract; around a roll the latest price
+# can belong to the new contract while prevClose belongs to the old one, which produces
+# a bogus day change. Max plausible |day change| in %, per key.
+ROLL_LIMITS = {"wti": 7.0, "brent": 7.0, "gold": 5.0}
+ROLL_MISMATCH = 0.02  # intraday last vs same-day daily close differ by >2%
+
+
+def apply_roll_guard(key: str, q: dict) -> dict:
+    """Never publish a price or day change that mixes two futures contracts."""
+    same_day = q.pop("_sameDayClose", None)
+    limit = ROLL_LIMITS.get(key)
+    if limit is None:
+        return q
+    price = q.get("price")
+    prev = q.get("prevClose")
+    if same_day and price and abs(price / same_day - 1.0) > ROLL_MISMATCH:
+        # Intraday and daily series disagree (roll artifact): use the daily settle so
+        # price and prevClose come from the same series.
+        q["intradayRaw"] = price
+        q["price"] = same_day
+        q["rollAdjusted"] = True
+        if prev:
+            q["chgAbs"] = same_day - prev
+            q["chgPct"] = (same_day - prev) / prev * 100.0
+    pct = q.get("chgPct")
+    if pct is not None and abs(pct) > limit:
+        # Still implausible: most likely prevClose belongs to the previous contract.
+        q["rollSuspect"] = True
+        q["rollReason"] = f"day change {pct:.2f}% > {limit}%"
+        q["chgPct"] = None
+        q["chgAbs"] = None
+    return q
 
 
 def _parse_num(s):
@@ -264,7 +307,7 @@ def main():
 
     for key, pid in PAIRS.items():
         try:
-            fresh[key] = investing_quote(pid)
+            fresh[key] = apply_roll_guard(key, investing_quote(pid))
             time.sleep(0.1)
         except Exception as e:
             errors.append(f"{key}:{e}")
