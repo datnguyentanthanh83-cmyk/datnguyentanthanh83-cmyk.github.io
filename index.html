@@ -144,6 +144,12 @@ h1{font-size:1.48rem;letter-spacing:-.03em;color:#262626;font-weight:800}.brand 
 .tr.is-live .name{color:#0f172a}.tr.is-live .change.live-day{font-weight:800}.live-item.is-closed .live-chg,.tr.is-closed .name{color:#7a8699}.card .level.is-live{outline:1px solid rgba(8,116,67,.22);outline-offset:2px;border-radius:6px}
 .section-label{font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:#667085;font-weight:800;margin:4px 0 10px}
 
+
+/* fix: long cells must wrap, name column keeps min width */
+.thead,.tr{grid-template-columns:minmax(5.5rem,1fr) minmax(0,auto) minmax(0,auto)!important}
+.tr span:not(.name){white-space:normal!important;overflow-wrap:anywhere;min-width:0}
+.tr .name{white-space:normal!important;overflow-wrap:anywhere}
+@media(max-width:700px){.thead,.tr{grid-template-columns:minmax(5rem,.9fr) minmax(0,auto) minmax(0,auto)!important}}
 </style>
 </head>
 <body>
