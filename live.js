@@ -34,8 +34,13 @@
   }
   function chgHtml(text, cls, closed) {
     var label = '<b class="' + (cls || 'flat') + '">' + text + '</b>';
-    if (closed) label += ' <span style="color:#7a8699;font-weight:700">· đóng</span>';
+    if (closed) label += ' <span style="color:#7a8699;font-weight:700">· đóng cửa</span>';
     return label;
+  }
+
+  function fmtAsOf(s) {
+    var m = /(\d{4})-(\d{2})-(\d{2})[ T](\d{2}):(\d{2})/.exec(s || '');
+    return m ? (m[4] + ':' + m[5] + ' ' + m[3] + '/' + m[2] + ' (GMT+7)') : '';
   }
 
   var SESSIONS = {
@@ -113,7 +118,7 @@
   function fillCarousel(payload) {
     var q = (payload && payload.quotes) || {};
     var asof = document.getElementById('carousel-asof');
-    if (asof) asof.textContent = payload.asOf || 'Live';
+    if (asof) { var at = fmtAsOf(payload.asOf); asof.textContent = at ? ('Cập nhật ' + at) : 'Đang cập nhật…'; }
     function setC(key, valText, chgText, cls) {
       var el = document.querySelector('.c-card[data-c="' + key + '"]');
       if (!el) return;
@@ -140,7 +145,7 @@
       var sell = uv.sell;
       var chgLine = '';
       if (buy != null && sell != null) {
-        chgLine = 'Mua CK ' + fmtNum(buy, 0) + ' · Bán ' + fmtNum(sell, 0);
+        chgLine = 'Mua ' + fmtNum(buy, 0) + ' · Bán ' + fmtNum(sell, 0);
       } else {
         var pe = pct(uv);
         chgLine = pe.t;
@@ -149,8 +154,8 @@
       var sbvEl = document.getElementById('c-usdvnd-sbv');
       if (sbvEl) {
         sbvEl.textContent = (uv.sbvCenter != null)
-          ? ('SBV TT ' + fmtNum(uv.sbvCenter, 0))
-          : 'SBV TT —';
+          ? ('Tỷ giá trung tâm ' + fmtNum(uv.sbvCenter, 0))
+          : 'Tỷ giá trung tâm —';
       }
       var card = document.querySelector('.c-card[data-c="usdvnd"]');
       if (card) {
@@ -180,14 +185,14 @@
         var wp = gs.worldPrice != null ? gs.worldPrice : (q.gold && q.gold.price);
         var wch = gs.worldChgPct != null ? gs.worldChgPct : (q.gold && q.gold.chgPct);
         if (wp != null) {
-          var wtxt = 'TG $' + fmtNum(wp, 0) + '/oz';
+          var wtxt = 'Thế giới $' + fmtNum(wp, 0) + '/oz';
           if (wch != null && !isNaN(wch)) {
             var sign = wch > 0 ? '+' : '';
             wtxt += ' (' + sign + Number(wch).toFixed(2) + '%)';
           }
           worldEl.textContent = wtxt;
         } else {
-          worldEl.textContent = 'TG $—/oz';
+          worldEl.textContent = 'Thế giới $—/oz';
         }
       }
       var gcard = document.querySelector('.c-card[data-c="goldsjc"]');
@@ -228,7 +233,7 @@
     var u10 = apply('ust10y', function (p) { return fmtNum(p, 3) + '%'; }, function (it) { return fmtBp(it.chgAbs); });
     if (u10) {
       setBoard('#live-ust10y', u10.priceText, chgHtml(u10.dayText, u10.dayCls, u10.closed), u10.closed);
-      setLevel('ust10y', fmtNum(u10.item.price, 2) + '%', '10Y vs prior');
+      setLevel('ust10y', fmtNum(u10.item.price, 2) + '%', 'UST 10Y');
     }
     var u2 = apply('ust2y', function (p) { return fmtNum(p, 3) + '%'; }, function (it) { return fmtBp(it.chgAbs); });
     if (u2) {
@@ -255,11 +260,11 @@
 
     [['wti', 2, '$'], ['brent', 2, '$'], ['gold', 0, '$']].forEach(function (x) {
       var r = apply(x[0], function (p) { return x[2] + fmtNum(p, x[1]); });
-      if (r && x[0] === 'wti') setLevel('wti', r.priceText, 'WTI vs prior');
+      if (r && x[0] === 'wti') setLevel('wti', r.priceText, 'WTI');
     });
     [['spx', 0], ['ndx', 0], ['dji', 0], ['rut', 0]].forEach(function (x) {
       var r = apply(x[0], function (p) { return fmtNum(p, x[1]); });
-      if (r && x[0] === 'spx') setLevel('spx', r.priceText, 'S&P vs prior');
+      if (r && x[0] === 'spx') setLevel('spx', r.priceText, 'S&P 500');
     });
     apply('gbpusd', function (p) { return fmtNum(p, 4); });
     apply('audusd', function (p) { return fmtNum(p, 4); });
@@ -278,10 +283,10 @@
     var v = apply('usdvnd', function (p) { return fmtNum(p, 0); });
     if (v) {
       var it = v.item || {};
-      var sbvTxt = (it.sbvCenter != null) ? ('SBV TT ' + fmtNum(it.sbvCenter, 0)) : 'SBV TT —';
+      var sbvTxt = (it.sbvCenter != null) ? ('Tỷ giá trung tâm ' + fmtNum(it.sbvCenter, 0)) : 'Tỷ giá trung tâm —';
       var buySell = '';
       if (it.buy != null && it.sell != null) {
-        buySell = 'Mua CK ' + fmtNum(it.buy, 0) + ' · Bán ' + fmtNum(it.sell, 0);
+        buySell = 'Mua ' + fmtNum(it.buy, 0) + ' · Bán ' + fmtNum(it.sell, 0);
       }
       var vHtml = '<span style="color:#7a8699;font-weight:700">' + sbvTxt
         + (buySell ? (' · ' + buySell) : '') + '</span>';
@@ -291,7 +296,7 @@
     }
 
     var head = $('#live-board .live-head h2');
-    if (head) head.textContent = 'Near real-time · Investing.com · vs prior close';
+    if (head) head.textContent = 'Giá thị trường · Investing.com (có độ trễ)';
   }
 
   var refreshing = false;
@@ -316,9 +321,8 @@
   async function refresh() {
     if (refreshing) return;
     refreshing = true;
-    var t0 = Date.now();
     try {
-      setStatus('Đang tải quotes…', true);
+      if (!lastGood) setStatus('Đang tải dữ liệu…', true);
       var r = await fetch(QUOTES_URL + '?t=' + Date.now(), { cache: 'no-store' });
       if (!r.ok) throw new Error('HTTP ' + r.status);
       var payload = await r.json();
@@ -328,17 +332,16 @@
       }).length;
       if (n > 0) lastGood = merged;
       applyQuotes(merged);
-      var ms = Date.now() - t0;
-      var note = (payload.errors && payload.errors.length)
-        ? ' · giữ ' + ((payload.retained && payload.retained.length) || 0) + ' mã cũ'
-        : '';
-      setStatus('Investing · vs prior close · ' + (merged.asOf || '') + ' · ' + ms + 'ms' + note, true);
+      var at = fmtAsOf(merged.asOf);
+      var marketsClosed = !isSessionOpen('vnindex') && !isSessionOpen('spx');
+      setStatus('Nguồn: Investing.com' + (at ? (' · Cập nhật ' + at) : '')
+        + (marketsClosed ? ' · Cổ phiếu: giá đóng cửa phiên gần nhất' : ''), true);
     } catch (e) {
       if (lastGood) {
         applyQuotes(lastGood);
-        setStatus('Mạng lỗi — giữ snapshot cũ. (' + (e && e.message) + ')', false);
+        setStatus('Không tải được dữ liệu mới · đang hiển thị giá gần nhất', false);
       } else {
-        setStatus('Chưa có quotes.json — giữ snapshot. (' + (e && e.message) + ')', false);
+        setStatus('Chưa tải được dữ liệu giá · vui lòng thử lại sau', false);
       }
       console.warn(e);
     } finally {
