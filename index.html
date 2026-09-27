@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Macro Markets Dashboard · Dat</title>
+<title>Macro Markets Dashboard · Macro Eco</title>
 
-<meta name="description" content="Macro Markets Dashboard: Fed/rates, DXY, FX, oil, VN-Index + Geo Pulse 24h. Live delayed quotes.">
+<meta name="description" content="Macro Markets Dashboard: Fed và lãi suất, DXY, tỷ giá, dầu, VN-Index và tin địa chính trị 24h.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://datnguyentanthanh83-cmyk.github.io/">
 <meta property="og:title" content="Weekly Macro Update · Rates · Oil · VN · Geo">
-<meta property="og:description" content="Dashboard macro live: DXY, UST, VN-Index, WTI + tin địa chính trị 24h & nhận định. Delayed quotes — not investment advice.">
+<meta property="og:description" content="Dashboard vĩ mô: DXY, UST, VN-Index, WTI, tin địa chính trị 24h và nhận định. Giá có độ trễ — không phải khuyến nghị đầu tư.">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/datnguyentanthanh83-cmyk/datnguyentanthanh83-cmyk.github.io@main/og.jpg">
 <meta property="og:image:secure_url" content="https://cdn.jsdelivr.net/gh/datnguyentanthanh83-cmyk/datnguyentanthanh83-cmyk.github.io@main/og.jpg">
 <meta property="og:image:type" content="image/jpeg">
@@ -17,7 +17,7 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Weekly Macro Update · Rates · Oil · VN · Geo">
-<meta name="twitter:description" content="Dashboard macro live + Geo Pulse 24h. Delayed quotes — not investment advice.">
+<meta name="twitter:description" content="Dashboard vĩ mô và tin địa chính trị 24h. Giá có độ trễ — không phải khuyến nghị đầu tư.">
 <meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/datnguyentanthanh83-cmyk/datnguyentanthanh83-cmyk.github.io@main/og.jpg">
 
 <style>
@@ -153,14 +153,14 @@ h1{font-size:1.48rem;letter-spacing:-.03em;color:#262626;font-weight:800}.brand 
 </style>
 </head>
 <body>
-<div class="shell" id="app"><div class="err">Đang tải dữ liệu… cần cả <code>index.html</code> và <code>data.js</code> trong cùng thư mục.</div></div>
+<div class="shell" id="app"><div class="err">Đang tải dữ liệu…</div></div>
 <script>document.write('<script src="./data.js?v='+Date.now()+'"><\/script>');</script>
 <script>
 (function () {
   var d = window.MACRO_DATA;
   var app = document.getElementById('app');
   if (!d) {
-    app.innerHTML = '<div class="err">Không đọc được data.js. Hãy để <b>index.html</b> và <b>data.js</b> cùng một thư mục, rồi mở bằng Chrome/Safari.</div>';
+    app.innerHTML = '<div class="err">Không tải được dữ liệu. Vui lòng tải lại trang sau ít phút.</div>';
     return;
   }
   function esc(s){return String(s==null?'':s)}
@@ -174,24 +174,24 @@ h1{font-size:1.48rem;letter-spacing:-.03em;color:#262626;font-weight:800}.brand 
   var m = d.meta;
   var html = '';
   html += '<header class="header"><div class="brand"><div class="logo">ME</div><div><h1>'+esc(m.title)+'</h1><p>'+esc(m.subtitle)+'</p></div></div><div class="meta"><div class="pill"><i class="dot"></i>'+esc(m.status)+'</div><div class="pill">'+esc(m.dateLabel)+'</div><div class="pill">'+esc(m.asOf)+'</div></div></header>';
-  html += '<section class="carousel-wrap" id="share-carousel"><div class="carousel-head"><h2>Live snapshot · vuốt ngang</h2><div class="carousel-hint" id="carousel-asof">Updating…</div></div><div class="carousel" id="carousel">'
-    + '<article class="c-card" data-c="dxy"><div class="c-lab">DXY</div><div class="c-val">—</div><div class="c-chg"></div><div class="c-sub">Dollar index</div></article>'
-    + '<article class="c-card" data-c="ust10y"><div class="c-lab">UST 10Y</div><div class="c-val">—</div><div class="c-chg"></div><div class="c-sub">Yield · bp ngày</div></article>'
-    + '<article class="c-card" data-c="vnindex"><div class="c-lab">VN-Index</div><div class="c-val">—</div><div class="c-chg"></div><div class="c-sub">Vs prior close</div></article>'
-    + '<article class="c-card" data-c="wti"><div class="c-lab">WTI</div><div class="c-val">—</div><div class="c-chg"></div><div class="c-sub">Oil · Investing</div></article>'
-    + '<article class="c-card" data-c="usdvnd"><div class="c-lab">USD/VND · VCB</div><div class="c-val">—</div><div class="c-chg"></div><div class="c-sbv" id="c-usdvnd-sbv">SBV TT —</div><div class="c-sub">Giá giao dịch VCB</div></article>'
-    + '<article class="c-card" data-c="goldsjc"><div class="c-lab">Vàng SJC · lượng</div><div class="c-val">—</div><div class="c-chg"></div><div class="c-world" id="c-gold-world">TG $—/oz</div><div class="c-sub">Giá SJC / lượng</div></article>'
-    + '<article class="c-card geo" data-c="geo"><div class="c-lab">Geo Pulse 24h</div><div class="c-val" id="c-geo-hd">—</div><div class="c-sub" id="c-geo-tag">Tin nổi bật</div></article>'
+  html += '<section class="carousel-wrap" id="share-carousel"><div class="carousel-head"><h2>Tổng quan thị trường · vuốt ngang</h2><div class="carousel-hint" id="carousel-asof">Đang cập nhật…</div></div><div class="carousel" id="carousel">'
+    + '<article class="c-card" data-c="dxy"><div class="c-lab">DXY</div><div class="c-val">—</div><div class="c-chg"></div><div class="c-sub">Chỉ số đô la Mỹ</div></article>'
+    + '<article class="c-card" data-c="ust10y"><div class="c-lab">UST 10Y</div><div class="c-val">—</div><div class="c-chg"></div><div class="c-sub">Lợi suất · thay đổi ngày (bp)</div></article>'
+    + '<article class="c-card" data-c="vnindex"><div class="c-lab">VN-Index</div><div class="c-val">—</div><div class="c-chg"></div><div class="c-sub">So với phiên trước</div></article>'
+    + '<article class="c-card" data-c="wti"><div class="c-lab">WTI</div><div class="c-val">—</div><div class="c-chg"></div><div class="c-sub">Dầu thô WTI</div></article>'
+    + '<article class="c-card" data-c="usdvnd"><div class="c-lab">USD/VND · VCB</div><div class="c-val">—</div><div class="c-chg"></div><div class="c-sbv" id="c-usdvnd-sbv">Tỷ giá trung tâm —</div><div class="c-sub">Giá niêm yết Vietcombank</div></article>'
+    + '<article class="c-card" data-c="goldsjc"><div class="c-lab">Vàng SJC · lượng</div><div class="c-val">—</div><div class="c-chg"></div><div class="c-world" id="c-gold-world">Thế giới $—/oz</div><div class="c-sub">Giá SJC / lượng</div></article>'
+    + '<article class="c-card geo" data-c="geo"><div class="c-lab">Địa chính trị 24h</div><div class="c-val" id="c-geo-hd">—</div><div class="c-sub" id="c-geo-tag">Tin nổi bật</div></article>'
     + '</div><div class="c-dots" id="c-dots"></div></section>';
 
-  html += '<section class="live-board" id="live-board"><div class="live-head"><h2>Near real-time · Investing.com (delayed)</h2><div class="live-status" id="live-status">Chờ quote…</div></div><div class="live-grid">'
+  html += '<section class="live-board" id="live-board"><div class="live-head"><h2>Giá thị trường · Investing.com (có độ trễ)</h2><div class="live-status" id="live-status">Đang tải dữ liệu…</div></div><div class="live-grid">'
     +'<div class="live-item" id="live-dxy"><div class="k">DXY</div><div class="live-value">—</div><div class="live-chg"></div></div>'
     +'<div class="live-item" id="live-ust10y"><div class="k">UST 10Y</div><div class="live-value">—</div><div class="live-chg"></div></div>'
     +'<div class="live-item" id="live-ust2y"><div class="k">UST 2Y</div><div class="live-value">—</div><div class="live-chg"></div></div>'
     +'<div class="live-item" id="live-vn"><div class="k">VN-Index</div><div class="live-value">—</div><div class="live-chg"></div></div>'
-    +'<div class="live-item" id="live-usdvnd"><div class="k">USD/VND · VCB</div><div class="live-value">—</div><div class="live-chg">SBV TT —</div></div>'
-    +'<div class="live-item" id="live-eurusd"><div class="k">EUR/USD</div><div class="live-value">—</div><div class="live-chg">FX mid</div></div>'
-    +'<div class="live-item" id="live-usdjpy"><div class="k">USD/JPY</div><div class="live-value">—</div><div class="live-chg">FX mid</div></div>'
+    +'<div class="live-item" id="live-usdvnd"><div class="k">USD/VND · VCB</div><div class="live-value">—</div><div class="live-chg">Tỷ giá trung tâm —</div></div>'
+    +'<div class="live-item" id="live-eurusd"><div class="k">EUR/USD</div><div class="live-value">—</div><div class="live-chg"></div></div>'
+    +'<div class="live-item" id="live-usdjpy"><div class="k">USD/JPY</div><div class="live-value">—</div><div class="live-chg"></div></div>'
     +'<div class="live-item" id="live-btc"><div class="k">Bitcoin</div><div class="live-value">—</div><div class="live-chg"></div></div>'
     +'</div></section>';
   html += '<div class="section-label">Bảng chỉ số chi tiết</div>';
@@ -235,7 +235,7 @@ h1{font-size:1.48rem;letter-spacing:-.03em;color:#262626;font-weight:800}.brand 
   }).join('')+'</section>';
   html += '<div class="section-label">Tin địa chính trị · 24h</div>';
   var geo = d.geoNews || {};
-  html += '<section class="geo-feed"><div class="geo-feed-head"><h2>'+esc(geo.title||'Geo Pulse · Tin quan trọng')+'</h2><div class="sub">'+esc(geo.window||'24h gần nhất')+'</div></div>';
+  html += '<section class="geo-feed"><div class="geo-feed-head"><h2>'+esc(geo.title||'Địa chính trị · Tin quan trọng')+'</h2><div class="sub">'+esc(geo.window||'24h gần nhất')+'</div></div>';
   (geo.items||[]).forEach(function(it){
     var tagCls = it.tagClass ? (' '+it.tagClass) : '';
     html += '<article class="geo-item"><div class="meta-row">';
@@ -245,7 +245,7 @@ h1{font-size:1.48rem;letter-spacing:-.03em;color:#262626;font-weight:800}.brand 
     if (it.url) html += '<a class="more" href="'+esc(it.url)+'" target="_blank" rel="noopener">Đọc nguồn</a>';
     html += '</article>';
   });
-  if (!(geo.items||[]).length) html += '<article class="geo-item"><p>Chưa có tin Geo Pulse trong cửa sổ 24h — sẽ cập nhật khi có brief.</p></article>';
+  if (!(geo.items||[]).length) html += '<article class="geo-item"><p>Chưa có tin địa chính trị mới trong 24 giờ qua.</p></article>';
   if (geo.sourceNote) html += '<p class="source-note">'+esc(geo.sourceNote)+'</p>';
   html += '</section>';
 
@@ -255,14 +255,14 @@ h1{font-size:1.48rem;letter-spacing:-.03em;color:#262626;font-weight:800}.brand 
 
   var tr = d.trading||{};
   if (tr.title || tr.body) {
-    html += '<section class="trading"><div class="badge">'+esc(tr.badge||'Macro Eco · Trading')+'</div><h2>'+esc(tr.title||'Chiến lược Trading')+'</h2><p>'+(tr.body||'')+'</p></section>';
+    html += '<section class="trading"><div class="badge">'+esc(tr.badge||'Macro Eco · Chiến lược')+'</div><h2>'+esc(tr.title||'Chiến lược giao dịch')+'</h2><p>'+(tr.body||'')+'</p></section>';
   }
   if (d.sources) {
-    html += '<section class="sources"><p><strong>Sources:</strong> '+esc(d.sources)+'</p></section>';
+    html += '<section class="sources"><p><strong>Nguồn tham khảo:</strong> '+esc(d.sources)+'</p></section>';
   }
 
-  html += '<section class="spotlight"><div class="panel"><h2>Bottom line hôm nay</h2><ul>'+(d.bottomLine||[]).map(function(x){return '<li>'+esc(x)+'</li>';}).join('')+'</ul></div><div class="side"><h2>Lịch catalyst</h2><div class="cal">'+(d.catalysts||[]).map(function(x){return '<div class="cal-item"><span class="when">'+esc(x.when)+'</span><span class="what">'+esc(x.what)+'</span></div>';}).join('')+'</div></div></section>';
-  html += '<div class="legend"><b>Quy ước:</b><span><i style="background:#087443"></i> tăng</span><span><i style="background:#c73545"></i> giảm</span><span><i style="background:#a7b0bd"></i> chưa có dữ liệu = —</span><span>Fed: vs kỳ gần nhất · Inflation: MoM/YoY · còn lại: % ngày/% tuần</span></div>';
+  html += '<section class="spotlight"><div class="panel"><h2>Điểm chính hôm nay</h2><ul>'+(d.bottomLine||[]).map(function(x){return '<li>'+esc(x)+'</li>';}).join('')+'</ul></div><div class="side"><h2>Lịch sự kiện quan trọng</h2><div class="cal">'+(d.catalysts||[]).map(function(x){return '<div class="cal-item"><span class="when">'+esc(x.when)+'</span><span class="what">'+esc(x.what)+'</span></div>';}).join('')+'</div></div></section>';
+  html += '<div class="legend"><b>Quy ước:</b><span><i style="background:#087443"></i> tăng</span><span><i style="background:#c73545"></i> giảm</span><span><i style="background:#a7b0bd"></i> chưa có dữ liệu = —</span><span>Fed: so với kỳ họp gần nhất · Lạm phát: MoM/YoY · Còn lại: % ngày/% tuần</span></div>';
   var f = d.footer||{};
   html += '<footer class="footer"><span>'+esc(f.left||'')+'</span><span class="source">'+esc(f.source||'')+'</span></footer>';
   app.innerHTML = html;
