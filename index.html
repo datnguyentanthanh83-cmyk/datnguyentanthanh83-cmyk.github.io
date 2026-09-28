@@ -56,13 +56,14 @@ h1{font-size:1.48rem;letter-spacing:-.03em;color:#262626;font-weight:800}.brand 
 .comment .badge{display:inline-flex;align-items:center;gap:7px;padding:5px 11px;border-radius:999px;background:#eef4ff;color:#1d4ed8;font-size:.7rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;margin-bottom:12px}
 .comment h2{font-size:1.05rem;font-weight:800;color:#262626;letter-spacing:-.02em;margin-bottom:10px}
 .comment p{font-size:.88rem;color:#333333;font-weight:600;line-height:1.68;margin-bottom:12px}.comment p:last-child{margin-bottom:0}.comment strong{color:#262626;font-weight:800}
-.spotlight{display:grid;grid-template-columns:1.35fr 1fr;gap:14px;margin-top:14px}
+.spotlight{display:grid;grid-template-columns:1fr;gap:14px;margin-top:14px}
 .panel{padding:19px 21px;background:linear-gradient(135deg,#eef5ff,#fff)}
 .panel h2,.side h2{font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:#275bc5;margin-bottom:11px}
 .panel ul{list-style:none;display:flex;flex-direction:column;gap:9px}
 .panel li{font-size:.86rem;color:#262626;font-weight:650;display:flex;gap:9px}
 .panel li:before{content:"";width:6px;height:6px;flex:0 0 6px;border-radius:50%;background:#f0a62b;margin-top:7px}
 .side{padding:19px 21px}.side h2{color:#667085}
+.panel.bottom-line{display:block;margin:0 0 18px}
 .cal{display:flex;flex-direction:column;gap:8px}
 .cal-item{display:flex;gap:12px;padding:9px 11px;background:#fafbfc;border:1px solid var(--line);border-radius:10px;font-size:.77rem}
 .when{color:#1d4ed8;font-weight:800;min-width:58px}.what{color:#262626;font-weight:650}
@@ -154,7 +155,7 @@ h1{font-size:1.48rem;letter-spacing:-.03em;color:#262626;font-weight:800}.brand 
 html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 .hero,.grid,.spotlight,.live-grid{min-width:0}
 .hero>*,.grid>*,.spotlight>*,.live-grid>*,.shell>*{min-width:0}
-.hero{grid-template-columns:repeat(4,minmax(0,1fr))}.grid{grid-template-columns:repeat(3,minmax(0,1fr))}.spotlight{grid-template-columns:minmax(0,1.35fr) minmax(0,1fr)}.live-grid{grid-template-columns:repeat(8,minmax(0,1fr))}
+.hero{grid-template-columns:repeat(4,minmax(0,1fr))}.grid{grid-template-columns:repeat(3,minmax(0,1fr))}.spotlight{grid-template-columns:minmax(0,1fr)}.live-grid{grid-template-columns:repeat(8,minmax(0,1fr))}
 @media(max-width:1100px){.hero,.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.spotlight{grid-template-columns:minmax(0,1fr)}.live-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
 @media(max-width:700px){.hero,.grid{grid-template-columns:minmax(0,1fr)}.live-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .card-top{flex-wrap:wrap;min-width:0}.card-top .cat{flex:1 1 12rem;min-width:0}.cat h3,.cat span{overflow-wrap:anywhere}
@@ -198,6 +199,8 @@ html,body{overflow-x:clip} /* backup only */
     + '<article class="c-card" data-c="goldsjc"><div class="c-lab">Vàng SJC · lượng</div><div class="c-val">—</div><div class="c-chg"></div><div class="c-world" id="c-gold-world">Thế giới $—/oz</div><div class="c-sub">Giá SJC / lượng</div></article>'
     + '<article class="c-card geo" data-c="geo"><div class="c-lab">Địa chính trị 24h</div><div class="c-val" id="c-geo-hd">—</div><div class="c-sub" id="c-geo-tag">Tin nổi bật</div></article>'
     + '</div><div class="c-dots" id="c-dots"></div></section>';
+
+  html += '<section class="panel bottom-line" id="bottom-line"><h2>Điểm chính hôm nay</h2><ul>'+(d.bottomLine||[]).map(function(x){return '<li>'+esc(x)+'</li>';}).join('')+'</ul></section>';
 
   html += '<section class="live-board" id="live-board"><div class="live-head"><h2>Giá thị trường · Investing.com (có độ trễ)</h2><div class="live-status" id="live-status">Đang tải dữ liệu…</div></div><div class="live-grid">'
     +'<div class="live-item" id="live-dji"><div class="k">Dow Jones</div><div class="live-value">—</div><div class="live-chg"></div></div>'
@@ -276,7 +279,7 @@ html,body{overflow-x:clip} /* backup only */
     html += '<section class="sources"><p><strong>Nguồn tham khảo:</strong> '+esc(d.sources)+'</p></section>';
   }
 
-  html += '<section class="spotlight"><div class="panel"><h2>Điểm chính hôm nay</h2><ul>'+(d.bottomLine||[]).map(function(x){return '<li>'+esc(x)+'</li>';}).join('')+'</ul></div><div class="side"><h2>Lịch sự kiện quan trọng</h2><div class="cal">'+(d.catalysts||[]).map(function(x){return '<div class="cal-item"><span class="when">'+esc(x.when)+'</span><span class="what">'+esc(x.what)+'</span></div>';}).join('')+'</div></div></section>';
+  html += '<section class="spotlight"><div class="side"><h2>Lịch sự kiện quan trọng</h2><div class="cal">'+(d.catalysts||[]).map(function(x){return '<div class="cal-item"><span class="when">'+esc(x.when)+'</span><span class="what">'+esc(x.what)+'</span></div>';}).join('')+'</div></div></section>';
   html += '<div class="legend"><b>Quy ước:</b><span><i style="background:#087443"></i> tăng</span><span><i style="background:#c73545"></i> giảm</span><span><i style="background:#a7b0bd"></i> chưa có dữ liệu = —</span><span>Fed: so với kỳ họp gần nhất · Lạm phát: MoM/YoY · Còn lại: % ngày/% tuần</span></div>';
   var f = d.footer||{};
   html += '<footer class="footer"><span>'+esc(f.left||'')+'</span><span class="source">'+esc(f.source||'')+'</span></footer>';
