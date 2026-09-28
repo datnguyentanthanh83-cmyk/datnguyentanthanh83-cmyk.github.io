@@ -254,8 +254,9 @@
       setBoard('#live-ust10y', u10.priceText, chgHtml(u10.dayText, u10.dayCls, u10.closed), u10.closed);
       setLevel('ust10y', fmtNum(u10.item.price, 2) + '%', 'UST 10Y');
     }
+    // UST 2Y: detail-card rows only (no live-board tile)
     var u2 = apply('ust2y', function (p) { return fmtNum(p, 3) + '%'; }, function (it) { return fmtBp(it.chgAbs); });
-    if (u2) {
+    if (u2 && $('#live-ust2y')) {
       setBoard('#live-ust2y', u2.priceText, chgHtml(u2.dayText, u2.dayCls, u2.closed), u2.closed);
     }
     if (q.ust2s10s && q.ust2s10s.price != null) {
@@ -282,6 +283,10 @@
       if (r && x[0] === 'wti') setLevel('wti', r.priceText, 'WTI');
       if (r && x[0] === 'brent') {
         setBoard('#live-brent', r.priceText, r.roll ? ROLL_NOTE : chgHtml(r.dayText, r.dayCls, false), false);
+      }
+      if (r && x[0] === 'gold') {
+        // World gold tile: USD/oz with 2 decimals; hide % on a futures contract roll
+        setBoard('#live-gold', '$' + fmtNum(r.item.price, 2), r.roll ? ROLL_NOTE : chgHtml(r.dayText, r.dayCls, false), false);
       }
     });
     [['spx', 0], ['ndx', 0], ['rut', 0]].forEach(function (x) {
