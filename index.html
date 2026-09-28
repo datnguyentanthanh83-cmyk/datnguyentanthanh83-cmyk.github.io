@@ -167,6 +167,14 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 .live-item .live-value{white-space:normal;overflow-wrap:anywhere}
 html,body{overflow-x:clip} /* backup only */
 .cal-item .when{flex:0 0 3.7rem;min-width:3.7rem;white-space:nowrap;overflow-wrap:normal;word-break:normal}.cal-item .what{flex:1 1 auto;min-width:0}
+/* background music toggle */
+.bgm-btn{position:fixed;right:calc(14px + env(safe-area-inset-right,0px));bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:1000;display:inline-flex;align-items:center;gap:6px;height:40px;padding:0 15px;border-radius:999px;border:1px solid #1f5cc9;background:#fff;color:#1f5cc9;font:700 13px/1 Arial,Helvetica,"Helvetica Neue",sans-serif;letter-spacing:.01em;cursor:pointer;box-shadow:0 6px 16px rgba(25,42,70,.16);-webkit-tap-highlight-color:transparent;transition:background .15s,color .15s,box-shadow .15s;opacity:.94}
+.bgm-btn:hover{opacity:1;box-shadow:0 8px 20px rgba(25,42,70,.22)}
+.bgm-btn:focus-visible{outline:3px solid rgba(31,92,201,.35);outline-offset:2px}
+.bgm-btn[aria-pressed="true"]{background:#1f5cc9;color:#fff}
+.bgm-btn .bgm-ic{font-size:14px;width:14px;text-align:center}
+body{padding-bottom:calc(64px + env(safe-area-inset-bottom,0px))}
+@media print{.bgm-btn{display:none}}
 </style>
 </head>
 <body>
@@ -308,5 +316,43 @@ html,body{overflow-x:clip} /* backup only */
 })();
 </script>
 <script>document.write('<script src="./live.js?v='+Date.now()+'"><\/script>');</script>
+<audio id="bgm" src="./bgm.mp3" loop preload="none"></audio>
+<button type="button" id="bgmToggle" class="bgm-btn" aria-pressed="false" aria-label="Bật nhạc nền" title="Bật nhạc nền"><span class="bgm-ic" aria-hidden="true">♪</span><span>Nhạc nền</span></button>
+<script>
+(function(){
+  var a=document.getElementById('bgm'),b=document.getElementById('bgmToggle');
+  if(!a||!b)return;
+  var KEY='macroeco_bgm',ic=b.querySelector('.bgm-ic');
+  a.volume=0.25;
+  function store(v){try{localStorage.setItem(KEY,v)}catch(e){}}
+  function pref(){try{return localStorage.getItem(KEY)}catch(e){return null}}
+  function ui(on){
+    b.setAttribute('aria-pressed',on?'true':'false');
+    var t=on?'Tắt nhạc nền':'Bật nhạc nền';
+    b.setAttribute('aria-label',t);b.title=t;
+    ic.textContent=on?'❚❚':'♪';
+  }
+  function play(){
+    var p;
+    try{p=a.play()}catch(e){ui(false);return}
+    if(p&&typeof p.then==='function'){p.then(function(){ui(true)},function(){ui(false)})}else{ui(!a.paused)}
+  }
+  b.addEventListener('click',function(e){
+    e.stopPropagation();disarm();
+    if(a.paused){store('on');ui(true);play()}else{a.pause();store('off');ui(false)}
+  });
+  a.addEventListener('pause',function(){ui(false)});
+  a.addEventListener('playing',function(){ui(true)});
+  a.addEventListener('error',function(){ui(false)});
+  var evs=['pointerdown','keydown','touchstart'];
+  function resume(e){
+    if(e&&e.target&&b.contains(e.target))return;
+    disarm();if(a.paused){ui(true);play()}
+  }
+  function disarm(){evs.forEach(function(t){document.removeEventListener(t,resume,true)})}
+  ui(false);
+  if(pref()==='on'){evs.forEach(function(t){document.addEventListener(t,resume,{capture:true,passive:true})})}
+})();
+</script>
 </body>
 </html>
