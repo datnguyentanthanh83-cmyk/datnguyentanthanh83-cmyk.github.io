@@ -62,6 +62,7 @@ h1{font-size:1.48rem;letter-spacing:-.03em;color:#262626;font-weight:800}.brand 
 .panel ul{list-style:none;display:flex;flex-direction:column;gap:9px}
 .panel li{font-size:.86rem;color:#262626;font-weight:650;display:flex;gap:9px}
 .panel li:before{content:"";width:6px;height:6px;flex:0 0 6px;border-radius:50%;background:#f0a62b;margin-top:7px}
+.panel li.tone-pos:before{background:var(--green)}.panel li.tone-neg:before{background:var(--red)}.panel li.tone-neu:before{background:#f0a62b}
 .side{padding:19px 21px}.side h2{color:#667085}
 .panel.bottom-line{display:block;margin:0 0 18px}
 .cal{display:flex;flex-direction:column;gap:8px}
@@ -200,7 +201,7 @@ html,body{overflow-x:clip} /* backup only */
     + '<article class="c-card geo" data-c="geo"><div class="c-lab">Địa chính trị 24h</div><div class="c-val" id="c-geo-hd">—</div><div class="c-sub" id="c-geo-tag">Tin nổi bật</div></article>'
     + '</div><div class="c-dots" id="c-dots"></div></section>';
 
-  html += '<section class="panel bottom-line" id="bottom-line"><h2>Điểm chính hôm nay</h2><ul>'+(d.bottomLine||[]).map(function(x){return '<li>'+esc(x)+'</li>';}).join('')+'</ul></section>';
+  html += '<section class="panel bottom-line" id="bottom-line"><h2>Điểm chính hôm nay</h2><ul>'+(d.bottomLine||[]).map(function(x){var o=(x&&typeof x==='object')?x:{text:x,tone:'neu'};var t=(o.tone==='pos'||o.tone==='neg')?o.tone:'neu';return '<li class="tone-'+t+'">'+esc(o.text)+'</li>';}).join('')+'</ul></section>';
 
   html += '<section class="live-board" id="live-board"><div class="live-head"><h2>Giá thị trường · Investing.com (có độ trễ)</h2><div class="live-status" id="live-status">Đang tải dữ liệu…</div></div><div class="live-grid">'
     +'<div class="live-item" id="live-dji"><div class="k">Dow Jones</div><div class="live-value">—</div><div class="live-chg"></div></div>'
