@@ -48,7 +48,6 @@ h1{font-size:1.48rem;letter-spacing:-.03em;color:#262626;font-weight:800}.brand 
 .tr .name{color:#555555;font-weight:650;overflow:hidden;text-overflow:ellipsis}
 .tr .val{font-weight:750;color:#172033;font-variant-numeric:tabular-nums}
 .change{font-weight:800;font-variant-numeric:tabular-nums}.up{color:var(--green)!important}.down{color:var(--red)!important}.flat{color:#7a8699!important}.dash{color:#64748b;font-weight:700}.tr span:not(.name){white-space:nowrap;font-variant-numeric:tabular-nums}.tr .name{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.note{font-size:.7rem;color:#666666;font-weight:600;margin-top:-5px}
 .news{border-top:1px solid var(--line);padding-top:11px;margin-top:auto}
 .news-label{font-size:.65rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#1d4ed8;margin-bottom:5px}
 .news p{font-size:.8rem;color:#333333;font-weight:600;line-height:1.5}
@@ -142,14 +141,13 @@ h1{font-size:1.48rem;letter-spacing:-.03em;color:#262626;font-weight:800}.brand 
 .sources strong{font-style:normal;font-weight:800;color:#334155;margin-right:6px}
 .footer .source{font-style:italic}
 .geo-feed .source-note{font-style:italic;font-size:.78rem;color:#667085;margin:8px 0 0;font-weight:600}
-.card .note{font-style:italic}
 .tr.is-live .name{color:#0f172a}.tr.is-live .change.live-day{font-weight:800}.live-item.is-closed .live-chg,.tr.is-closed .name{color:#7a8699}.card .level.is-live{outline:1px solid rgba(8,116,67,.22);outline-offset:2px;border-radius:6px}
 .section-label{font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:#667085;font-weight:800;margin:4px 0 10px}
 
 
 /* fix: long cells must wrap, name column keeps min width */
 .thead,.tr{grid-template-columns:minmax(5.5rem,1fr) minmax(0,auto) minmax(0,auto)!important}
-.tr span:not(.name){white-space:normal!important;overflow-wrap:anywhere;min-width:0}
+.tr span:not(.name){white-space:nowrap!important;overflow-wrap:normal;min-width:0}
 .tr .name{white-space:normal!important;overflow-wrap:anywhere}
 @media(max-width:700px){.thead,.tr{grid-template-columns:minmax(5rem,.9fr) minmax(0,auto) minmax(0,auto)!important}}
 /* fix: mobile overflow - grid tracks may shrink below content, card header wraps */
@@ -162,7 +160,7 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 .card-top{flex-wrap:wrap;min-width:0}.card-top .cat{flex:1 1 12rem;min-width:0}.cat h3,.cat span{overflow-wrap:anywhere}
 .tag{white-space:normal;max-width:100%;min-width:0;line-height:1.3;overflow-wrap:anywhere}
 .level{display:flex;flex-wrap:wrap;align-items:baseline;column-gap:6px;row-gap:2px;min-width:0;overflow-wrap:anywhere}.level small{margin-left:0}
-.note,.news p,.kpi,.pill,.cal-item,.what,.panel li,.live-item{overflow-wrap:anywhere;min-width:0}
+.news p,.kpi,.pill,.cal-item,.what,.panel li,.live-item{overflow-wrap:anywhere;min-width:0}
 .pill{max-width:100%;flex-wrap:wrap}.cal-item>*{min-width:0}
 .live-item .live-value{white-space:normal;overflow-wrap:anywhere}
 html,body{overflow-x:clip} /* backup only */
@@ -258,7 +256,7 @@ body{padding-bottom:calc(64px + env(safe-area-inset-bottom,0px))}
     else if (/US Bond Yields/i.test(c.title)) liveLevel=' data-live-level="ust10y"';
     else if (/Equities/i.test(c.title)) liveLevel=' data-live-level="spx"';
     else if (/FX/i.test(c.title)) liveLevel=' data-live-level="eurusd"';
-    return '<article class="card"><div class="card-top"><div class="cat"><div class="icon">'+esc(c.icon)+'</div><div><h3>'+esc(c.title)+'</h3><span>'+esc(c.subtitle)+'</span></div></div>'+tag+'</div><div class="level"'+liveLevel+'>'+esc(c.level)+(c.levelSmall?'<small>'+esc(c.levelSmall)+'</small>':'')+'</div><div class="table">'+thead+rows+'</div><div class="note">'+esc(c.note)+'</div><div class="news"><div class="news-label">Điểm nhấn</div><p>'+esc(c.news)+'</p></div></article>';
+    return '<article class="card"><div class="card-top"><div class="cat"><div class="icon">'+esc(c.icon)+'</div><div><h3>'+esc(c.title)+'</h3><span>'+esc(c.subtitle)+'</span></div></div>'+tag+'</div><div class="level"'+liveLevel+'>'+esc(c.level)+(c.levelSmall?'<small>'+esc(c.levelSmall)+'</small>':'')+'</div><div class="table">'+thead+rows+'</div><div class="news"><div class="news-label">Điểm nhấn</div><p>'+esc(c.news)+'</p></div></article>';
   }).join('')+'</section>';
   html += '<div class="section-label">Tin địa chính trị · 24h</div>';
   var geo = d.geoNews || {};
