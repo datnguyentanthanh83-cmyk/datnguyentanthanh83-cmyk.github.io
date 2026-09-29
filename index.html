@@ -273,7 +273,6 @@ body{padding-bottom:calc(64px + env(safe-area-inset-bottom,0px))}
     html += '</article>';
   });
   if (!(geo.items||[]).length) html += '<article class="geo-item"><p>Chưa có tin địa chính trị mới trong 24 giờ qua.</p></article>';
-  if (geo.sourceNote) html += '<p class="source-note">'+esc(geo.sourceNote)+'</p>';
   html += '</section>';
 
   html += '<div class="section-label">Tin AI · 24h</div>';
@@ -289,7 +288,6 @@ body{padding-bottom:calc(64px + env(safe-area-inset-bottom,0px))}
     html += '</article>';
   });
   if (!(ai.items||[]).length) html += '<article class="geo-item"><p>Chưa có tin AI mới trong 24 giờ qua.</p></article>';
-  if (ai.sourceNote) html += '<p class="source-note">'+esc(ai.sourceNote)+'</p>';
   html += '</section>';
 
   var cm = d.comment||{};
