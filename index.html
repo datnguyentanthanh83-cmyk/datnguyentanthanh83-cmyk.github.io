@@ -276,6 +276,22 @@ body{padding-bottom:calc(64px + env(safe-area-inset-bottom,0px))}
   if (geo.sourceNote) html += '<p class="source-note">'+esc(geo.sourceNote)+'</p>';
   html += '</section>';
 
+  html += '<div class="section-label">Tin AI · 24h</div>';
+  var ai = d.aiNews || {};
+  html += '<section class="geo-feed"><div class="geo-feed-head"><h2>'+esc(ai.title||'Tin AI · 24h')+'</h2><div class="sub">'+esc(ai.window||'24h gần nhất')+'</div></div>';
+  (ai.items||[]).forEach(function(it){
+    var tagCls = it.tagClass ? (' '+it.tagClass) : '';
+    html += '<article class="geo-item"><div class="meta-row">';
+    if (it.tag) html += '<span class="geo-tag'+tagCls+'">'+esc(it.tag)+'</span>';
+    if (it.when) html += '<span class="when">'+esc(it.when)+'</span>';
+    html += '</div><h3>'+esc(it.headline)+'</h3><p>'+esc(it.summary)+'</p>';
+    if (it.url) html += '<a class="more" href="'+esc(it.url)+'" target="_blank" rel="noopener">Đọc nguồn</a>';
+    html += '</article>';
+  });
+  if (!(ai.items||[]).length) html += '<article class="geo-item"><p>Chưa có tin AI mới trong 24 giờ qua.</p></article>';
+  if (ai.sourceNote) html += '<p class="source-note">'+esc(ai.sourceNote)+'</p>';
+  html += '</section>';
+
   var cm = d.comment||{};
   html += '<div class="section-label">Nhận định · đánh giá · dự đoán</div>';
   html += '<section class="analysis"><div class="badge">'+esc(cm.badge||'Macro Eco · Bình luận')+'</div><h2>'+esc(cm.title||'Nhận định chung tình hình')+'</h2>'+(cm.paragraphs||[]).map(function(p){return '<p>'+p+'</p>';}).join('')+'</section>';
