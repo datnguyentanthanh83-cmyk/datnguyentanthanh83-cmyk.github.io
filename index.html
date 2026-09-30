@@ -150,7 +150,7 @@ h1{font-size:1.48rem;letter-spacing:-.03em;color:#262626;font-weight:800}.brand 
 .tr span:not(.name){white-space:nowrap!important;overflow-wrap:normal;min-width:0}
 .tr .name{white-space:normal!important;overflow-wrap:anywhere}
 @media(max-width:700px){.thead,.tr{grid-template-columns:minmax(5rem,.9fr) minmax(0,auto) minmax(0,auto)!important}}
-/* Inflation card only: fourth track is Kỳ vọng. Other cards stay on three tracks. */
+/* Inflation card only: Actual, Cons, Prev. Other cards stay on three tracks. */
 .table.cols-4 .thead,.table.cols-4 .tr{grid-template-columns:minmax(4.6rem,1.15fr) minmax(0,auto) minmax(0,auto) minmax(0,auto)!important}
 @media(max-width:700px){.table.cols-4 .thead,.table.cols-4 .tr{grid-template-columns:minmax(3.4rem,.8fr) minmax(0,auto) minmax(0,auto) minmax(0,auto)!important}.table.cols-4 .thead{letter-spacing:.01em}}
 
@@ -252,7 +252,7 @@ body{padding-bottom:calc(64px + env(safe-area-inset-bottom,0px))}
         else if (/^Russell/i.test(r.name)) nk='rut';
       }
       if (nk) liveAttr=' data-live-row="'+nk+'"';
-      var consCell = wide ? cell(r.cons, r.consClass||'') : '';
+      var consCell = wide ? cell(r.cons, r.consClass||'') : ''; /* 4-col card: day=Actual, week=Cons, cons=Prev */
       return '<div class="tr"'+liveAttr+'><span class="name">'+esc(r.name)+'</span>'+cell(r.day,r.dayClass||'')+cell(r.week,r.weekClass||'')+consCell+'</div>';
     }).join('');
     var liveLevel='';
@@ -307,7 +307,7 @@ body{padding-bottom:calc(64px + env(safe-area-inset-bottom,0px))}
   }
 
   html += '<section class="spotlight"><div class="side"><h2>Lịch sự kiện quan trọng</h2><div class="cal">'+(d.catalysts||[]).map(function(x){return '<div class="cal-item"><span class="when">'+esc(x.when)+'</span><span class="what">'+esc(x.what)+'</span></div>';}).join('')+'</div></div></section>';
-  html += '<div class="legend"><b>Quy ước:</b><span><i style="background:#087443"></i> tăng</span><span><i style="background:#c73545"></i> giảm</span><span><i style="background:#a7b0bd"></i> chưa có dữ liệu = —</span><span>Fed: so với kỳ họp gần nhất · Lạm phát: MoM/YoY/Kỳ vọng · Còn lại: % ngày/% tuần</span></div>';
+  html += '<div class="legend"><b>Quy ước:</b><span><i style="background:#087443"></i> tăng</span><span><i style="background:#c73545"></i> giảm</span><span><i style="background:#a7b0bd"></i> chưa có dữ liệu = —</span><span>Fed: so với kỳ họp gần nhất · Lạm phát: Actual/Cons/Prev · Còn lại: % ngày/% tuần</span></div>';
   var f = d.footer||{};
   html += '<footer class="footer"><span>'+esc(f.left||'')+'</span><span class="source">'+esc(f.source||'')+'</span></footer>';
   app.innerHTML = html;
