@@ -1,1 +1,204 @@
-PLACEHOLDER_WILL_NOT_USE
+{
+  "asOf": "2026-09-30 19:40:00 ICT",
+  "asOfUnix": 1790772000,
+  "provider": "Investing.com (vs prior close) + VCB/SBV USDVND + SJC (vang.today)",
+  "quotes": {
+    "dxy": {
+      "price": 100.843,
+      "prevClose": 101.116,
+      "chgPct": -0.26998694568613885,
+      "chgAbs": -0.27299999999999613,
+      "ts": 1790772000000,
+      "source": "investing",
+      "pairId": 8827
+    },
+    "ust10y": {
+      "price": 5.238,
+      "prevClose": 5.24,
+      "chgPct": -0.038167938931293506,
+      "chgAbs": -0.0019999999999997797,
+      "ts": 1790768700000,
+      "source": "investing",
+      "pairId": 23705
+    },
+    "ust2y": {
+      "price": 4.868,
+      "prevClose": 4.887,
+      "chgPct": -0.388786576631865,
+      "chgAbs": -0.01899999999999924,
+      "ts": 1790768100000,
+      "source": "investing",
+      "pairId": 23701
+    },
+    "vnindex": {
+      "price": 1768.62,
+      "prevClose": 1777.73,
+      "chgPct": -0.5124512721279456,
+      "chgAbs": -9.110000000000127,
+      "ts": 1790754300000,
+      "source": "investing",
+      "pairId": 41063
+    },
+    "wti": {
+      "price": 90.44,
+      "prevClose": 89.38,
+      "chgPct": 1.1859476392929094,
+      "chgAbs": 1.0600000000000023,
+      "ts": 1790771100000,
+      "source": "investing",
+      "pairId": 8849
+    },
+    "brent": {
+      "price": 102.59,
+      "prevClose": 105.28,
+      "chgPct": -2.5551,
+      "chgAbs": -2.69,
+      "ts": 1790726700000,
+      "source": "reuters-ice-settle",
+      "pairId": 8833,
+      "retained": true
+    },
+    "gold": {
+      "price": 4238.5,
+      "prevClose": 4216.85,
+      "chgPct": 0.5134164127251297,
+      "chgAbs": 21.649999999999636,
+      "ts": 1790771400000,
+      "source": "investing",
+      "pairId": 8830
+    },
+    "spx": {
+      "price": 7671.19,
+      "prevClose": 7683.69,
+      "chgPct": -0.1626822529279552,
+      "chgAbs": -12.5,
+      "ts": 1790711700000,
+      "source": "investing",
+      "pairId": 166,
+      "retained": true
+    },
+    "ndx": {
+      "price": 26797.54,
+      "prevClose": 26820.38,
+      "chgPct": -0.08515912153369992,
+      "chgAbs": -22.840000000000146,
+      "ts": 1790711700000,
+      "source": "investing",
+      "pairId": 14958,
+      "retained": true
+    },
+    "dji": {
+      "price": 51349.92,
+      "prevClose": 51481.51,
+      "chgPct": -0.255606333225276,
+      "chgAbs": -131.59000000000378,
+      "ts": 1790713200000,
+      "source": "investing",
+      "pairId": 169,
+      "retained": true
+    },
+    "rut": {
+      "price": 2809.54,
+      "prevClose": 2817.91,
+      "chgPct": -0.29702864889226027,
+      "chgAbs": -8.36999999999989,
+      "ts": 1790711700000,
+      "source": "investing",
+      "pairId": 170,
+      "retained": true
+    },
+    "gbpusd": {
+      "price": 1.3301,
+      "prevClose": 1.3232,
+      "chgPct": 0.5214631197098042,
+      "chgAbs": 0.006900000000000128,
+      "ts": 1790772000000,
+      "source": "investing",
+      "pairId": 2
+    },
+    "audusd": {
+      "price": 0.6979,
+      "prevClose": 0.6989,
+      "chgPct": -0.1430819859779655,
+      "chgAbs": -0.0010000000000000009,
+      "ts": 1790772000000,
+      "source": "investing",
+      "pairId": 5
+    },
+    "eurusd": {
+      "price": 1.137,
+      "prevClose": 1.1337,
+      "chgPct": 0.29108229690395,
+      "chgAbs": 0.0033000000000000806,
+      "ts": 1790772000000,
+      "source": "investing",
+      "pairId": 1
+    },
+    "usdjpy": {
+      "price": 156.77,
+      "prevClose": 157.43,
+      "chgPct": -0.4192339452455038,
+      "chgAbs": -0.6599999999999966,
+      "ts": 1790772000000,
+      "source": "investing",
+      "pairId": 3
+    },
+    "btc": {
+      "price": 85035.8,
+      "prevClose": 83656.5,
+      "chgPct": 1.6487660851219006,
+      "chgAbs": 1379.300000000003,
+      "ts": 1790772000000,
+      "source": "investing",
+      "pairId": 1057391
+    },
+    "usdvnd": {
+      "price": 25970,
+      "buy": 25780.0,
+      "sell": 26160.0,
+      "cash": 25750.0,
+      "transfer": 25780.0,
+      "prevClose": 25994.936845,
+      "chgPct": -0.09592962332892398,
+      "chgAbs": -24.936845000000176,
+      "source": "vcb+sbv",
+      "vcbUpdated": "2026-09-30T08:07:41+07:00",
+      "sbvCenter": 25627.0,
+      "sbvChgAbs": -3.0
+    },
+    "goldsjc": {
+      "price": 142600000,
+      "buy": 141100000.0,
+      "sell": 144100000.0,
+      "chgAbs": 600000.0,
+      "chgPct": 0.42253521126760557,
+      "unit": "VND/luong",
+      "source": "vang.today",
+      "name": "SJC 9999",
+      "apiTime": "19:30",
+      "apiDate": "2026-09-30",
+      "worldPrice": 4238.5,
+      "worldChgPct": 0.5134164127251297
+    },
+    "ust2s10s": {
+      "price": 0.3700000000000001,
+      "chgPct": null,
+      "chgAbs": null,
+      "source": "derived"
+    }
+  },
+  "errors": [
+    "brent:Investing/Yahoo front ~97.6 is the rolled contract (prior close ~96), not the ICE settle; kept Reuters/ICE 102.59 from 29/09",
+    "ust10y:last Investing bar 18:45 ICT, before the 19:30 PCE release",
+    "ust2y:last Investing bar 18:35 ICT, before the 19:30 PCE release",
+    "spx,ndx,dji,rut:US cash session not open; retained 29/09 closes"
+  ],
+  "retained": [
+    "brent",
+    "spx",
+    "ndx",
+    "dji",
+    "rut"
+  ],
+  "investingOk": 11
+}
