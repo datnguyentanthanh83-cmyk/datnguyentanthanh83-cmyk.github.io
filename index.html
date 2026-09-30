@@ -47,7 +47,7 @@ h1{font-size:1.48rem;letter-spacing:-.03em;color:#262626;font-weight:800}.brand 
 .tr{padding:8px 10px;border-top:1px solid #eef1f5;font-size:.77rem;min-height:35px}
 .tr .name{color:#555555;font-weight:650;overflow:hidden;text-overflow:ellipsis}
 .tr .val{font-weight:750;color:#172033;font-variant-numeric:tabular-nums}
-.change{font-weight:800;font-variant-numeric:tabular-nums}.up{color:var(--green)!important}.down{color:var(--red)!important}.flat{color:#7a8699!important}.dash{color:#64748b;font-weight:700}.tr span:not(.name){white-space:nowrap;font-variant-numeric:tabular-nums}.tr .name{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.change{font-weight:800;font-variant-numeric:tabular-nums}.up{color:var(--green)!important}.down{color:var(--red)!important}.flat{color:#7a8699!important}.amber{color:var(--amber)!important}.dash{color:#64748b;font-weight:700}.tr span:not(.name){white-space:nowrap;font-variant-numeric:tabular-nums}.tr .name{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .news{border-top:1px solid var(--line);padding-top:11px;margin-top:auto}
 .news-label{font-size:.65rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#1d4ed8;margin-bottom:5px}
 .news p{font-size:.8rem;color:#333333;font-weight:600;line-height:1.5}
@@ -307,7 +307,7 @@ body{padding-bottom:calc(64px + env(safe-area-inset-bottom,0px))}
   }
 
   html += '<section class="spotlight"><div class="side"><h2>Lịch sự kiện quan trọng</h2><div class="cal">'+(d.catalysts||[]).map(function(x){return '<div class="cal-item"><span class="when">'+esc(x.when)+'</span><span class="what">'+esc(x.what)+'</span></div>';}).join('')+'</div></div></section>';
-  html += '<div class="legend"><b>Quy ước:</b><span><i style="background:#087443"></i> tăng</span><span><i style="background:#c73545"></i> giảm</span><span><i style="background:#a7b0bd"></i> chưa có dữ liệu = —</span><span>Fed: so với kỳ họp gần nhất · Lạm phát: Actual/Cons/Prev · Còn lại: % ngày/% tuần</span></div>';
+  html += '<div class="legend"><b>Quy ước:</b><span><i style="background:#087443"></i> tăng</span><span><i style="background:#c73545"></i> giảm</span><span><i style="background:#a7b0bd"></i> chưa có dữ liệu = —</span><span>Fed: so với kỳ họp gần nhất · Lạm phát: Actual dưới Cons xanh, bằng vàng, trên đỏ · Còn lại: % ngày/% tuần</span></div>';
   var f = d.footer||{};
   html += '<footer class="footer"><span>'+esc(f.left||'')+'</span><span class="source">'+esc(f.source||'')+'</span></footer>';
   app.innerHTML = html;
