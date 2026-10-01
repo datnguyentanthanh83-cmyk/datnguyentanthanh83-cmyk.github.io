@@ -1,1 +1,190 @@
-LOAD_FROM_FILE:/tmp/push_quotes.json
+{
+  "asOf": "2026-10-01 07:22:47 ICT",
+  "asOfUnix": 1790814167,
+  "provider": "Investing.com (vs prior close) + VCB/SBV USDVND + SJC (vang.today); Brent=DJ Nov settle 103.53",
+  "quotes": {
+    "dxy": {
+      "price": 101.258,
+      "prevClose": 101.191,
+      "chgPct": 0.0662114219643971,
+      "chgAbs": 0.06699999999999307,
+      "ts": 1790814000000,
+      "source": "investing",
+      "pairId": 8827
+    },
+    "ust10y": {
+      "price": 5.304,
+      "prevClose": 5.29,
+      "chgPct": 0.2646502835538797,
+      "chgAbs": 0.014000000000000234,
+      "ts": 1790814000000,
+      "source": "investing",
+      "pairId": 23705
+    },
+    "ust2y": {
+      "price": 4.891,
+      "prevClose": 4.889,
+      "chgPct": 0.040908161178150534,
+      "chgAbs": 0.0019999999999997797,
+      "ts": 1790813700000,
+      "source": "investing",
+      "pairId": 23701
+    },
+    "vnindex": {
+      "price": 1768.62,
+      "prevClose": 1777.73,
+      "chgPct": -0.5124512721279456,
+      "chgAbs": -9.110000000000127,
+      "ts": 1790754300000,
+      "source": "investing",
+      "pairId": 41063
+    },
+    "wti": {
+      "price": 90.41,
+      "prevClose": 90.01,
+      "chgPct": 0.4443950672147444,
+      "chgAbs": 0.3999999999999915,
+      "ts": 1790814000000,
+      "source": "investing",
+      "pairId": 8849
+    },
+    "brent": {
+      "price": 103.53,
+      "prevClose": 102.59,
+      "chgPct": 0.9163,
+      "chgAbs": 0.94,
+      "ts": 1790814000000,
+      "source": "dow-jones-settle-nov",
+      "pairId": 8833
+    },
+    "gold": {
+      "price": 4173.07,
+      "prevClose": 4186.26,
+      "chgPct": -0.31507837544730877,
+      "chgAbs": -13.19000000000051,
+      "ts": 1790814000000,
+      "source": "investing",
+      "pairId": 8830
+    },
+    "spx": {
+      "price": 7651.54,
+      "prevClose": 7670.84,
+      "chgPct": -0.2516,
+      "chgAbs": -19.3,
+      "ts": 1790798100000,
+      "source": "wire-close-wed",
+      "pairId": 166
+    },
+    "ndx": {
+      "price": 26861.06,
+      "prevClose": 26797.54,
+      "chgPct": 0.2370366832179388,
+      "chgAbs": 63.52000000000044,
+      "ts": 1790798100000,
+      "source": "investing",
+      "pairId": 14958
+    },
+    "dji": {
+      "price": 50906.05,
+      "prevClose": 51349.92,
+      "chgPct": -0.8642,
+      "chgAbs": -443.87,
+      "ts": 1790799600000,
+      "source": "wire-close-wed",
+      "pairId": 169
+    },
+    "rut": {
+      "price": 2797.18,
+      "prevClose": 2807.92,
+      "chgPct": -0.38248952961623683,
+      "chgAbs": -10.740000000000236,
+      "ts": 1790798100000,
+      "source": "investing",
+      "pairId": 170
+    },
+    "gbpusd": {
+      "price": 1.3263,
+      "prevClose": 1.3266,
+      "chgPct": -0.02261420171867684,
+      "chgAbs": -0.00029999999999996696,
+      "ts": 1790814000000,
+      "source": "investing",
+      "pairId": 2
+    },
+    "audusd": {
+      "price": 0.6944,
+      "prevClose": 0.6946,
+      "chgPct": -0.028793550244742006,
+      "chgAbs": -0.00019999999999997797,
+      "ts": 1790814000000,
+      "source": "investing",
+      "pairId": 5
+    },
+    "eurusd": {
+      "price": 1.133,
+      "prevClose": 1.1327,
+      "chgPct": 0.026485388893790675,
+      "chgAbs": 0.00029999999999996696,
+      "ts": 1790814000000,
+      "source": "investing",
+      "pairId": 1
+    },
+    "usdjpy": {
+      "price": 157.71,
+      "prevClose": 157.57,
+      "chgPct": 0.08884940026655759,
+      "chgAbs": 0.14000000000001478,
+      "ts": 1790814000000,
+      "source": "investing",
+      "pairId": 3
+    },
+    "btc": {
+      "price": 83479.5,
+      "prevClose": 83612.2,
+      "chgPct": -0.15870889654858633,
+      "chgAbs": -132.6999999999971,
+      "ts": 1790814000000,
+      "source": "investing",
+      "pairId": 1057391
+    },
+    "usdvnd": {
+      "price": 25970,
+      "buy": 25780.0,
+      "sell": 26160.0,
+      "cash": 25750.0,
+      "transfer": 25780.0,
+      "prevClose": 25970,
+      "chgPct": 0.0,
+      "chgAbs": 0,
+      "source": "vcb+sbv",
+      "vcbUpdated": "2026-09-30T23:00:00+07:00",
+      "sbvCenter": 25627.0,
+      "sbvChgAbs": -3.0
+    },
+    "goldsjc": {
+      "price": 142600000,
+      "buy": 141100000.0,
+      "sell": 144100000.0,
+      "chgAbs": 0.0,
+      "chgPct": 0.0,
+      "unit": "VND/luong",
+      "source": "vang.today",
+      "name": "SJC 9999",
+      "apiTime": "07:00",
+      "apiDate": "2026-10-01",
+      "worldPrice": 4173.07,
+      "worldChgPct": -0.31507837544730877
+    },
+    "ust2s10s": {
+      "price": 0.41300000000000026,
+      "chgPct": null,
+      "chgAbs": null,
+      "source": "derived"
+    }
+  },
+  "errors": [],
+  "retained": [
+    "ust2s10s"
+  ],
+  "investingOk": 16
+}
