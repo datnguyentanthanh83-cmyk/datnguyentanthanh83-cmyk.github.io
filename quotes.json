@@ -1,7 +1,7 @@
 {
-  "asOf": "2026-10-01 07:22:47 ICT",
-  "asOfUnix": 1790814167,
-  "provider": "Investing.com (vs prior close) + VCB/SBV USDVND + SJC (vang.today); Brent=DJ Nov settle 103.53",
+  "asOf": "2026-10-01 09:12:13 ICT",
+  "asOfUnix": 1790820733,
+  "provider": "Investing.com (vs prior close) + VCB/SBV USDVND + SJC (vang.today)",
   "quotes": {
     "dxy": {
       "price": 101.258,
@@ -10,7 +10,8 @@
       "chgAbs": 0.06699999999999307,
       "ts": 1790814000000,
       "source": "investing",
-      "pairId": 8827
+      "pairId": 8827,
+      "retained": true
     },
     "ust10y": {
       "price": 5.304,
@@ -19,7 +20,8 @@
       "chgAbs": 0.014000000000000234,
       "ts": 1790814000000,
       "source": "investing",
-      "pairId": 23705
+      "pairId": 23705,
+      "retained": true
     },
     "ust2y": {
       "price": 4.891,
@@ -28,7 +30,8 @@
       "chgAbs": 0.0019999999999997797,
       "ts": 1790813700000,
       "source": "investing",
-      "pairId": 23701
+      "pairId": 23701,
+      "retained": true
     },
     "vnindex": {
       "price": 1768.62,
@@ -37,7 +40,8 @@
       "chgAbs": -9.110000000000127,
       "ts": 1790754300000,
       "source": "investing",
-      "pairId": 41063
+      "pairId": 41063,
+      "retained": true
     },
     "wti": {
       "price": 90.41,
@@ -46,7 +50,8 @@
       "chgAbs": 0.3999999999999915,
       "ts": 1790814000000,
       "source": "investing",
-      "pairId": 8849
+      "pairId": 8849,
+      "retained": true
     },
     "brent": {
       "price": 103.53,
@@ -55,7 +60,8 @@
       "chgAbs": 0.94,
       "ts": 1790814000000,
       "source": "dow-jones-settle-nov",
-      "pairId": 8833
+      "pairId": 8833,
+      "retained": true
     },
     "gold": {
       "price": 4173.07,
@@ -64,7 +70,8 @@
       "chgAbs": -13.19000000000051,
       "ts": 1790814000000,
       "source": "investing",
-      "pairId": 8830
+      "pairId": 8830,
+      "retained": true
     },
     "spx": {
       "price": 7651.54,
@@ -73,7 +80,8 @@
       "chgAbs": -19.3,
       "ts": 1790798100000,
       "source": "wire-close-wed",
-      "pairId": 166
+      "pairId": 166,
+      "retained": true
     },
     "ndx": {
       "price": 26861.06,
@@ -82,7 +90,8 @@
       "chgAbs": 63.52000000000044,
       "ts": 1790798100000,
       "source": "investing",
-      "pairId": 14958
+      "pairId": 14958,
+      "retained": true
     },
     "dji": {
       "price": 50906.05,
@@ -91,7 +100,8 @@
       "chgAbs": -443.87,
       "ts": 1790799600000,
       "source": "wire-close-wed",
-      "pairId": 169
+      "pairId": 169,
+      "retained": true
     },
     "rut": {
       "price": 2797.18,
@@ -100,7 +110,8 @@
       "chgAbs": -10.740000000000236,
       "ts": 1790798100000,
       "source": "investing",
-      "pairId": 170
+      "pairId": 170,
+      "retained": true
     },
     "gbpusd": {
       "price": 1.3263,
@@ -109,7 +120,8 @@
       "chgAbs": -0.00029999999999996696,
       "ts": 1790814000000,
       "source": "investing",
-      "pairId": 2
+      "pairId": 2,
+      "retained": true
     },
     "audusd": {
       "price": 0.6944,
@@ -118,7 +130,8 @@
       "chgAbs": -0.00019999999999997797,
       "ts": 1790814000000,
       "source": "investing",
-      "pairId": 5
+      "pairId": 5,
+      "retained": true
     },
     "eurusd": {
       "price": 1.133,
@@ -127,7 +140,8 @@
       "chgAbs": 0.00029999999999996696,
       "ts": 1790814000000,
       "source": "investing",
-      "pairId": 1
+      "pairId": 1,
+      "retained": true
     },
     "usdjpy": {
       "price": 157.71,
@@ -136,7 +150,8 @@
       "chgAbs": 0.14000000000001478,
       "ts": 1790814000000,
       "source": "investing",
-      "pairId": 3
+      "pairId": 3,
+      "retained": true
     },
     "btc": {
       "price": 83479.5,
@@ -145,32 +160,33 @@
       "chgAbs": -132.6999999999971,
       "ts": 1790814000000,
       "source": "investing",
-      "pairId": 1057391
+      "pairId": 1057391,
+      "retained": true
     },
     "usdvnd": {
-      "price": 25970,
-      "buy": 25780.0,
-      "sell": 26160.0,
-      "cash": 25750.0,
-      "transfer": 25780.0,
-      "prevClose": 25970,
-      "chgPct": 0.0,
-      "chgAbs": 0,
+      "price": 25960,
+      "buy": 25770.0,
+      "sell": 26150.0,
+      "cash": 25740.0,
+      "transfer": 25770.0,
+      "prevClose": 25994.936845,
+      "chgPct": -0.1343986531235605,
+      "chgAbs": -34.936845000000176,
       "source": "vcb+sbv",
-      "vcbUpdated": "2026-09-30T23:00:00+07:00",
-      "sbvCenter": 25627.0,
+      "vcbUpdated": "2026-10-01T07:59:15+07:00",
+      "sbvCenter": 25624.0,
       "sbvChgAbs": -3.0
     },
     "goldsjc": {
-      "price": 142600000,
-      "buy": 141100000.0,
-      "sell": 144100000.0,
-      "chgAbs": 0.0,
-      "chgPct": 0.0,
+      "price": 142300000,
+      "buy": 140800000.0,
+      "sell": 143800000.0,
+      "chgAbs": -300000.0,
+      "chgPct": -0.21037868162692847,
       "unit": "VND/luong",
       "source": "vang.today",
       "name": "SJC 9999",
-      "apiTime": "07:00",
+      "apiTime": "09:00",
       "apiDate": "2026-10-01",
       "worldPrice": 4173.07,
       "worldChgPct": -0.31507837544730877
@@ -182,9 +198,42 @@
       "source": "derived"
     }
   },
-  "errors": [],
+  "errors": [
+    "dxy:HTTP Error 403: Forbidden",
+    "ust10y:HTTP Error 403: Forbidden",
+    "ust2y:HTTP Error 403: Forbidden",
+    "vnindex:HTTP Error 403: Forbidden",
+    "wti:HTTP Error 403: Forbidden",
+    "brent:HTTP Error 403: Forbidden",
+    "gold:HTTP Error 403: Forbidden",
+    "spx:HTTP Error 403: Forbidden",
+    "ndx:HTTP Error 403: Forbidden",
+    "dji:HTTP Error 403: Forbidden",
+    "rut:HTTP Error 403: Forbidden",
+    "gbpusd:HTTP Error 403: Forbidden",
+    "audusd:HTTP Error 403: Forbidden",
+    "eurusd:HTTP Error 403: Forbidden",
+    "usdjpy:HTTP Error 403: Forbidden",
+    "btc:HTTP Error 403: Forbidden"
+  ],
   "retained": [
+    "dxy",
+    "ust10y",
+    "ust2y",
+    "vnindex",
+    "wti",
+    "brent",
+    "gold",
+    "spx",
+    "ndx",
+    "dji",
+    "rut",
+    "gbpusd",
+    "audusd",
+    "eurusd",
+    "usdjpy",
+    "btc",
     "ust2s10s"
   ],
-  "investingOk": 16
+  "investingOk": 0
 }
