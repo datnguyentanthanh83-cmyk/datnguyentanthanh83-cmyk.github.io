@@ -1,1 +1,1 @@
-PLACEHOLDER_WILL_FAIL
+LOAD_FROM_FILE:/tmp/push_data.js
