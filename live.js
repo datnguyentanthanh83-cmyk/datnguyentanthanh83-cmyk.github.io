@@ -291,11 +291,11 @@
     });
     [['spx', 0], ['ndx', 0], ['rut', 0]].forEach(function (x) {
       var r = apply(x[0], function (p) { return fmtNum(p, x[1]); });
-      if (r && x[0] === 'spx') setLevel('spx', r.priceText, 'S&P 500');
     });
     var dj = apply('dji', function (p) { return fmtNum(p, 2); });
     if (dj) {
       setBoard('#live-dji', dj.priceText, chgHtml(dj.dayText, dj.dayCls, dj.closed), dj.closed);
+      setLevel('dji', dj.priceText);
       var djk = document.querySelector('#live-dji .k');
       if (djk) djk.textContent = dj.closed ? 'Dow Jones · đóng cửa' : 'Dow Jones';
     }
