@@ -1,6 +1,6 @@
 {
-  "asOf": "2026-10-08 06:33:12 ICT",
-  "asOfUnix": 1791415992,
+  "asOf": "2026-10-08 09:54:26 ICT",
+  "asOfUnix": 1791428066,
   "provider": "Investing.com (vs prior close) + VCB/SBV USDVND + SJC (vang.today)",
   "quotes": {
     "dxy": {
@@ -81,7 +81,7 @@
       "ts": 1791403200000,
       "source": "ap-close",
       "pairId": 166,
-      "retained": false
+      "retained": true
     },
     "ndx": {
       "price": 27538.69,
@@ -91,7 +91,7 @@
       "ts": 1791403200000,
       "source": "ap-close",
       "pairId": 14958,
-      "retained": false
+      "retained": true
     },
     "dji": {
       "price": 51179.87,
@@ -101,7 +101,7 @@
       "ts": 1791403200000,
       "source": "ap-close",
       "pairId": 169,
-      "retained": false
+      "retained": true
     },
     "rut": {
       "price": 2793.21,
@@ -111,7 +111,7 @@
       "ts": 1791403200000,
       "source": "ap-close",
       "pairId": 170,
-      "retained": false
+      "retained": true
     },
     "gbpusd": {
       "price": 1.3218,
@@ -173,9 +173,9 @@
       "chgPct": -0.05746059353428745,
       "chgAbs": -14.936845000000176,
       "source": "vcb+sbv",
-      "vcbUpdated": "2026-10-07T23:00:00+07:00",
-      "sbvCenter": 25638.0,
-      "sbvChgAbs": -7.0
+      "vcbUpdated": "2026-10-08T07:54:46+07:00",
+      "sbvCenter": 25634.0,
+      "sbvChgAbs": -4.0
     },
     "goldsjc": {
       "price": 141500000,
@@ -186,7 +186,7 @@
       "unit": "VND/luong",
       "source": "vang.today",
       "name": "SJC 9999",
-      "apiTime": "06:00",
+      "apiTime": "09:30",
       "apiDate": "2026-10-08",
       "worldPrice": 4167.7,
       "worldChgPct": 0.1537980919424131
@@ -202,7 +202,7 @@
     "dxy:HTTP Error 403: Forbidden",
     "ust10y:HTTP Error 403: Forbidden",
     "ust2y:HTTP Error 403: Forbidden",
-    "vnindex:HTTP Error 403: Forbidden",
+    "vnindex:<urlopen error [Errno 104] Connection reset by peer>",
     "wti:HTTP Error 403: Forbidden",
     "brent:HTTP Error 403: Forbidden",
     "gold:HTTP Error 403: Forbidden",
@@ -224,6 +224,10 @@
     "wti",
     "brent",
     "gold",
+    "spx",
+    "ndx",
+    "dji",
+    "rut",
     "gbpusd",
     "audusd",
     "eurusd",
