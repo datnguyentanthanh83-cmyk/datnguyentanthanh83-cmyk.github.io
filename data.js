@@ -1,1 +1,1 @@
-PLACEHOLDER_WILL_REPLACE
+LOAD_FROM:/workspace/macro-dashboard/run-2026-10-09/data.js
