@@ -1,6 +1,6 @@
 {
-  "asOf": "2026-10-09 05:23:37 ICT",
-  "asOfUnix": 1791498217,
+  "asOf": "2026-10-09 09:25:51 ICT",
+  "asOfUnix": 1791512751,
   "provider": "Investing.com (vs prior close) + VCB/SBV USDVND + SJC (vang.today)",
   "quotes": {
     "dxy": {
@@ -81,7 +81,7 @@
       "ts": 1791489600000,
       "source": "ap-close",
       "pairId": 166,
-      "retained": false
+      "retained": true
     },
     "ndx": {
       "price": 27193.34,
@@ -91,7 +91,7 @@
       "ts": 1791489600000,
       "source": "ap-close",
       "pairId": 14958,
-      "retained": false
+      "retained": true
     },
     "dji": {
       "price": 51231.64,
@@ -101,7 +101,7 @@
       "ts": 1791489600000,
       "source": "ap-close",
       "pairId": 169,
-      "retained": false
+      "retained": true
     },
     "rut": {
       "price": 2794.13,
@@ -111,7 +111,7 @@
       "ts": 1791489600000,
       "source": "ap-close",
       "pairId": 170,
-      "retained": false
+      "retained": true
     },
     "gbpusd": {
       "price": 1.3218,
@@ -164,29 +164,29 @@
       "retained": true
     },
     "usdvnd": {
-      "price": 25910,
-      "buy": 25720.0,
-      "sell": 26100.0,
-      "cash": 25690.0,
-      "transfer": 25720.0,
+      "price": 25900,
+      "buy": 25710.0,
+      "sell": 26090.0,
+      "cash": 25680.0,
+      "transfer": 25710.0,
       "prevClose": 25994.936845,
-      "chgPct": -0.3267438020967432,
-      "chgAbs": -84.93684500000018,
+      "chgPct": -0.3652128318913797,
+      "chgAbs": -94.93684500000018,
       "source": "vcb+sbv",
-      "vcbUpdated": "2026-10-08T23:00:00+07:00",
-      "sbvCenter": 25634.0,
-      "sbvChgAbs": -4.0
+      "vcbUpdated": "2026-10-09T08:01:31+07:00",
+      "sbvCenter": 25629.0,
+      "sbvChgAbs": -5.0
     },
     "goldsjc": {
-      "price": 141500000,
-      "buy": 140000000.0,
-      "sell": 143000000.0,
-      "chgAbs": 0.0,
-      "chgPct": 0.0,
+      "price": 142300000,
+      "buy": 140800000.0,
+      "sell": 143800000.0,
+      "chgAbs": 800000.0,
+      "chgPct": 0.5653710247349824,
       "unit": "VND/luong",
       "source": "vang.today",
       "name": "SJC 9999",
-      "apiTime": "04:30",
+      "apiTime": "09:00",
       "apiDate": "2026-10-09",
       "worldPrice": 4167.7,
       "worldChgPct": 0.1537980919424131
@@ -224,6 +224,10 @@
     "wti",
     "brent",
     "gold",
+    "spx",
+    "ndx",
+    "dji",
+    "rut",
     "gbpusd",
     "audusd",
     "eurusd",
