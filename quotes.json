@@ -74,44 +74,44 @@
       "retained": true
     },
     "spx": {
-      "price": 7801.77,
-      "prevClose": 7818.93,
-      "chgPct": -0.2195,
-      "chgAbs": -17.16,
-      "ts": 1791403200000,
+      "price": 7765.36,
+      "prevClose": 7801.77,
+      "chgPct": -0.4667,
+      "chgAbs": -36.41,
+      "ts": 1791489600000,
       "source": "ap-close",
       "pairId": 166,
-      "retained": true
+      "retained": false
     },
     "ndx": {
-      "price": 27538.69,
-      "prevClose": 27599.79,
-      "chgPct": -0.2214,
-      "chgAbs": -61.1,
-      "ts": 1791403200000,
+      "price": 27193.34,
+      "prevClose": 27538.69,
+      "chgPct": -1.2541,
+      "chgAbs": -345.35,
+      "ts": 1791489600000,
       "source": "ap-close",
       "pairId": 14958,
-      "retained": true
+      "retained": false
     },
     "dji": {
-      "price": 51179.87,
-      "prevClose": 51521.28,
-      "chgPct": -0.6627,
-      "chgAbs": -341.41,
-      "ts": 1791403200000,
+      "price": 51231.64,
+      "prevClose": 51179.87,
+      "chgPct": 0.1012,
+      "chgAbs": 51.77,
+      "ts": 1791489600000,
       "source": "ap-close",
       "pairId": 169,
-      "retained": true
+      "retained": false
     },
     "rut": {
-      "price": 2793.21,
-      "prevClose": 2830.3,
-      "chgPct": -1.3105,
-      "chgAbs": -37.09,
-      "ts": 1791403200000,
+      "price": 2794.13,
+      "prevClose": 2793.21,
+      "chgPct": 0.0329,
+      "chgAbs": 0.92,
+      "ts": 1791489600000,
       "source": "ap-close",
       "pairId": 170,
-      "retained": true
+      "retained": false
     },
     "gbpusd": {
       "price": 1.3218,
@@ -224,10 +224,6 @@
     "wti",
     "brent",
     "gold",
-    "spx",
-    "ndx",
-    "dji",
-    "rut",
     "gbpusd",
     "audusd",
     "eurusd",
