@@ -280,9 +280,9 @@
 
     [['wti', 2, '$'], ['brent', 2, '$'], ['gold', 0, '$']].forEach(function (x) {
       var r = apply(x[0], function (p) { return x[2] + fmtNum(p, x[1]); });
-      if (r && x[0] === 'wti') setLevel('wti', r.priceText, 'WTI');
       if (r && x[0] === 'brent') {
         setBoard('#live-brent', r.priceText, r.roll ? ROLL_NOTE : chgHtml(r.dayText, r.dayCls, false), false);
+        setLevel('brent', r.priceText, 'Brent');
       }
       if (r && x[0] === 'gold') {
         // World gold tile: USD/oz with 2 decimals; hide % on a futures contract roll
