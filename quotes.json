@@ -1,1 +1,239 @@
-{"asOf":"2026-10-10 07:28:57 ICT","asOfUnix":1791592137,"provider":"Investing.com (vs prior close) + VCB/SBV USDVND + SJC (vang.today) · 09/10 closes patched from Treasury/AP/Reuters/Dow Jones","quotes":{"dxy":{"price":102.21,"prevClose":102.138503,"chgPct":0.07,"chgAbs":0.071497,"ts":1791576000000,"source":"close-0910 (The Edge/Reuters)","pairId":8827,"retained":false},"ust10y":{"price":5.24,"prevClose":5.22,"chgPct":0.383142,"chgAbs":0.02,"ts":1791576000000,"source":"treasury-par","pairId":23705,"retained":false},"ust2y":{"price":4.8,"prevClose":4.75,"chgPct":1.052632,"chgAbs":0.05,"ts":1791576000000,"source":"treasury-par","pairId":23701,"retained":false},"vnindex":{"price":1735.09,"prevClose":1738.97,"chgPct":-0.223121,"chgAbs":-3.88,"ts":1791532800000,"source":"hose-close","pairId":41063,"retained":false},"wti":{"price":91.85,"prevClose":91.49,"chgPct":0.393486,"chgAbs":0.36,"ts":1791576000000,"source":"settle-0910","pairId":8849,"retained":false},"brent":{"price":104.72,"prevClose":104.28,"chgPct":0.421941,"chgAbs":0.44,"ts":1791576000000,"source":"settle-0910","pairId":8833,"retained":false},"gold":{"price":4191.0,"prevClose":4157.0,"chgPct":0.817898,"chgAbs":34.0,"ts":1791576000000,"source":"comex-settle-0910","pairId":8830,"retained":false},"spx":{"price":7811.54,"prevClose":7765.36,"chgPct":0.594692,"chgAbs":46.18,"ts":1791576000000,"source":"ap-close","pairId":166,"retained":false},"ndx":{"price":27366.17,"prevClose":27193.34,"chgPct":0.63556,"chgAbs":172.83,"ts":1791576000000,"source":"ap-close","pairId":14958,"retained":false},"dji":{"price":51654.95,"prevClose":51231.64,"chgPct":0.826267,"chgAbs":423.31,"ts":1791576000000,"source":"ap-close","pairId":169,"retained":false},"rut":{"price":2806.98,"prevClose":2794.13,"chgPct":0.459893,"chgAbs":12.85,"ts":1791576000000,"source":"close-0910","pairId":170,"retained":false},"gbpusd":{"price":1.3238,"prevClose":1.322345,"chgPct":0.11,"chgAbs":0.001455,"ts":1791576000000,"source":"close-0910","pairId":2,"retained":false},"audusd":{"price":0.6964,"prevClose":0.6967,"chgPct":-0.04306,"chgAbs":-0.0003,"ts":1791246300000,"source":"investing","pairId":5,"retained":true},"eurusd":{"price":1.1202,"prevClose":1.120873,"chgPct":-0.06,"chgAbs":-0.000673,"ts":1791576000000,"source":"close-0910","pairId":1,"retained":false},"usdjpy":{"price":158.24,"prevClose":157.861133,"chgPct":0.24,"chgAbs":0.378867,"ts":1791576000000,"source":"close-0910","pairId":3,"retained":false},"btc":{"price":82572.05,"prevClose":81726.01,"chgPct":1.035215,"chgAbs":846.04,"ts":1791592137493,"source":"binance-24h","pairId":1057391,"retained":false},"usdvnd":{"price":25880,"buy":25690.0,"sell":26070.0,"cash":25660.0,"transfer":25690.0,"prevClose":25994.936845,"chgPct":-0.442151,"chgAbs":-114.936845,"source":"vcb+sbv","vcbUpdated":"2026-10-09T23:00:00+07:00","sbvCenter":25629.0,"sbvChgAbs":0.0},"goldsjc":{"price":143300000,"buy":141800000.0,"sell":144800000.0,"chgAbs":0.0,"chgPct":0.0,"unit":"VND/luong","source":"vang.today","name":"SJC 9999","apiTime":"04:00","apiDate":"2026-10-10","worldPrice":4191.0,"worldChgPct":0.817898},"ust2s10s":{"price":0.44,"chgPct":null,"chgAbs":null,"source":"derived"}},"errors":["investing:HTTP 403 (16 symbols)"],"retained":["audusd"],"investingOk":0}
+{
+  "asOf": "2026-10-10 08:00:12 ICT",
+  "asOfUnix": 1791594012,
+  "provider": "Investing.com (vs prior close) + VCB/SBV USDVND + SJC (vang.today)",
+  "quotes": {
+    "dxy": {
+      "price": 102.21,
+      "prevClose": 102.138503,
+      "chgPct": 0.07,
+      "chgAbs": 0.071497,
+      "ts": 1791576000000,
+      "source": "close-0910 (The Edge/Reuters)",
+      "pairId": 8827,
+      "retained": true
+    },
+    "ust10y": {
+      "price": 5.24,
+      "prevClose": 5.22,
+      "chgPct": 0.383142,
+      "chgAbs": 0.02,
+      "ts": 1791576000000,
+      "source": "treasury-par",
+      "pairId": 23705,
+      "retained": true
+    },
+    "ust2y": {
+      "price": 4.8,
+      "prevClose": 4.75,
+      "chgPct": 1.052632,
+      "chgAbs": 0.05,
+      "ts": 1791576000000,
+      "source": "treasury-par",
+      "pairId": 23701,
+      "retained": true
+    },
+    "vnindex": {
+      "price": 1735.09,
+      "prevClose": 1738.97,
+      "chgPct": -0.223121,
+      "chgAbs": -3.88,
+      "ts": 1791532800000,
+      "source": "hose-close",
+      "pairId": 41063,
+      "retained": true
+    },
+    "wti": {
+      "price": 91.85,
+      "prevClose": 91.49,
+      "chgPct": 0.393486,
+      "chgAbs": 0.36,
+      "ts": 1791576000000,
+      "source": "settle-0910",
+      "pairId": 8849,
+      "retained": true
+    },
+    "brent": {
+      "price": 104.72,
+      "prevClose": 104.28,
+      "chgPct": 0.421941,
+      "chgAbs": 0.44,
+      "ts": 1791576000000,
+      "source": "settle-0910",
+      "pairId": 8833,
+      "retained": true
+    },
+    "gold": {
+      "price": 4191.0,
+      "prevClose": 4157.0,
+      "chgPct": 0.817898,
+      "chgAbs": 34.0,
+      "ts": 1791576000000,
+      "source": "comex-settle-0910",
+      "pairId": 8830,
+      "retained": true
+    },
+    "spx": {
+      "price": 7811.54,
+      "prevClose": 7765.36,
+      "chgPct": 0.594692,
+      "chgAbs": 46.18,
+      "ts": 1791576000000,
+      "source": "ap-close",
+      "pairId": 166,
+      "retained": true
+    },
+    "ndx": {
+      "price": 27366.17,
+      "prevClose": 27193.34,
+      "chgPct": 0.63556,
+      "chgAbs": 172.83,
+      "ts": 1791576000000,
+      "source": "ap-close",
+      "pairId": 14958,
+      "retained": true
+    },
+    "dji": {
+      "price": 51654.95,
+      "prevClose": 51231.64,
+      "chgPct": 0.826267,
+      "chgAbs": 423.31,
+      "ts": 1791576000000,
+      "source": "ap-close",
+      "pairId": 169,
+      "retained": true
+    },
+    "rut": {
+      "price": 2806.98,
+      "prevClose": 2794.13,
+      "chgPct": 0.459893,
+      "chgAbs": 12.85,
+      "ts": 1791576000000,
+      "source": "close-0910",
+      "pairId": 170,
+      "retained": true
+    },
+    "gbpusd": {
+      "price": 1.3238,
+      "prevClose": 1.322345,
+      "chgPct": 0.11,
+      "chgAbs": 0.001455,
+      "ts": 1791576000000,
+      "source": "close-0910",
+      "pairId": 2,
+      "retained": true
+    },
+    "audusd": {
+      "price": 0.6964,
+      "prevClose": 0.6967,
+      "chgPct": -0.04306,
+      "chgAbs": -0.0003,
+      "ts": 1791246300000,
+      "source": "investing",
+      "pairId": 5,
+      "retained": true
+    },
+    "eurusd": {
+      "price": 1.1202,
+      "prevClose": 1.120873,
+      "chgPct": -0.06,
+      "chgAbs": -0.000673,
+      "ts": 1791576000000,
+      "source": "close-0910",
+      "pairId": 1,
+      "retained": true
+    },
+    "usdjpy": {
+      "price": 158.24,
+      "prevClose": 157.861133,
+      "chgPct": 0.24,
+      "chgAbs": 0.378867,
+      "ts": 1791576000000,
+      "source": "close-0910",
+      "pairId": 3,
+      "retained": true
+    },
+    "btc": {
+      "price": 82572.05,
+      "prevClose": 81726.01,
+      "chgPct": 1.035215,
+      "chgAbs": 846.04,
+      "ts": 1791592137493,
+      "source": "binance-24h",
+      "pairId": 1057391,
+      "retained": true
+    },
+    "usdvnd": {
+      "price": 25880,
+      "buy": 25690.0,
+      "sell": 26070.0,
+      "cash": 25660.0,
+      "transfer": 25690.0,
+      "prevClose": 25994.936845,
+      "chgPct": -0.4421508914806528,
+      "chgAbs": -114.93684500000018,
+      "source": "vcb+sbv",
+      "vcbUpdated": "2026-10-09T23:00:00+07:00",
+      "sbvCenter": 25629.0,
+      "sbvChgAbs": 0.0
+    },
+    "goldsjc": {
+      "price": 143300000,
+      "buy": 141800000.0,
+      "sell": 144800000.0,
+      "chgAbs": 0.0,
+      "chgPct": 0.0,
+      "unit": "VND/luong",
+      "source": "vang.today",
+      "name": "SJC 9999",
+      "apiTime": "04:30",
+      "apiDate": "2026-10-10",
+      "worldPrice": 4191.0,
+      "worldChgPct": 0.817898
+    },
+    "ust2s10s": {
+      "price": 0.4400000000000004,
+      "chgPct": null,
+      "chgAbs": null,
+      "source": "derived"
+    }
+  },
+  "errors": [
+    "dxy:HTTP Error 403: Forbidden",
+    "ust10y:HTTP Error 403: Forbidden",
+    "ust2y:HTTP Error 403: Forbidden",
+    "vnindex:HTTP Error 403: Forbidden",
+    "wti:HTTP Error 403: Forbidden",
+    "brent:HTTP Error 403: Forbidden",
+    "gold:HTTP Error 403: Forbidden",
+    "spx:HTTP Error 403: Forbidden",
+    "ndx:HTTP Error 403: Forbidden",
+    "dji:HTTP Error 403: Forbidden",
+    "rut:HTTP Error 403: Forbidden",
+    "gbpusd:HTTP Error 403: Forbidden",
+    "audusd:HTTP Error 403: Forbidden",
+    "eurusd:HTTP Error 403: Forbidden",
+    "usdjpy:HTTP Error 403: Forbidden",
+    "btc:HTTP Error 403: Forbidden"
+  ],
+  "retained": [
+    "dxy",
+    "ust10y",
+    "ust2y",
+    "vnindex",
+    "wti",
+    "brent",
+    "gold",
+    "spx",
+    "ndx",
+    "dji",
+    "rut",
+    "gbpusd",
+    "audusd",
+    "eurusd",
+    "usdjpy",
+    "btc",
+    "ust2s10s"
+  ],
+  "investingOk": 0
+}
