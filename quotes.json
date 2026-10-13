@@ -1,7 +1,7 @@
 {
-  "asOf": "2026-10-13 07:56:45 ICT",
-  "asOfUnix": 1791853005,
-  "provider": "Last-good T2 + verified settles/closes 12/10 (Reuters/Xinhua/AFP/HOSE) + gold-api/Binance 13/10 + VCB/SBV/SJC 13/10 (Investing.com 403)",
+  "asOf": "2026-10-13 10:53:55 ICT",
+  "asOfUnix": 1791863635,
+  "provider": "Investing.com (vs prior close) + VCB/SBV USDVND + SJC (vang.today)",
   "quotes": {
     "dxy": {
       "price": 102.6,
@@ -11,7 +11,7 @@
       "ts": 1791833640000,
       "source": "fxstreet-1210 (~17-mo high)",
       "pairId": 8827,
-      "retained": false,
+      "retained": true,
       "asOf": "2026-10-13T07:53:00+07:00",
       "sourceNote": "FXStreet ~17-mo high night 12/10"
     },
@@ -43,7 +43,7 @@
       "ts": 1791792000000,
       "source": "hose-close-1210",
       "pairId": 41063,
-      "retained": false
+      "retained": true
     },
     "wti": {
       "price": 93.74,
@@ -53,7 +53,7 @@
       "ts": 1791832320000,
       "source": "nymex-settle-1210 (Xinhua)",
       "pairId": 8849,
-      "retained": false,
+      "retained": true,
       "asOf": "2026-10-13T07:53:00+07:00",
       "sourceNote": "NYMEX Nov settle Mon 12/10 · Xinhua"
     },
@@ -65,7 +65,7 @@
       "ts": 1791832320000,
       "source": "ice-settle-1210 (Reuters/Xinhua)",
       "pairId": 8833,
-      "retained": false,
+      "retained": true,
       "asOf": "2026-10-13T07:53:00+07:00",
       "sourceNote": "ICE Dec settle Mon 12/10 · Xinhua/Reuters"
     },
@@ -77,7 +77,7 @@
       "ts": 1791852780000,
       "source": "spot-0753ict-1310 (gold-api) vs 0722ict-1210",
       "pairId": 8830,
-      "retained": false
+      "retained": true
     },
     "spx": {
       "price": 7807.24,
@@ -87,7 +87,7 @@
       "ts": 1791835200000,
       "source": "close-1210 (Reuters/AFP)",
       "pairId": 166,
-      "retained": false,
+      "retained": true,
       "asOf": "2026-10-13T07:53:00+07:00",
       "sourceNote": "Reuters Mon close 12/10"
     },
@@ -99,7 +99,7 @@
       "ts": 1791835200000,
       "source": "nasdaq-comp-close-1210 (Dow Jones/Morningstar)",
       "pairId": 14958,
-      "retained": false
+      "retained": true
     },
     "dji": {
       "price": 51850.55,
@@ -109,7 +109,7 @@
       "ts": 1791835200000,
       "source": "close-1210 (Reuters/AFP)",
       "pairId": 169,
-      "retained": false,
+      "retained": true,
       "asOf": "2026-10-13T07:53:00+07:00",
       "sourceNote": "Reuters Mon close 12/10"
     },
@@ -121,7 +121,7 @@
       "ts": 1791835200000,
       "source": "close-1210",
       "pairId": 170,
-      "retained": false
+      "retained": true
     },
     "gbpusd": {
       "price": 1.3238,
@@ -151,7 +151,7 @@
       "ts": 1791840120000,
       "source": "reuters-1210",
       "pairId": 1,
-      "retained": false,
+      "retained": true,
       "asOf": "2026-10-13T07:53:00+07:00",
       "sourceNote": "Reuters Trading Day ~04:22 ICT 13/10"
     },
@@ -163,7 +163,7 @@
       "ts": 1791840120000,
       "source": "reuters-1210",
       "pairId": 3,
-      "retained": false,
+      "retained": true,
       "asOf": "2026-10-13T07:53:00+07:00",
       "sourceNote": "Reuters Trading Day ~04:22 ICT 13/10"
     },
@@ -175,39 +175,38 @@
       "ts": 1791852780000,
       "source": "binance-24h-0753ict-1310",
       "pairId": 1057391,
-      "retained": false
+      "retained": true
     },
     "usdvnd": {
-      "price": 25930,
-      "buy": 25740.0,
-      "sell": 26120.0,
-      "transfer": 25740.0,
-      "prevClose": 25880.0,
-      "chgPct": 0.193199,
-      "chgAbs": 50.0,
+      "price": 25920,
+      "buy": 25730.0,
+      "sell": 26110.0,
+      "cash": 25700.0,
+      "transfer": 25730.0,
+      "prevClose": 25994.936845,
+      "chgPct": -0.28827477230210663,
+      "chgAbs": -74.93684500000018,
       "source": "vcb+sbv",
-      "vcbUpdated": "2026-10-13T06:45:05+07:00",
-      "sbvCenter": 25621.0,
-      "sbvChgAbs": 0.0,
-      "asOf": "2026-10-13T07:53:00+07:00",
-      "sourceNote": "VCB mid 13/10 · buy 25740 sell 26120 webgia 06:45"
+      "vcbUpdated": "2026-10-13T08:12:55+07:00",
+      "sbvCenter": 25633.0,
+      "sbvChgAbs": 12.0
     },
     "goldsjc": {
-      "price": 142800000,
-      "buy": 141300000.0,
-      "sell": 144300000.0,
-      "chgAbs": -500000.0,
-      "chgPct": -0.348918,
+      "price": 142000000,
+      "buy": 140500000.0,
+      "sell": 143500000.0,
+      "chgAbs": -800000.0,
+      "chgPct": -0.5602240896358543,
       "unit": "VND/luong",
-      "source": "vang.today/SJC 13/10",
+      "source": "vang.today",
       "name": "SJC 9999",
-      "apiTime": "00:00",
+      "apiTime": "10:30",
       "apiDate": "2026-10-13",
       "worldPrice": 4159.9,
       "worldChgPct": -1.144001
     },
     "ust2s10s": {
-      "price": 0.44,
+      "price": 0.4400000000000004,
       "chgPct": null,
       "chgAbs": null,
       "source": "derived"
@@ -232,10 +231,22 @@
     "btc:HTTP Error 403: Forbidden"
   ],
   "retained": [
+    "dxy",
     "ust10y",
     "ust2y",
+    "vnindex",
+    "wti",
+    "brent",
+    "gold",
+    "spx",
+    "ndx",
+    "dji",
+    "rut",
     "gbpusd",
     "audusd",
+    "eurusd",
+    "usdjpy",
+    "btc",
     "ust2s10s"
   ],
   "investingOk": 0
