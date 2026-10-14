@@ -1,7 +1,7 @@
 {
-  "asOf": "2026-10-14 07:30:02 ICT",
-  "asOfUnix": 1791937802,
-  "provider": "Last-good T3 + verified settles/closes 13/10 (Reuters/AP/CNBC/FXStreet/HOSE) + gold-api/Binance/VCB/SJC 14/10 + SBV 13/10 (Investing.com 403)",
+  "asOf": "2026-10-14 08:54:11 ICT",
+  "asOfUnix": 1791942851,
+  "provider": "Investing.com (vs prior close) + VCB/SBV USDVND + SJC (vang.today)",
   "quotes": {
     "dxy": {
       "price": 102.18,
@@ -11,7 +11,7 @@
       "ts": 1791926040000,
       "source": "reuters-1310 (−0.37%)",
       "pairId": 8827,
-      "retained": false,
+      "retained": true,
       "asOf": "2026-10-14T07:40:00+07:00",
       "sourceNote": "Reuters NY 13/10"
     },
@@ -23,7 +23,7 @@
       "ts": 1791921600000,
       "source": "cnbc-1310",
       "pairId": 23705,
-      "retained": false,
+      "retained": true,
       "asOf": "2026-10-14T07:40:00+07:00",
       "sourceNote": "CNBC Tue 13/10"
     },
@@ -35,7 +35,7 @@
       "ts": 1791921600000,
       "source": "cnbc-1310",
       "pairId": 23701,
-      "retained": false,
+      "retained": true,
       "asOf": "2026-10-14T07:40:00+07:00",
       "sourceNote": "CNBC Tue 13/10"
     },
@@ -47,7 +47,7 @@
       "ts": 1791878400000,
       "source": "hose-close-1310",
       "pairId": 41063,
-      "retained": false,
+      "retained": true,
       "asOf": "2026-10-14T07:40:00+07:00"
     },
     "wti": {
@@ -58,7 +58,7 @@
       "ts": 1791919080000,
       "source": "nymex-settle-1310 (Reuters)",
       "pairId": 8849,
-      "retained": false,
+      "retained": true,
       "asOf": "2026-10-14T07:40:00+07:00",
       "sourceNote": "NYMEX Nov settle Tue 13/10 · Reuters"
     },
@@ -70,7 +70,7 @@
       "ts": 1791919080000,
       "source": "ice-settle-1310 (Reuters)",
       "pairId": 8833,
-      "retained": false,
+      "retained": true,
       "asOf": "2026-10-14T07:40:00+07:00",
       "sourceNote": "ICE Dec settle Tue 13/10 · Reuters"
     },
@@ -82,7 +82,7 @@
       "ts": 1791937500000,
       "source": "spot-0725ict-1410 (gold-api) vs 0753ict-1310",
       "pairId": 8830,
-      "retained": false,
+      "retained": true,
       "asOf": "2026-10-14T07:40:00+07:00"
     },
     "spx": {
@@ -93,7 +93,7 @@
       "ts": 1791921600000,
       "source": "close-1310 (AP)",
       "pairId": 166,
-      "retained": false,
+      "retained": true,
       "asOf": "2026-10-14T07:40:00+07:00"
     },
     "ndx": {
@@ -104,7 +104,7 @@
       "ts": 1791921600000,
       "source": "nasdaq-comp-close-1310 (AP)",
       "pairId": 14958,
-      "retained": false,
+      "retained": true,
       "asOf": "2026-10-14T07:40:00+07:00"
     },
     "dji": {
@@ -115,7 +115,7 @@
       "ts": 1791921600000,
       "source": "close-1310 (AP)",
       "pairId": 169,
-      "retained": false,
+      "retained": true,
       "asOf": "2026-10-14T07:40:00+07:00"
     },
     "rut": {
@@ -126,7 +126,7 @@
       "ts": 1791921600000,
       "source": "close-1310 (AP)",
       "pairId": 170,
-      "retained": false,
+      "retained": true,
       "asOf": "2026-10-14T07:40:00+07:00"
     },
     "gbpusd": {
@@ -137,7 +137,7 @@
       "ts": 1791905940000,
       "source": "fxstreet-1310 (+0.28%)",
       "pairId": 2,
-      "retained": false,
+      "retained": true,
       "asOf": "2026-10-14T07:40:00+07:00",
       "sourceNote": "FXStreet 15:39 GMT 13/10"
     },
@@ -149,7 +149,7 @@
       "ts": 1791926040000,
       "source": "reuters-1310 (prev = last-good 06/10)",
       "pairId": 5,
-      "retained": false,
+      "retained": true,
       "asOf": "2026-10-14T07:40:00+07:00",
       "sourceNote": "Reuters NY 13/10"
     },
@@ -161,7 +161,7 @@
       "ts": 1791926040000,
       "source": "reuters-1310 (+0.40%)",
       "pairId": 1,
-      "retained": false,
+      "retained": true,
       "asOf": "2026-10-14T07:40:00+07:00",
       "sourceNote": "Reuters NY 13/10"
     },
@@ -173,7 +173,7 @@
       "ts": 1791926040000,
       "source": "reuters-1310 (−0.18%)",
       "pairId": 3,
-      "retained": false,
+      "retained": true,
       "asOf": "2026-10-14T07:40:00+07:00",
       "sourceNote": "Reuters NY 13/10"
     },
@@ -185,23 +185,22 @@
       "ts": 1791937500000,
       "source": "binance-0725ict-1410 vs 0753ict-1310",
       "pairId": 1057391,
-      "retained": false,
+      "retained": true,
       "asOf": "2026-10-14T07:40:00+07:00"
     },
     "usdvnd": {
       "price": 25910,
-      "buy": 25690.0,
+      "buy": 25720.0,
       "sell": 26100.0,
+      "cash": 25690.0,
       "transfer": 25720.0,
-      "prevClose": 25930.0,
-      "chgPct": -0.077131,
-      "chgAbs": -20.0,
+      "prevClose": 25994.936845,
+      "chgPct": -0.3267438020967432,
+      "chgAbs": -84.93684500000018,
       "source": "vcb+sbv",
-      "vcbUpdated": "2026-10-14T07:24:40+07:00",
-      "sbvCenter": 25633.0,
-      "sbvChgAbs": 12.0,
-      "asOf": "2026-10-14T07:40:00+07:00",
-      "sourceNote": "VCB 14/10 07:24 · mua 25690 CK 25720 bán 26100 · mid (CK+bán)/2 · SBV 13/10 25633 (+12)"
+      "vcbUpdated": "2026-10-14T08:00:22+07:00",
+      "sbvCenter": 25646.0,
+      "sbvChgAbs": 13.0
     },
     "goldsjc": {
       "price": 142800000,
@@ -210,15 +209,15 @@
       "chgAbs": 0.0,
       "chgPct": 0.0,
       "unit": "VND/luong",
-      "source": "vang.today/SJC 14/10",
+      "source": "vang.today",
       "name": "SJC 9999",
-      "apiTime": "07:00",
+      "apiTime": "08:30",
       "apiDate": "2026-10-14",
       "worldPrice": 4160.3,
       "worldChgPct": 0.009616
     },
     "ust2s10s": {
-      "price": 0.424,
+      "price": 0.4239999999999995,
       "chgPct": null,
       "chgAbs": null,
       "source": "derived"
@@ -242,6 +241,24 @@
     "usdjpy:HTTP Error 403: Forbidden",
     "btc:HTTP Error 403: Forbidden"
   ],
-  "retained": [],
+  "retained": [
+    "dxy",
+    "ust10y",
+    "ust2y",
+    "vnindex",
+    "wti",
+    "brent",
+    "gold",
+    "spx",
+    "ndx",
+    "dji",
+    "rut",
+    "gbpusd",
+    "audusd",
+    "eurusd",
+    "usdjpy",
+    "btc",
+    "ust2s10s"
+  ],
   "investingOk": 0
 }
