@@ -1,6 +1,6 @@
 {
-  "asOf": "2026-10-20 07:39:37 ICT",
-  "asOfUnix": 1792456777,
+  "asOf": "2026-10-20 12:22:34 ICT",
+  "asOfUnix": 1792473754,
   "provider": "Investing.com (vs prior close) + VCB/SBV USDVND + SJC (vang.today)",
   "quotes": {
     "dxy": {
@@ -184,29 +184,29 @@
       "asOf": "2026-10-20T07:35:00+07:00"
     },
     "usdvnd": {
-      "price": 25910,
-      "buy": 25720.0,
-      "sell": 26100.0,
-      "cash": 25690.0,
-      "transfer": 25720.0,
+      "price": 25870,
+      "buy": 25680.0,
+      "sell": 26060.0,
+      "cash": 25650.0,
+      "transfer": 25680.0,
       "prevClose": 25994.936845,
-      "chgPct": -0.3267438020967432,
-      "chgAbs": -84.93684500000018,
+      "chgPct": -0.4806199212752893,
+      "chgAbs": -124.93684500000018,
       "source": "vcb+sbv",
-      "vcbUpdated": "2026-10-19T23:00:00+07:00",
-      "sbvCenter": 25633.0,
-      "sbvChgAbs": -4.0
+      "vcbUpdated": "2026-10-20T10:01:49+07:00",
+      "sbvCenter": 25639.0,
+      "sbvChgAbs": 6.0
     },
     "goldsjc": {
-      "price": 141600000,
-      "buy": 140100000.0,
-      "sell": 143100000.0,
-      "chgAbs": 0.0,
-      "chgPct": 0.0,
+      "price": 141100000,
+      "buy": 139600000.0,
+      "sell": 142600000.0,
+      "chgAbs": 600000.0,
+      "chgPct": 0.42704626334519574,
       "unit": "VND/luong",
       "source": "vang.today",
       "name": "SJC 9999",
-      "apiTime": "07:30",
+      "apiTime": "12:00",
       "apiDate": "2026-10-20",
       "worldPrice": 4133.0,
       "worldChgPct": -1.098375
