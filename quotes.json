@@ -1,6 +1,6 @@
 {
-  "asOf": "2026-10-26 14:04:55 ICT",
-  "asOfUnix": 1792998295,
+  "asOf": "2026-10-26 21:13:29 ICT",
+  "asOfUnix": 1793024009,
   "provider": "Investing.com (vs prior close) + VCB/SBV USDVND + SJC (vang.today)",
   "quotes": {
     "dxy": {
@@ -206,7 +206,7 @@
       "unit": "VND/luong",
       "source": "vang.today",
       "name": "SJC 9999",
-      "apiTime": "14:00",
+      "apiTime": "21:00",
       "apiDate": "2026-10-26",
       "worldPrice": 3987.1,
       "worldChgPct": -0.24519
