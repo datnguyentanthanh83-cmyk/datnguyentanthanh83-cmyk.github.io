@@ -1,7 +1,7 @@
 {
-  "asOf": "2026-10-30 07:22:30 ICT",
-  "asOfUnix": 1793319750,
-  "provider": "Verified closes 29/10 (AP/Reuters/U.S. Treasury/ICE/NYMEX) + HOSE 29/10 + Binance/VCB/SJC 30/10 + SBV 29/10",
+  "asOf": "2026-10-30 09:48:14 ICT",
+  "asOfUnix": 1793328494,
+  "provider": "Investing.com (vs prior close) + VCB/SBV USDVND + SJC (vang.today)",
   "quotes": {
     "dxy": {
       "price": 101.88,
@@ -11,7 +11,7 @@
       "ts": 1793307600000,
       "source": "reuters-close-2910",
       "pairId": 8827,
-      "retained": false,
+      "retained": true,
       "asOf": "2026-10-30T07:22:00+07:00"
     },
     "ust10y": {
@@ -22,7 +22,7 @@
       "ts": 1793307600000,
       "source": "treasury-par-2910",
       "pairId": 23705,
-      "retained": false,
+      "retained": true,
       "asOf": "2026-10-30T07:22:00+07:00"
     },
     "ust2y": {
@@ -33,7 +33,7 @@
       "ts": 1793307600000,
       "source": "treasury-par-2910",
       "pairId": 23701,
-      "retained": false,
+      "retained": true,
       "asOf": "2026-10-30T07:22:00+07:00"
     },
     "vnindex": {
@@ -44,7 +44,7 @@
       "ts": 1793260800000,
       "source": "hose-close-2910",
       "pairId": 41063,
-      "retained": false,
+      "retained": true,
       "asOf": "2026-10-30T07:22:00+07:00"
     },
     "wti": {
@@ -55,7 +55,7 @@
       "ts": 1793307600000,
       "source": "nymex-dec-settle-2910",
       "pairId": 8849,
-      "retained": false,
+      "retained": true,
       "asOf": "2026-10-30T07:22:00+07:00",
       "sourceNote": "NYMEX WTI HĐ T12, giá chốt 29/10"
     },
@@ -67,7 +67,7 @@
       "ts": 1793307600000,
       "source": "ice-dec-settle-2910",
       "pairId": 8833,
-      "retained": false,
+      "retained": true,
       "asOf": "2026-10-30T07:22:00+07:00",
       "sourceNote": "ICE Brent HĐ T12, giá chốt 29/10"
     },
@@ -79,7 +79,7 @@
       "ts": 1793307600000,
       "source": "spot-close-2910",
       "pairId": 8830,
-      "retained": false,
+      "retained": true,
       "asOf": "2026-10-30T07:22:00+07:00"
     },
     "spx": {
@@ -90,7 +90,7 @@
       "ts": 1793307600000,
       "source": "ap-close-2910",
       "pairId": 166,
-      "retained": false,
+      "retained": true,
       "asOf": "2026-10-30T07:22:00+07:00"
     },
     "ndx": {
@@ -101,7 +101,7 @@
       "ts": 1793307600000,
       "source": "ap-close-2910",
       "pairId": 14958,
-      "retained": false,
+      "retained": true,
       "asOf": "2026-10-30T07:22:00+07:00"
     },
     "dji": {
@@ -112,7 +112,7 @@
       "ts": 1793307600000,
       "source": "ap-close-2910",
       "pairId": 169,
-      "retained": false,
+      "retained": true,
       "asOf": "2026-10-30T07:22:00+07:00"
     },
     "rut": {
@@ -123,7 +123,7 @@
       "ts": 1793307600000,
       "source": "ap-close-2910",
       "pairId": 170,
-      "retained": false,
+      "retained": true,
       "asOf": "2026-10-30T07:22:00+07:00"
     },
     "gbpusd": {
@@ -134,7 +134,7 @@
       "ts": 1793307600000,
       "source": "close-2910",
       "pairId": 2,
-      "retained": false,
+      "retained": true,
       "asOf": "2026-10-30T07:22:00+07:00"
     },
     "audusd": {
@@ -145,7 +145,7 @@
       "ts": 1793307600000,
       "source": "close-2910",
       "pairId": 5,
-      "retained": false,
+      "retained": true,
       "asOf": "2026-10-30T07:22:00+07:00"
     },
     "eurusd": {
@@ -156,7 +156,7 @@
       "ts": 1793307600000,
       "source": "close-2910",
       "pairId": 1,
-      "retained": false,
+      "retained": true,
       "asOf": "2026-10-30T07:22:00+07:00"
     },
     "usdjpy": {
@@ -167,7 +167,7 @@
       "ts": 1793307600000,
       "source": "close-2910",
       "pairId": 3,
-      "retained": false,
+      "retained": true,
       "asOf": "2026-10-30T07:22:00+07:00"
     },
     "btc": {
@@ -178,51 +178,80 @@
       "ts": 1793319749821,
       "source": "binance-3010 sáng vs 24h",
       "pairId": 1057391,
-      "retained": false,
+      "retained": true,
       "asOf": "2026-10-30T07:22:00+07:00"
     },
     "usdvnd": {
-      "price": 25830,
-      "buy": 25640.0,
-      "sell": 26020.0,
-      "cash": 25610.0,
-      "transfer": 25640.0,
-      "prevClose": 25850.0,
-      "chgPct": -0.077369,
-      "chgAbs": -20.0,
+      "price": 25810,
+      "buy": 25620.0,
+      "sell": 26000.0,
+      "cash": 25590.0,
+      "transfer": 25620.0,
+      "prevClose": 25994.936845,
+      "chgPct": -0.7114341000431086,
+      "chgAbs": -184.93684500000018,
       "source": "vcb+sbv",
-      "vcbUpdated": "2026-10-30 07:14",
-      "sbvCenter": 25644.0,
-      "sbvChgAbs": 13.0,
-      "asOf": "2026-10-30T07:22:00+07:00",
-      "retained": false,
-      "sourceNote": "VCB 30/10 · mua TM 25610 CK 25640 bán 26020 · mid (CK+bán)/2 · SBV 25644 (29/10)"
+      "vcbUpdated": "2026-10-30T09:33:30+07:00",
+      "sbvCenter": 25637.0,
+      "sbvChgAbs": -7.0
     },
     "goldsjc": {
-      "price": 141200000,
-      "buy": 139700000.0,
-      "sell": 142700000.0,
-      "chgAbs": 0.0,
-      "chgPct": 0.0,
+      "price": 139900000,
+      "buy": 138400000.0,
+      "sell": 141400000.0,
+      "chgAbs": -1300000.0,
+      "chgPct": -0.9206798866855523,
       "unit": "VND/luong",
-      "source": "SJC 30/10",
+      "source": "vang.today",
       "name": "SJC 9999",
-      "apiTime": "07:30",
+      "apiTime": "09:30",
       "apiDate": "2026-10-30",
-      "worldPrice": 4019.7,
-      "worldChgPct": -1.160343,
-      "asOf": "2026-10-30T07:22:00+07:00",
-      "retained": false
+      "worldPrice": 4019.71,
+      "worldChgPct": -1.160343
     },
     "ust2s10s": {
-      "price": 0.37,
+      "price": 0.3700000000000001,
       "chgPct": null,
       "chgAbs": null,
-      "source": "derived",
-      "asOf": "2026-10-30T07:22:00+07:00"
+      "source": "derived"
     }
   },
-  "errors": [],
-  "retained": [],
+  "errors": [
+    "dxy:HTTP Error 403: Forbidden",
+    "ust10y:HTTP Error 403: Forbidden",
+    "ust2y:HTTP Error 403: Forbidden",
+    "vnindex:HTTP Error 403: Forbidden",
+    "wti:HTTP Error 403: Forbidden",
+    "brent:HTTP Error 403: Forbidden",
+    "gold:HTTP Error 403: Forbidden",
+    "spx:HTTP Error 403: Forbidden",
+    "ndx:HTTP Error 403: Forbidden",
+    "dji:HTTP Error 403: Forbidden",
+    "rut:HTTP Error 403: Forbidden",
+    "gbpusd:HTTP Error 403: Forbidden",
+    "audusd:HTTP Error 403: Forbidden",
+    "eurusd:HTTP Error 403: Forbidden",
+    "usdjpy:HTTP Error 403: Forbidden",
+    "btc:HTTP Error 403: Forbidden"
+  ],
+  "retained": [
+    "dxy",
+    "ust10y",
+    "ust2y",
+    "vnindex",
+    "wti",
+    "brent",
+    "gold",
+    "spx",
+    "ndx",
+    "dji",
+    "rut",
+    "gbpusd",
+    "audusd",
+    "eurusd",
+    "usdjpy",
+    "btc",
+    "ust2s10s"
+  ],
   "investingOk": 0
 }
