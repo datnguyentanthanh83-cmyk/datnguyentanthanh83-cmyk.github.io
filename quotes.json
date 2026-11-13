@@ -1,7 +1,7 @@
 {
-  "asOf": "2026-11-13 07:28:10 ICT",
-  "asOfUnix": 1794529690,
-  "provider": "CNBC đóng cửa 12/11 + ICE/NYMEX chốt 12/11 + HOSE 12/11 + VCB 13/11 + SJC 12/11",
+  "asOf": "2026-11-13 10:39:17 ICT",
+  "asOfUnix": 1794541157,
+  "provider": "Investing.com (vs prior close) + VCB/SBV USDVND + SJC (vang.today)",
   "quotes": {
     "dxy": {
       "price": 103.173,
@@ -11,7 +11,7 @@
       "ts": 1794517200000,
       "source": "cnbc-close-1211",
       "pairId": 8827,
-      "retained": false,
+      "retained": true,
       "asOf": "2026-11-13T07:28:00+07:00",
       "sourceNote": "Đóng cửa 12/11 so với 11/11"
     },
@@ -23,7 +23,7 @@
       "ts": 1794517200000,
       "source": "cnbc-close-1211",
       "pairId": 23705,
-      "retained": false,
+      "retained": true,
       "asOf": "2026-11-13T07:28:00+07:00",
       "sourceNote": "Đóng cửa 12/11 so với 10/11 (nghỉ lễ 11/11)"
     },
@@ -35,7 +35,7 @@
       "ts": 1794517200000,
       "source": "cnbc-close-1211",
       "pairId": 23701,
-      "retained": false,
+      "retained": true,
       "asOf": "2026-11-13T07:28:00+07:00",
       "sourceNote": "Đóng cửa 12/11 so với 10/11 (nghỉ lễ 11/11)"
     },
@@ -47,7 +47,7 @@
       "ts": 1794470400000,
       "source": "hose-close-1211",
       "pairId": 41063,
-      "retained": false,
+      "retained": true,
       "asOf": "2026-11-13T07:28:00+07:00"
     },
     "wti": {
@@ -58,7 +58,7 @@
       "ts": 1794517200000,
       "source": "nymex-settle-1211",
       "pairId": 8849,
-      "retained": false,
+      "retained": true,
       "asOf": "2026-11-13T07:28:00+07:00",
       "sourceNote": "NYMEX WTI HĐ T12 chốt 12/11"
     },
@@ -70,7 +70,7 @@
       "ts": 1794517200000,
       "source": "ice-settle-1211",
       "pairId": 8833,
-      "retained": false,
+      "retained": true,
       "asOf": "2026-11-13T07:28:00+07:00",
       "sourceNote": "ICE Brent HĐ T1/2027 chốt 12/11"
     },
@@ -82,7 +82,7 @@
       "ts": 1794517200000,
       "source": "spot-close-1211",
       "pairId": 8830,
-      "retained": false,
+      "retained": true,
       "asOf": "2026-11-13T07:28:00+07:00",
       "sourceNote": "Giao ngay đóng cửa 12/11 so với 11/11"
     },
@@ -94,7 +94,7 @@
       "ts": 1794517200000,
       "source": "cnbc-close-1211",
       "pairId": 166,
-      "retained": false,
+      "retained": true,
       "asOf": "2026-11-13T07:28:00+07:00"
     },
     "ndx": {
@@ -105,7 +105,7 @@
       "ts": 1794517200000,
       "source": "cnbc-close-1211",
       "pairId": 14958,
-      "retained": false,
+      "retained": true,
       "asOf": "2026-11-13T07:28:00+07:00"
     },
     "dji": {
@@ -116,7 +116,7 @@
       "ts": 1794517200000,
       "source": "cnbc-close-1211",
       "pairId": 169,
-      "retained": false,
+      "retained": true,
       "asOf": "2026-11-13T07:28:00+07:00"
     },
     "rut": {
@@ -127,7 +127,7 @@
       "ts": 1794517200000,
       "source": "cnbc-close-1211",
       "pairId": 170,
-      "retained": false,
+      "retained": true,
       "asOf": "2026-11-13T07:28:00+07:00"
     },
     "gbpusd": {
@@ -138,7 +138,7 @@
       "ts": 1794517200000,
       "source": "fx-close-1211",
       "pairId": 2,
-      "retained": false,
+      "retained": true,
       "asOf": "2026-11-13T07:28:00+07:00"
     },
     "audusd": {
@@ -149,7 +149,7 @@
       "ts": 1794517200000,
       "source": "fx-close-1211",
       "pairId": 5,
-      "retained": false,
+      "retained": true,
       "asOf": "2026-11-13T07:28:00+07:00"
     },
     "eurusd": {
@@ -160,7 +160,7 @@
       "ts": 1794517200000,
       "source": "fx-close-1211",
       "pairId": 1,
-      "retained": false,
+      "retained": true,
       "asOf": "2026-11-13T07:28:00+07:00"
     },
     "usdjpy": {
@@ -171,7 +171,7 @@
       "ts": 1794517200000,
       "source": "fx-close-1211",
       "pairId": 3,
-      "retained": false,
+      "retained": true,
       "asOf": "2026-11-13T07:28:00+07:00"
     },
     "btc": {
@@ -182,55 +182,80 @@
       "ts": 1794529690766,
       "source": "cnbc-btc-1311",
       "pairId": 1057391,
-      "retained": false,
+      "retained": true,
       "asOf": "2026-11-13T07:28:00+07:00"
     },
     "usdvnd": {
-      "price": 25680,
-      "buy": 25490.0,
-      "sell": 25870.0,
-      "cash": 25460.0,
-      "transfer": 25490.0,
-      "prevClose": 25680.0,
-      "chgPct": 0.0,
-      "chgAbs": 0.0,
+      "price": 25650,
+      "buy": 25460.0,
+      "sell": 25840.0,
+      "cash": 25430.0,
+      "transfer": 25460.0,
+      "prevClose": 25994.936845,
+      "chgPct": -1.326938576757293,
+      "chgAbs": -344.9368450000002,
       "source": "vcb+sbv",
-      "vcbUpdated": "2026-11-13T07:22:28+07:00",
-      "sbvCenter": 25623.0,
-      "sbvChgAbs": 12.0,
-      "asOf": "2026-11-13T07:28:00+07:00",
-      "retained": false,
-      "sourceNote": "VCB 13/11 07:22 · mua TM 25460 CK 25490 bán 25870 · mid (CK+bán)/2 · SBV 25623 (12/11)"
+      "vcbUpdated": "2026-11-13T09:27:34+07:00",
+      "sbvCenter": 25637.0,
+      "sbvChgAbs": 14.0
     },
     "goldsjc": {
-      "price": 137500000,
-      "buy": 136000000.0,
-      "sell": 139000000.0,
+      "price": 136500000,
+      "buy": 135000000.0,
+      "sell": 138000000.0,
       "chgAbs": -1000000.0,
-      "chgPct": -0.722022,
+      "chgPct": -0.7272727272727273,
       "unit": "VND/luong",
-      "source": "SJC 12/11",
+      "source": "vang.today",
       "name": "SJC 9999",
-      "apiTime": "19:30",
-      "apiDate": "2026-11-12",
+      "apiTime": "10:30",
+      "apiDate": "2026-11-13",
       "worldPrice": 3876.35,
-      "worldChgPct": -2.782341,
-      "prevClose": 138500000.0,
-      "asOf": "2026-11-13T07:28:00+07:00",
-      "retained": true
+      "worldChgPct": -2.782341
     },
     "ust2s10s": {
-      "price": 0.239,
+      "price": 0.23899999999999988,
       "chgPct": null,
-      "chgAbs": -0.023,
-      "source": "derived",
-      "asOf": "2026-11-13T07:28:00+07:00",
-      "prevClose": 0.262
+      "chgAbs": null,
+      "source": "derived"
     }
   },
-  "errors": [],
+  "errors": [
+    "dxy:HTTP Error 403: Forbidden",
+    "ust10y:HTTP Error 403: Forbidden",
+    "ust2y:HTTP Error 403: Forbidden",
+    "vnindex:HTTP Error 403: Forbidden",
+    "wti:HTTP Error 403: Forbidden",
+    "brent:HTTP Error 403: Forbidden",
+    "gold:HTTP Error 403: Forbidden",
+    "spx:HTTP Error 403: Forbidden",
+    "ndx:HTTP Error 403: Forbidden",
+    "dji:HTTP Error 403: Forbidden",
+    "rut:HTTP Error 403: Forbidden",
+    "gbpusd:HTTP Error 403: Forbidden",
+    "audusd:HTTP Error 403: Forbidden",
+    "eurusd:HTTP Error 403: Forbidden",
+    "usdjpy:HTTP Error 403: Forbidden",
+    "btc:HTTP Error 403: Forbidden"
+  ],
   "retained": [
-    "goldsjc"
+    "dxy",
+    "ust10y",
+    "ust2y",
+    "vnindex",
+    "wti",
+    "brent",
+    "gold",
+    "spx",
+    "ndx",
+    "dji",
+    "rut",
+    "gbpusd",
+    "audusd",
+    "eurusd",
+    "usdjpy",
+    "btc",
+    "ust2s10s"
   ],
   "investingOk": 0
 }
