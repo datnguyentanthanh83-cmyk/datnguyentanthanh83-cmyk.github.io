@@ -1,6 +1,6 @@
 {
-  "asOf": "2026-11-18 19:42:15 ICT",
-  "asOfUnix": 1795005735,
+  "asOf": "2026-11-18 19:44:46 ICT",
+  "asOfUnix": 1795005886,
   "provider": "CNBC phiên Âu 18/11 + ICE/NYMEX + HOSE 18/11 + VCB/SBV 18/11 + SJC 18/11; chứng khoán Mỹ giữ đóng cửa 17/11",
   "quotes": {
     "dxy": {
@@ -8,11 +8,11 @@
       "prevClose": 103.485,
       "chgPct": 0.334348,
       "chgAbs": 0.346,
-      "ts": 1795005735539,
+      "ts": 1795005886971,
       "source": "cnbc-eu-1811",
       "pairId": 8827,
       "retained": false,
-      "asOf": "2026-11-18T19:42:00+07:00",
+      "asOf": "2026-11-18T19:44:00+07:00",
       "sourceNote": "Phiên Âu 18/11 so với đóng cửa 17/11"
     },
     "ust10y": {
@@ -20,11 +20,11 @@
       "prevClose": 5.103,
       "chgPct": 0.039193,
       "chgAbs": 0.002,
-      "ts": 1795005735539,
+      "ts": 1795005886971,
       "source": "cnbc-eu-1811",
       "pairId": 23705,
       "retained": false,
-      "asOf": "2026-11-18T19:42:00+07:00",
+      "asOf": "2026-11-18T19:44:00+07:00",
       "sourceNote": "Phiên Âu 18/11 so với đóng cửa 17/11"
     },
     "ust2y": {
@@ -32,11 +32,11 @@
       "prevClose": 4.789,
       "chgPct": 0.459386,
       "chgAbs": 0.022,
-      "ts": 1795005735539,
+      "ts": 1795005886971,
       "source": "cnbc-eu-1811",
       "pairId": 23701,
       "retained": false,
-      "asOf": "2026-11-18T19:42:00+07:00",
+      "asOf": "2026-11-18T19:44:00+07:00",
       "sourceNote": "Phiên Âu 18/11 so với đóng cửa 17/11"
     },
     "vnindex": {
@@ -48,18 +48,18 @@
       "source": "hose-close-1811",
       "pairId": 41063,
       "retained": false,
-      "asOf": "2026-11-18T19:42:00+07:00"
+      "asOf": "2026-11-18T19:44:00+07:00"
     },
     "wti": {
       "price": 85.43,
       "prevClose": 86.01,
       "chgPct": -0.67434,
       "chgAbs": -0.58,
-      "ts": 1795005735539,
+      "ts": 1795005886971,
       "source": "nymex-dec-live-1811",
       "pairId": 8849,
       "retained": false,
-      "asOf": "2026-11-18T19:42:00+07:00",
+      "asOf": "2026-11-18T19:44:00+07:00",
       "sourceNote": "NYMEX WTI HĐ T12, phiên Âu 18/11 so với chốt 17/11"
     },
     "brent": {
@@ -67,11 +67,11 @@
       "prevClose": 93.14,
       "chgPct": -0.085892,
       "chgAbs": -0.08,
-      "ts": 1795005735539,
+      "ts": 1795005886971,
       "source": "ice-jan-live-1811",
       "pairId": 8833,
       "retained": false,
-      "asOf": "2026-11-18T19:42:00+07:00",
+      "asOf": "2026-11-18T19:44:00+07:00",
       "sourceNote": "ICE Brent HĐ T1/2027, phiên Âu 18/11 so với chốt 17/11"
     },
     "gold": {
@@ -79,11 +79,11 @@
       "prevClose": 3849.77,
       "chgPct": -2.362479,
       "chgAbs": -90.95,
-      "ts": 1795005735539,
+      "ts": 1795005886971,
       "source": "spot-eu-1811",
       "pairId": 8830,
       "retained": false,
-      "asOf": "2026-11-18T19:42:00+07:00",
+      "asOf": "2026-11-18T19:44:00+07:00",
       "sourceNote": "Giao ngay phiên Âu 18/11 so với 17/11"
     },
     "spx": {
@@ -95,7 +95,7 @@
       "source": "cnbc-close-1711",
       "pairId": 166,
       "retained": false,
-      "asOf": "2026-11-18T19:42:00+07:00"
+      "asOf": "2026-11-18T19:44:00+07:00"
     },
     "ndx": {
       "price": 24328.383,
@@ -106,7 +106,7 @@
       "source": "cnbc-close-1711",
       "pairId": 14958,
       "retained": false,
-      "asOf": "2026-11-18T19:42:00+07:00"
+      "asOf": "2026-11-18T19:44:00+07:00"
     },
     "dji": {
       "price": 50759.42,
@@ -117,7 +117,7 @@
       "source": "cnbc-close-1711",
       "pairId": 169,
       "retained": false,
-      "asOf": "2026-11-18T19:42:00+07:00"
+      "asOf": "2026-11-18T19:44:00+07:00"
     },
     "rut": {
       "price": 2701.871,
@@ -128,62 +128,62 @@
       "source": "cnbc-close-1711",
       "pairId": 170,
       "retained": false,
-      "asOf": "2026-11-18T19:42:00+07:00"
+      "asOf": "2026-11-18T19:44:00+07:00"
     },
     "gbpusd": {
       "price": 1.3157,
       "prevClose": 1.3208,
       "chgPct": -0.38613,
       "chgAbs": -0.0051,
-      "ts": 1795005735539,
+      "ts": 1795005886971,
       "source": "fx-eu-1811",
       "pairId": 2,
       "retained": false,
-      "asOf": "2026-11-18T19:42:00+07:00"
+      "asOf": "2026-11-18T19:44:00+07:00"
     },
     "audusd": {
       "price": 0.6728,
       "prevClose": 0.6731,
       "chgPct": -0.04457,
       "chgAbs": -0.0003,
-      "ts": 1795005735539,
+      "ts": 1795005886971,
       "source": "fx-eu-1811",
       "pairId": 5,
       "retained": false,
-      "asOf": "2026-11-18T19:42:00+07:00"
+      "asOf": "2026-11-18T19:44:00+07:00"
     },
     "eurusd": {
       "price": 1.0962,
       "prevClose": 1.0997,
       "chgPct": -0.318269,
       "chgAbs": -0.0035,
-      "ts": 1795005735539,
+      "ts": 1795005886971,
       "source": "fx-eu-1811",
       "pairId": 1,
       "retained": false,
-      "asOf": "2026-11-18T19:42:00+07:00"
+      "asOf": "2026-11-18T19:44:00+07:00"
     },
     "usdjpy": {
       "price": 159.4,
       "prevClose": 159.35,
       "chgPct": 0.031377,
       "chgAbs": 0.05,
-      "ts": 1795005735539,
+      "ts": 1795005886971,
       "source": "fx-eu-1811",
       "pairId": 3,
       "retained": false,
-      "asOf": "2026-11-18T19:42:00+07:00"
+      "asOf": "2026-11-18T19:44:00+07:00"
     },
     "btc": {
       "price": 64070.32,
       "prevClose": 63877.04,
       "chgPct": 0.302581,
       "chgAbs": 193.28,
-      "ts": 1795005735539,
+      "ts": 1795005886971,
       "source": "cnbc-btc-1811",
       "pairId": 1057391,
       "retained": false,
-      "asOf": "2026-11-18T19:42:00+07:00"
+      "asOf": "2026-11-18T19:44:00+07:00"
     },
     "usdvnd": {
       "price": 25710,
@@ -198,7 +198,7 @@
       "vcbUpdated": "2026-11-18T19:35:24+07:00",
       "sbvCenter": 25656.0,
       "sbvChgAbs": 4.0,
-      "asOf": "2026-11-18T19:42:00+07:00",
+      "asOf": "2026-11-18T19:44:00+07:00",
       "retained": false,
       "sourceNote": "VCB 18/11 19:35 · mua TM 25490 CK 25520 bán 25900 · mid (CK+bán)/2 · SBV 25656 (+4đ)"
     },
@@ -216,7 +216,7 @@
       "worldPrice": 3758.82,
       "worldChgPct": -2.362479,
       "prevClose": 136200000.0,
-      "asOf": "2026-11-18T19:42:00+07:00",
+      "asOf": "2026-11-18T19:44:00+07:00",
       "retained": false
     },
     "ust2s10s": {
@@ -225,7 +225,7 @@
       "chgAbs": -0.02,
       "source": "derived",
       "prevClose": 0.314,
-      "asOf": "2026-11-18T19:42:00+07:00",
+      "asOf": "2026-11-18T19:44:00+07:00",
       "retained": false
     }
   },
