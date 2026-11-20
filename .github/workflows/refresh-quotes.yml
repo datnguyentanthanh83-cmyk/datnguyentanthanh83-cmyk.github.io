@@ -21,6 +21,9 @@ jobs:
           import json, subprocess
           from pathlib import Path
           p = Path('quotes.json')
+          if subprocess.call(['git', 'diff', '--quiet', '--', 'quotes.json']) == 0:
+              print('quotes.json unchanged by fetch (Investing blocked); skip merge')
+              raise SystemExit(0)
           fresh = json.loads(p.read_text())
           try:
               prev_raw = subprocess.check_output(
@@ -60,6 +63,12 @@ jobs:
         run: |
           git config user.name "Macro Eco bot"
           git config user.email "macro-eco-bot@users.noreply.github.com"
+          ok=$(python3 -c "import json;print(int(json.load(open('quotes.json')).get('investingOk') or 0))" 2>/dev/null || echo 0)
+          if [ "$ok" = "0" ]; then
+            echo "No fresh Investing data (investingOk=0); not overwriting quotes.json"
+            git checkout -- quotes.json
+            exit 0
+          fi
           git add quotes.json
           if git diff --cached --quiet; then
             echo "No quote changes"

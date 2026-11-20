@@ -305,17 +305,41 @@ def main():
     errors: list[str] = []
     retained: list[str] = []
 
+    blocked = 0
     for key, pid in PAIRS.items():
         try:
-            fresh[key] = apply_roll_guard(key, investing_quote(pid))
+            q = apply_roll_guard(key, investing_quote(pid))
+            old = previous.get(key) or {}
+            if old.get("price") is not None and (old.get("ts") or 0) > (q.get("ts") or 0):
+                # Never replace a value with an older one (e.g. fresher digest write).
+                raise ValueError("older than existing quote")
+            fresh[key] = q
             time.sleep(0.1)
         except Exception as e:
+            if "403" in str(e) or "Forbidden" in str(e):
+                blocked += 1
             errors.append(f"{key}:{e}")
             if key in previous and previous[key].get("price") is not None:
                 kept = dict(previous[key])
                 kept["retained"] = True
                 fresh[key] = kept
                 retained.append(key)
+
+    fresh_investing = sum(1 for k in PAIRS if k in fresh and not fresh[k].get("retained"))
+    if fresh_investing == 0 or blocked * 2 > len(PAIRS):
+        # Investing blocked (403) or nothing fresh: leave quotes.json and state untouched
+        # so the digest's last-good prices are not clobbered by retained/stale data.
+        print(
+            f"Investing blocked/empty (fresh={fresh_investing} blocked={blocked}/{len(PAIRS)}); "
+            "quotes.json left unchanged"
+        )
+        return
+
+    # usdvnd prevClose: keep the existing quotes.json value (quotes-state.json is not
+    # committed, so its usdvnd is stale).
+    prev_fx = previous.get("usdvnd") or {}
+    if prev_fx.get("prevClose") is not None:
+        state["usdvnd"] = prev_fx["prevClose"]
 
     try:
         for k, v in fx_with_state(state).items():
