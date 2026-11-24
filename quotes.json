@@ -1,6 +1,6 @@
 {
-  "asOf": "2026-11-24 07:22:43 ICT",
-  "asOfUnix": 1795479763,
+  "asOf": "2026-11-24 07:23:49 ICT",
+  "asOfUnix": 1795479829,
   "provider": "CNBC đóng cửa 23/11 + lợi suất, vàng, ngoại hối, Bitcoin sáng 24/11 + ICE/NYMEX chốt 23/11 + HOSE 23/11 + VCB 24/11 + SBV 23/11 + SJC 24/11",
   "quotes": {
     "dxy": {
@@ -12,7 +12,7 @@
       "source": "cnbc-close-2311",
       "pairId": 8827,
       "retained": false,
-      "asOf": "2026-11-24T07:22:00+07:00",
+      "asOf": "2026-11-24T07:23:00+07:00",
       "sourceNote": "Đóng cửa 23/11 so với 20/11"
     },
     "ust10y": {
@@ -20,11 +20,11 @@
       "prevClose": 4.912,
       "chgPct": 0.529316,
       "chgAbs": 0.026,
-      "ts": 1795479763308,
+      "ts": 1795479829522,
       "source": "cnbc-asia-2411",
       "pairId": 23705,
       "retained": false,
-      "asOf": "2026-11-24T07:22:00+07:00",
+      "asOf": "2026-11-24T07:23:00+07:00",
       "sourceNote": "Sáng 24/11 so với đóng cửa 20/11"
     },
     "ust2y": {
@@ -32,11 +32,11 @@
       "prevClose": 4.613,
       "chgPct": 1.647518,
       "chgAbs": 0.076,
-      "ts": 1795479763308,
+      "ts": 1795479829522,
       "source": "cnbc-asia-2411",
       "pairId": 23701,
       "retained": false,
-      "asOf": "2026-11-24T07:22:00+07:00",
+      "asOf": "2026-11-24T07:23:00+07:00",
       "sourceNote": "Sáng 24/11 so với đóng cửa 20/11"
     },
     "vnindex": {
@@ -48,7 +48,7 @@
       "source": "hose-close-2311",
       "pairId": 41063,
       "retained": false,
-      "asOf": "2026-11-24T07:22:00+07:00"
+      "asOf": "2026-11-24T07:23:00+07:00"
     },
     "wti": {
       "price": 80.17,
@@ -59,7 +59,7 @@
       "source": "nymex-settle-2311",
       "pairId": 8849,
       "retained": false,
-      "asOf": "2026-11-24T07:22:00+07:00",
+      "asOf": "2026-11-24T07:23:00+07:00",
       "sourceNote": "NYMEX WTI HĐ T1/2027, chốt 23/11 so với 20/11"
     },
     "brent": {
@@ -71,7 +71,7 @@
       "source": "ice-settle-2311",
       "pairId": 8833,
       "retained": false,
-      "asOf": "2026-11-24T07:22:00+07:00",
+      "asOf": "2026-11-24T07:23:00+07:00",
       "sourceNote": "ICE Brent HĐ T1/2027, chốt 23/11 so với 20/11"
     },
     "gold": {
@@ -79,11 +79,11 @@
       "prevClose": 3532.29,
       "chgPct": 2.924448,
       "chgAbs": 103.3,
-      "ts": 1795479763308,
+      "ts": 1795479829522,
       "source": "spot-asia-2411",
       "pairId": 8830,
       "retained": false,
-      "asOf": "2026-11-24T07:22:00+07:00",
+      "asOf": "2026-11-24T07:23:00+07:00",
       "sourceNote": "Giao ngay sáng 24/11 so với đóng cửa 20/11"
     },
     "spx": {
@@ -95,7 +95,7 @@
       "source": "cnbc-close-2311",
       "pairId": 166,
       "retained": false,
-      "asOf": "2026-11-24T07:22:00+07:00"
+      "asOf": "2026-11-24T07:23:00+07:00"
     },
     "ndx": {
       "price": 24089.558,
@@ -106,7 +106,7 @@
       "source": "cnbc-close-2311",
       "pairId": 14958,
       "retained": false,
-      "asOf": "2026-11-24T07:22:00+07:00"
+      "asOf": "2026-11-24T07:23:00+07:00"
     },
     "dji": {
       "price": 49595.31,
@@ -117,7 +117,7 @@
       "source": "cnbc-close-2311",
       "pairId": 169,
       "retained": false,
-      "asOf": "2026-11-24T07:22:00+07:00"
+      "asOf": "2026-11-24T07:23:00+07:00"
     },
     "rut": {
       "price": 2669.655,
@@ -128,62 +128,62 @@
       "source": "cnbc-close-2311",
       "pairId": 170,
       "retained": false,
-      "asOf": "2026-11-24T07:22:00+07:00"
+      "asOf": "2026-11-24T07:23:00+07:00"
     },
     "gbpusd": {
       "price": 1.3021,
       "prevClose": 1.3081,
       "chgPct": -0.458681,
       "chgAbs": -0.006,
-      "ts": 1795479763308,
+      "ts": 1795479829522,
       "source": "fx-asia-2411",
       "pairId": 2,
       "retained": false,
-      "asOf": "2026-11-24T07:22:00+07:00"
+      "asOf": "2026-11-24T07:23:00+07:00"
     },
     "audusd": {
       "price": 0.6622,
       "prevClose": 0.6615,
       "chgPct": 0.10582,
       "chgAbs": 0.0007,
-      "ts": 1795479763308,
+      "ts": 1795479829522,
       "source": "fx-asia-2411",
       "pairId": 5,
       "retained": false,
-      "asOf": "2026-11-24T07:22:00+07:00"
+      "asOf": "2026-11-24T07:23:00+07:00"
     },
     "eurusd": {
       "price": 1.0905,
       "prevClose": 1.0967,
       "chgPct": -0.565332,
       "chgAbs": -0.0062,
-      "ts": 1795479763308,
+      "ts": 1795479829522,
       "source": "fx-asia-2411",
       "pairId": 1,
       "retained": false,
-      "asOf": "2026-11-24T07:22:00+07:00"
+      "asOf": "2026-11-24T07:23:00+07:00"
     },
     "usdjpy": {
       "price": 158.93,
       "prevClose": 158.53,
       "chgPct": 0.252318,
       "chgAbs": 0.4,
-      "ts": 1795479763308,
+      "ts": 1795479829522,
       "source": "fx-asia-2411",
       "pairId": 3,
       "retained": false,
-      "asOf": "2026-11-24T07:22:00+07:00"
+      "asOf": "2026-11-24T07:23:00+07:00"
     },
     "btc": {
       "price": 61157.99,
       "prevClose": 60649.19,
       "chgPct": 0.838923,
       "chgAbs": 508.8,
-      "ts": 1795479763308,
+      "ts": 1795479829522,
       "source": "cnbc-btc-2411",
       "pairId": 1057391,
       "retained": false,
-      "asOf": "2026-11-24T07:22:00+07:00"
+      "asOf": "2026-11-24T07:23:00+07:00"
     },
     "usdvnd": {
       "price": 25800,
@@ -198,7 +198,7 @@
       "vcbUpdated": "2026-11-23T23:00:00+07:00",
       "sbvCenter": 25668.0,
       "sbvChgAbs": 9.0,
-      "asOf": "2026-11-24T07:22:00+07:00",
+      "asOf": "2026-11-24T07:23:00+07:00",
       "retained": false,
       "sourceNote": "VCB 24/11 · mua TM 25580 CK 25610 bán 25990 · mid (CK+bán)/2 · SBV 25668 (23/11)"
     },
@@ -216,7 +216,7 @@
       "worldPrice": 3635.59,
       "worldChgPct": 2.924448,
       "prevClose": 132500000.0,
-      "asOf": "2026-11-24T07:22:00+07:00",
+      "asOf": "2026-11-24T07:23:00+07:00",
       "retained": false
     },
     "ust2s10s": {
@@ -225,7 +225,7 @@
       "chgAbs": -0.05,
       "source": "derived",
       "prevClose": 0.299,
-      "asOf": "2026-11-24T07:22:00+07:00",
+      "asOf": "2026-11-24T07:23:00+07:00",
       "retained": false
     }
   },
