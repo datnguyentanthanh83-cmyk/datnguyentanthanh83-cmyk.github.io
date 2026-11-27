@@ -1,43 +1,43 @@
 {
-  "asOf": "2026-11-26 19:43:35 ICT",
-  "asOfUnix": 1795697015,
-  "provider": "CNBC phiên Âu 26/11 + ICE/NYMEX + HOSE 26/11 + VCB/SBV 26/11 + SJC 26/11; chứng khoán và trái phiếu Mỹ giữ đóng cửa 25/11 (nghỉ Lễ Tạ ơn)",
+  "asOf": "2026-11-27 07:25:20 ICT",
+  "asOfUnix": 1795739120,
+  "provider": "CNBC sáng 27/11 (lợi suất, ngoại hối, vàng, WTI, Bitcoin) + ICE Brent chốt 26/11 + chứng khoán Mỹ đóng cửa 25/11 + HOSE 26/11 + VCB 27/11 + SBV 26/11 + SJC 27/11",
   "quotes": {
     "dxy": {
-      "price": 103.733,
-      "prevClose": 103.665,
-      "chgPct": 0.065596,
-      "chgAbs": 0.068,
-      "ts": 1795697015980,
-      "source": "cnbc-eu-2611",
+      "price": 103.826,
+      "prevClose": 103.787,
+      "chgPct": 0.037577,
+      "chgAbs": 0.039,
+      "ts": 1795739120377,
+      "source": "derived-basket-2711",
       "pairId": 8827,
       "retained": false,
-      "asOf": "2026-11-26T19:43:00+07:00",
-      "sourceNote": "Phiên Âu 26/11 so với đóng cửa 25/11"
+      "asOf": "2026-11-27T07:25:00+07:00",
+      "sourceNote": "Ước tính từ rổ sáu đồng tiền, sáng 27/11 so với 26/11"
     },
     "ust10y": {
-      "price": 4.864,
-      "prevClose": 4.902,
-      "chgPct": -0.775194,
-      "chgAbs": -0.038,
-      "ts": 1795644300000,
-      "source": "cnbc-close-2511",
+      "price": 4.872,
+      "prevClose": 4.864,
+      "chgPct": 0.164474,
+      "chgAbs": 0.008,
+      "ts": 1795739120377,
+      "source": "cnbc-asia-2711",
       "pairId": 23705,
       "retained": false,
-      "asOf": "2026-11-26T19:43:00+07:00",
-      "sourceNote": "Đóng cửa 25/11 so với 24/11 (thị trường trái phiếu Mỹ nghỉ Lễ Tạ ơn 26/11)"
+      "asOf": "2026-11-27T07:25:00+07:00",
+      "sourceNote": "Giao dịch châu Á sáng 27/11 so với đóng cửa 25/11"
     },
     "ust2y": {
-      "price": 4.65,
-      "prevClose": 4.671,
-      "chgPct": -0.449583,
-      "chgAbs": -0.021,
-      "ts": 1795644300000,
-      "source": "cnbc-close-2511",
+      "price": 4.658,
+      "prevClose": 4.65,
+      "chgPct": 0.172043,
+      "chgAbs": 0.008,
+      "ts": 1795739120377,
+      "source": "cnbc-asia-2711",
       "pairId": 23701,
       "retained": false,
-      "asOf": "2026-11-26T19:43:00+07:00",
-      "sourceNote": "Đóng cửa 25/11 so với 24/11 (thị trường trái phiếu Mỹ nghỉ Lễ Tạ ơn 26/11)"
+      "asOf": "2026-11-27T07:25:00+07:00",
+      "sourceNote": "Giao dịch châu Á sáng 27/11 so với đóng cửa 25/11"
     },
     "vnindex": {
       "price": 1629.68,
@@ -48,43 +48,43 @@
       "source": "hose-2611",
       "pairId": 41063,
       "retained": false,
-      "asOf": "2026-11-26T19:43:00+07:00"
+      "asOf": "2026-11-27T07:25:00+07:00"
     },
     "wti": {
-      "price": 84.52,
+      "price": 85.03,
       "prevClose": 83.68,
-      "chgPct": 1.003824,
-      "chgAbs": 0.84,
-      "ts": 1795697015980,
-      "source": "nymex-jan-live-2611",
+      "chgPct": 1.613289,
+      "chgAbs": 1.35,
+      "ts": 1795739120377,
+      "source": "nymex-asia-2711",
       "pairId": 8849,
       "retained": false,
-      "asOf": "2026-11-26T19:43:00+07:00",
-      "sourceNote": "NYMEX WTI HĐ T1/2027, phiên Âu 26/11 so với chốt 25/11"
+      "asOf": "2026-11-27T07:25:00+07:00",
+      "sourceNote": "NYMEX WTI HĐ T1/2027, sáng 27/11 so với chốt 25/11"
     },
     "brent": {
-      "price": 95.09,
+      "price": 96.57,
       "prevClose": 94.61,
-      "chgPct": 0.507346,
-      "chgAbs": 0.48,
-      "ts": 1795697015980,
-      "source": "ice-jan-live-2611",
+      "chgPct": 2.071663,
+      "chgAbs": 1.96,
+      "ts": 1795739120377,
+      "source": "ice-settle-2611",
       "pairId": 8833,
       "retained": false,
-      "asOf": "2026-11-26T19:43:00+07:00",
-      "sourceNote": "ICE Brent HĐ T1/2027, phiên Âu 26/11 so với chốt 25/11"
+      "asOf": "2026-11-27T07:25:00+07:00",
+      "sourceNote": "ICE Brent HĐ T1/2027, chốt 26/11 so với 25/11"
     },
     "gold": {
-      "price": 3572.15,
-      "prevClose": 3581.0,
-      "chgPct": -0.247138,
-      "chgAbs": -8.85,
-      "ts": 1795697015980,
-      "source": "spot-eu-2611",
+      "price": 3567.6,
+      "prevClose": 3567.14,
+      "chgPct": 0.012895,
+      "chgAbs": 0.46,
+      "ts": 1795739120377,
+      "source": "spot-asia-2711",
       "pairId": 8830,
       "retained": false,
-      "asOf": "2026-11-26T19:43:00+07:00",
-      "sourceNote": "Giao ngay phiên Âu 26/11 so với 25/11"
+      "asOf": "2026-11-27T07:25:00+07:00",
+      "sourceNote": "Giao ngay sáng 27/11 so với 26/11"
     },
     "spx": {
       "price": 7182.78,
@@ -95,7 +95,7 @@
       "source": "cnbc-close-2511",
       "pairId": 166,
       "retained": false,
-      "asOf": "2026-11-26T19:43:00+07:00"
+      "asOf": "2026-11-27T07:25:00+07:00"
     },
     "ndx": {
       "price": 23585.802,
@@ -106,7 +106,7 @@
       "source": "cnbc-close-2511",
       "pairId": 14958,
       "retained": false,
-      "asOf": "2026-11-26T19:43:00+07:00"
+      "asOf": "2026-11-27T07:25:00+07:00"
     },
     "dji": {
       "price": 50182.95,
@@ -117,7 +117,7 @@
       "source": "cnbc-close-2511",
       "pairId": 169,
       "retained": false,
-      "asOf": "2026-11-26T19:43:00+07:00"
+      "asOf": "2026-11-27T07:25:00+07:00"
     },
     "rut": {
       "price": 2704.061,
@@ -128,62 +128,62 @@
       "source": "cnbc-close-2511",
       "pairId": 170,
       "retained": false,
-      "asOf": "2026-11-26T19:43:00+07:00"
+      "asOf": "2026-11-27T07:25:00+07:00"
     },
     "gbpusd": {
-      "price": 1.3105,
-      "prevClose": 1.3112,
-      "chgPct": -0.053386,
-      "chgAbs": -0.0007,
-      "ts": 1795697015980,
-      "source": "fx-eu-2611",
+      "price": 1.3099,
+      "prevClose": 1.311,
+      "chgPct": -0.083905,
+      "chgAbs": -0.0011,
+      "ts": 1795739120377,
+      "source": "fx-asia-2711",
       "pairId": 2,
       "retained": false,
-      "asOf": "2026-11-26T19:43:00+07:00"
+      "asOf": "2026-11-27T07:25:00+07:00"
     },
     "audusd": {
-      "price": 0.6633,
-      "prevClose": 0.6625,
-      "chgPct": 0.120755,
-      "chgAbs": 0.0008,
-      "ts": 1795697015980,
-      "source": "fx-eu-2611",
+      "price": 0.6632,
+      "prevClose": 0.6632,
+      "chgPct": 0.0,
+      "chgAbs": 0.0,
+      "ts": 1795739120377,
+      "source": "fx-asia-2711",
       "pairId": 5,
       "retained": false,
-      "asOf": "2026-11-26T19:43:00+07:00"
+      "asOf": "2026-11-27T07:25:00+07:00"
     },
     "eurusd": {
-      "price": 1.0974,
-      "prevClose": 1.0971,
-      "chgPct": 0.027345,
-      "chgAbs": 0.0003,
-      "ts": 1795697015980,
-      "source": "fx-eu-2611",
+      "price": 1.0964,
+      "prevClose": 1.0967,
+      "chgPct": -0.027355,
+      "chgAbs": -0.0003,
+      "ts": 1795739120377,
+      "source": "fx-asia-2711",
       "pairId": 1,
       "retained": false,
-      "asOf": "2026-11-26T19:43:00+07:00"
+      "asOf": "2026-11-27T07:25:00+07:00"
     },
     "usdjpy": {
-      "price": 159.25,
-      "prevClose": 159.17,
-      "chgPct": 0.050261,
-      "chgAbs": 0.08,
-      "ts": 1795697015980,
-      "source": "fx-eu-2611",
+      "price": 159.36,
+      "prevClose": 159.25,
+      "chgPct": 0.069074,
+      "chgAbs": 0.11,
+      "ts": 1795739120377,
+      "source": "fx-asia-2711",
       "pairId": 3,
       "retained": false,
-      "asOf": "2026-11-26T19:43:00+07:00"
+      "asOf": "2026-11-27T07:25:00+07:00"
     },
     "btc": {
-      "price": 60805.8,
+      "price": 60525.12,
       "prevClose": 59995.96,
-      "chgPct": 1.349824,
-      "chgAbs": 809.84,
-      "ts": 1795697015980,
-      "source": "cnbc-btc-2611",
+      "chgPct": 0.881993,
+      "chgAbs": 529.16,
+      "ts": 1795739120377,
+      "source": "cnbc-btc-2711",
       "pairId": 1057391,
       "retained": false,
-      "asOf": "2026-11-26T19:43:00+07:00"
+      "asOf": "2026-11-27T07:25:00+07:00"
     },
     "usdvnd": {
       "price": 25820,
@@ -191,41 +191,41 @@
       "sell": 26010.0,
       "cash": 25600.0,
       "transfer": 25630.0,
-      "prevClose": 25830.0,
-      "chgPct": -0.038715,
-      "chgAbs": -10.0,
+      "prevClose": 25820.0,
+      "chgPct": 0.0,
+      "chgAbs": 0.0,
       "source": "vcb+sbv",
-      "vcbUpdated": "2026-11-26T16:39:07+07:00",
+      "vcbUpdated": "2026-11-26T23:00:00+07:00",
       "sbvCenter": 25676.0,
       "sbvChgAbs": -3.0,
-      "asOf": "2026-11-26T19:43:00+07:00",
+      "asOf": "2026-11-27T07:25:00+07:00",
       "retained": false,
-      "sourceNote": "VCB 26/11 · mua TM 25600 CK 25630 bán 26010 · mid (CK+bán)/2 · SBV 25676 (26/11, −3)"
+      "sourceNote": "VCB 27/11 · mua TM 25600 CK 25630 bán 26010 · mid (CK+bán)/2 · SBV 25676 (26/11, −3)"
     },
     "goldsjc": {
       "price": 132000000.0,
       "buy": 129500000.0,
       "sell": 134500000.0,
-      "chgAbs": 400000.0,
-      "chgPct": 0.303951,
+      "chgAbs": 0.0,
+      "chgPct": 0.0,
       "unit": "VND/luong",
       "source": "sjc",
       "name": "SJC 9999",
-      "apiTime": "19:30",
-      "apiDate": "2026-11-26",
-      "worldPrice": 3572.15,
-      "worldChgPct": -0.247138,
-      "prevClose": 131600000.0,
-      "asOf": "2026-11-26T19:43:00+07:00",
+      "apiTime": "07:00",
+      "apiDate": "2026-11-27",
+      "worldPrice": 3567.6,
+      "worldChgPct": 0.012895,
+      "prevClose": 132000000.0,
+      "asOf": "2026-11-27T07:25:00+07:00",
       "retained": false
     },
     "ust2s10s": {
       "price": 0.214,
       "chgPct": null,
-      "chgAbs": -0.017,
+      "chgAbs": 0.0,
       "source": "derived",
-      "prevClose": 0.231,
-      "asOf": "2026-11-26T19:43:00+07:00",
+      "prevClose": 0.214,
+      "asOf": "2026-11-27T07:25:00+07:00",
       "retained": false
     }
   },
